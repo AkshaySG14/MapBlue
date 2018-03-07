@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,13 +20,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LaunchImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="dch-7s-YPB">
-                                <rect key="frame" x="84" y="112" width="206" height="231"/>
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dch-7s-YPB" secondAttribute="height" multiplier="1:1" id="1Ic-aQ-gww"/>
+                                    <constraint firstAttribute="width" constant="300" id="OGe-AS-T3F"/>
+                                    <constraint firstAttribute="height" constant="300" id="zww-pk-dmj"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.15294117647058825" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dch-7s-YPB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rEa-hK-f04"/>
-                            <constraint firstItem="dch-7s-YPB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="vRB-cz-LXf"/>
+                            <constraint firstItem="dch-7s-YPB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q3n-eg-iX6"/>
+                            <constraint firstItem="dch-7s-YPB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="uMp-71-dW5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
