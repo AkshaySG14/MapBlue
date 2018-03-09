@@ -26,6 +26,7 @@
 		AF7E76BC204DD577002DCC46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76BA204DD577002DCC46 /* LaunchScreen.storyboard */; };
 		AF7E76C6204DDEFF002DCC46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76C5204DDEFF002DCC46 /* Images.xcassets */; };
 		AF8407D0204FA5C3001182CA /* BuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8407CF204FA5C3001182CA /* BuildingViewController.swift */; };
+		AFB80F1720524674003942E2 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB80F1620524674003942E2 /* RoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		AF7E76BD204DD577002DCC46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7E76C5204DDEFF002DCC46 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF8407CF204FA5C3001182CA /* BuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingViewController.swift; sourceTree = "<group>"; };
+		AFB80F1620524674003942E2 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				AF7E76B3204DD577002DCC46 /* ViewController.swift */,
 				AF8407CF204FA5C3001182CA /* BuildingViewController.swift */,
+				AFB80F1620524674003942E2 /* RoomViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				AF8407D0204FA5C3001182CA /* BuildingViewController.swift in Sources */,
 				AF7E76B4204DD577002DCC46 /* ViewController.swift in Sources */,
 				AF7E76B2204DD577002DCC46 /* AppDelegate.swift in Sources */,
+				AFB80F1720524674003942E2 /* RoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

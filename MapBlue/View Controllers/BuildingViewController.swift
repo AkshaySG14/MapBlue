@@ -14,12 +14,21 @@ class BuildingViewController: UIViewController {
     
     let borderAlpha : CGFloat = 0.7
     let cornerRadius : CGFloat = 5.0
-
+    
     func setButtonScripts(button : UIButton) {
         button.setTitle("Touched!!", for: .highlighted)
         button.setTitleColor(UIColor.red, for: .highlighted)
+        button.addTarget(self, action: #selector(BuildingViewController.buttonClicked(_:)), for: .touchUpInside)
     }
-    func setButtonBorder(button : UIButton!) {
+    
+    @objc func buttonClicked(_ sender: AnyObject?) {
+        if (sender === EECSButton) {
+        }
+        let roomViewControllerObj = self.storyboard?.instantiateViewController(withIdentifier: "RoomViewController") as? RoomViewController
+        self.navigationController?.pushViewController(roomViewControllerObj!, animated: true)
+    }
+
+    func setButtonBorder(button : UIButton) {
         button.backgroundColor = UIColor.clear
         
         let topBorder = CALayer()
@@ -42,6 +51,7 @@ class BuildingViewController: UIViewController {
         // Sets the button scripts.
         self.setButtonScripts(button: EECSButton)
         self.setButtonScripts(button: GGButton)
+        // Set the button event handlers.
     }
     
     override func viewDidLoad() {
@@ -67,5 +77,4 @@ class BuildingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

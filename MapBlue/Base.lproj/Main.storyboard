@@ -129,10 +129,10 @@ Computer Science (EECS Building)</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLg-Ob-yiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Room View Controller-->
         <scene sceneID="JYR-75-crw">
             <objects>
-                <viewController id="z7C-0d-GKu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RoomViewController" id="z7C-0d-GKu" userLabel="Room View Controller" customClass="RoomViewController" customModule="MapBlue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x25-pV-jGH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
