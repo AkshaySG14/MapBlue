@@ -7,25 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2021D620519C37008F82A9 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021CA20519C36008F82A9 /* Icon-Small@2x.png */; };
+		AF2021D720519C37008F82A9 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021CB20519C36008F82A9 /* Icon-Small@3x.png */; };
+		AF2021D820519C37008F82A9 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021CC20519C36008F82A9 /* Icon-Small.png */; };
+		AF2021D920519C37008F82A9 /* Icon-Small-40.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021CD20519C36008F82A9 /* Icon-Small-40.png */; };
+		AF2021DA20519C37008F82A9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021CE20519C37008F82A9 /* Icon.png */; };
+		AF2021DB20519C37008F82A9 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021CF20519C37008F82A9 /* Icon-60@2x.png */; };
+		AF2021DC20519C37008F82A9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021D020519C37008F82A9 /* Icon@2x.png */; };
+		AF2021DD20519C37008F82A9 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021D120519C37008F82A9 /* iTunesArtwork.png */; };
+		AF2021DE20519C37008F82A9 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021D220519C37008F82A9 /* iTunesArtwork@2x.png */; };
+		AF2021DF20519C37008F82A9 /* Icon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021D320519C37008F82A9 /* Icon-Small-40@2x.png */; };
+		AF2021E020519C37008F82A9 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021D420519C37008F82A9 /* Icon-60@3x.png */; };
+		AF2021E120519C37008F82A9 /* Icon-Notification@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021D520519C37008F82A9 /* Icon-Notification@3x.png */; };
+		AF2021E42051A1C0008F82A9 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021E32051A1C0008F82A9 /* LaunchImage.png */; };
 		AF7E76B2204DD577002DCC46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E76B1204DD577002DCC46 /* AppDelegate.swift */; };
 		AF7E76B4204DD577002DCC46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E76B3204DD577002DCC46 /* ViewController.swift */; };
 		AF7E76B7204DD577002DCC46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76B5204DD577002DCC46 /* Main.storyboard */; };
 		AF7E76BC204DD577002DCC46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76BA204DD577002DCC46 /* LaunchScreen.storyboard */; };
-		AF7E76C4204DDEAB002DCC46 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76C3204DDEAB002DCC46 /* LaunchImage.png */; };
 		AF7E76C6204DDEFF002DCC46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76C5204DDEFF002DCC46 /* Images.xcassets */; };
-		AFE4A03D204DE5B00077C343 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE4A03C204DE5B00077C343 /* AppIcon.png */; };
+		AF8407D0204FA5C3001182CA /* BuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8407CF204FA5C3001182CA /* BuildingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF2021CA20519C36008F82A9 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		AF2021CB20519C36008F82A9 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		AF2021CC20519C36008F82A9 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		AF2021CD20519C36008F82A9 /* Icon-Small-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40.png"; sourceTree = "<group>"; };
+		AF2021CE20519C37008F82A9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		AF2021CF20519C37008F82A9 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		AF2021D020519C37008F82A9 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		AF2021D120519C37008F82A9 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		AF2021D220519C37008F82A9 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		AF2021D320519C37008F82A9 /* Icon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@2x.png"; sourceTree = "<group>"; };
+		AF2021D420519C37008F82A9 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		AF2021D520519C37008F82A9 /* Icon-Notification@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Notification@3x.png"; sourceTree = "<group>"; };
+		AF2021E32051A1C0008F82A9 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		AF7E76AE204DD577002DCC46 /* MapBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7E76B1204DD577002DCC46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7E76B3204DD577002DCC46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF7E76B6204DD577002DCC46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF7E76BB204DD577002DCC46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF7E76BD204DD577002DCC46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF7E76C3204DDEAB002DCC46 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		AF7E76C5204DDEFF002DCC46 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AFE4A03C204DE5B00077C343 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		AF8407CF204FA5C3001182CA /* BuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +63,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF2021E220519C3E008F82A9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AF2021CF20519C37008F82A9 /* Icon-60@2x.png */,
+				AF2021D420519C37008F82A9 /* Icon-60@3x.png */,
+				AF2021D520519C37008F82A9 /* Icon-Notification@3x.png */,
+				AF2021CD20519C36008F82A9 /* Icon-Small-40.png */,
+				AF2021CA20519C36008F82A9 /* Icon-Small@2x.png */,
+				AF2021E32051A1C0008F82A9 /* LaunchImage.png */,
+				AF2021D320519C37008F82A9 /* Icon-Small-40@2x.png */,
+				AF2021CC20519C36008F82A9 /* Icon-Small.png */,
+				AF2021CB20519C36008F82A9 /* Icon-Small@3x.png */,
+				AF2021CE20519C37008F82A9 /* Icon.png */,
+				AF2021D020519C37008F82A9 /* Icon@2x.png */,
+				AF2021D120519C37008F82A9 /* iTunesArtwork.png */,
+				AF2021D220519C37008F82A9 /* iTunesArtwork@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		AF7E76A5204DD577002DCC46 = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +102,24 @@
 		AF7E76B0204DD577002DCC46 /* MapBlue */ = {
 			isa = PBXGroup;
 			children = (
+				AF2021E220519C3E008F82A9 /* Assets */,
+				AF8407CE204F9CE9001182CA /* View Controllers */,
 				AF7E76B1204DD577002DCC46 /* AppDelegate.swift */,
-				AF7E76B3204DD577002DCC46 /* ViewController.swift */,
 				AF7E76B5204DD577002DCC46 /* Main.storyboard */,
 				AF7E76BA204DD577002DCC46 /* LaunchScreen.storyboard */,
 				AF7E76BD204DD577002DCC46 /* Info.plist */,
 				AF7E76C5204DDEFF002DCC46 /* Images.xcassets */,
-				AFE4A03C204DE5B00077C343 /* AppIcon.png */,
-				AF7E76C3204DDEAB002DCC46 /* LaunchImage.png */,
 			);
 			path = MapBlue;
+			sourceTree = "<group>";
+		};
+		AF8407CE204F9CE9001182CA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF7E76B3204DD577002DCC46 /* ViewController.swift */,
+				AF8407CF204FA5C3001182CA /* BuildingViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,10 +181,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE4A03D204DE5B00077C343 /* AppIcon.png in Resources */,
-				AF7E76C4204DDEAB002DCC46 /* LaunchImage.png in Resources */,
+				AF2021D820519C37008F82A9 /* Icon-Small.png in Resources */,
+				AF2021E120519C37008F82A9 /* Icon-Notification@3x.png in Resources */,
+				AF2021DF20519C37008F82A9 /* Icon-Small-40@2x.png in Resources */,
+				AF2021DC20519C37008F82A9 /* Icon@2x.png in Resources */,
+				AF2021DA20519C37008F82A9 /* Icon.png in Resources */,
+				AF2021DB20519C37008F82A9 /* Icon-60@2x.png in Resources */,
+				AF2021D920519C37008F82A9 /* Icon-Small-40.png in Resources */,
+				AF2021E020519C37008F82A9 /* Icon-60@3x.png in Resources */,
+				AF2021DD20519C37008F82A9 /* iTunesArtwork.png in Resources */,
 				AF7E76C6204DDEFF002DCC46 /* Images.xcassets in Resources */,
+				AF2021E42051A1C0008F82A9 /* LaunchImage.png in Resources */,
+				AF2021DE20519C37008F82A9 /* iTunesArtwork@2x.png in Resources */,
+				AF2021D620519C37008F82A9 /* Icon-Small@2x.png in Resources */,
 				AF7E76BC204DD577002DCC46 /* LaunchScreen.storyboard in Resources */,
+				AF2021D720519C37008F82A9 /* Icon-Small@3x.png in Resources */,
 				AF7E76B7204DD577002DCC46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8407D0204FA5C3001182CA /* BuildingViewController.swift in Sources */,
 				AF7E76B4204DD577002DCC46 /* ViewController.swift in Sources */,
 				AF7E76B2204DD577002DCC46 /* AppDelegate.swift in Sources */,
 			);

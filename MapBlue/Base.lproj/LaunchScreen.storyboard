@@ -20,18 +20,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LaunchImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="dch-7s-YPB">
-                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <rect key="frame" x="37" y="252" width="246" height="231"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="dch-7s-YPB" secondAttribute="height" multiplier="1:1" id="1Ic-aQ-gww"/>
-                                    <constraint firstAttribute="width" constant="300" id="OGe-AS-T3F"/>
-                                    <constraint firstAttribute="height" constant="300" id="zww-pk-dmj"/>
+                                    <constraint firstAttribute="height" constant="300" id="1fe-22-62F"/>
+                                    <constraint firstAttribute="width" constant="300" id="GIb-VD-EMo"/>
+                                    <constraint firstAttribute="width" secondItem="dch-7s-YPB" secondAttribute="height" multiplier="1:1" id="KFS-76-Kmd"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.15294117647058825" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dch-7s-YPB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q3n-eg-iX6"/>
-                            <constraint firstItem="dch-7s-YPB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="uMp-71-dW5"/>
+                            <constraint firstItem="dch-7s-YPB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="McZ-wZ-CrL"/>
+                            <constraint firstItem="dch-7s-YPB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="P5f-0W-nuQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -42,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchImage.png" width="2560" height="2560"/>
+        <image name="LaunchImage.png" width="512" height="512"/>
     </resources>
 </document>
