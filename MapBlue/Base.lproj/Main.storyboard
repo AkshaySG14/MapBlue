@@ -49,6 +49,7 @@
                                             </attributedString>
                                         </state>
                                         <connections>
+                                            <action selector="GGBgotoRooms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PYm-jW-Blm"/>
                                             <action selector="GGButton" destination="OBx-DH-xcV" eventType="touchUpInside" id="ko8-vb-oKC"/>
                                         </connections>
                                     </button>
@@ -68,6 +69,9 @@ Computer Science (EECS Building)</string>
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <action selector="EECSgotoRooms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZF-qb-dw1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -87,12 +91,13 @@ Computer Science (EECS Building)</string>
                     <connections>
                         <outlet property="EECSButton" destination="Wen-7x-jm8" id="cHw-gt-iO6"/>
                         <outlet property="GGButton" destination="gAZ-Cl-ev1" id="SJo-8t-S2K"/>
+                        <segue destination="z7C-0d-GKu" kind="show" identifier="gotoRooms" id="Ags-PO-PNb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="OBx-DH-xcV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+            <point key="canvasLocation" x="927" y="393"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bdw-dl-FdE">
@@ -128,6 +133,7 @@ Computer Science (EECS Building)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLg-Ob-yiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1385" y="-345"/>
         </scene>
         <!--Room View Controller-->
         <scene sceneID="JYR-75-crw">
@@ -202,7 +208,7 @@ Computer Science (EECS Building)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEB-gk-JzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="792.95352323838085"/>
+            <point key="canvasLocation" x="1796" y="393"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QRj-zm-H4a">
@@ -217,6 +223,7 @@ Computer Science (EECS Building)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6I-TX-ye1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="66" y="-315"/>
         </scene>
     </scenes>
 </document>

@@ -18,16 +18,17 @@ class BuildingViewController: UIViewController {
     func setButtonScripts(button : UIButton) {
         button.setTitle("Touched!!", for: .highlighted)
         button.setTitleColor(UIColor.red, for: .highlighted)
-        button.addTarget(self, action: #selector(BuildingViewController.buttonClicked(_:)), for: .touchUpInside)
     }
     
-    @objc func buttonClicked(_ sender: AnyObject?) {
-        if (sender === EECSButton) {
-        }
-        let roomViewControllerObj = self.storyboard?.instantiateViewController(withIdentifier: "RoomViewController") as? RoomViewController
-        self.navigationController?.pushViewController(roomViewControllerObj!, animated: true)
-    }
 
+    @IBAction func GGBgotoRooms(_ sender: UIButton) {
+        performSegue(withIdentifier: "gotoRooms", sender: self)
+    }
+    @IBAction func EECSgotoRooms(_ sender: UIButton) {
+         performSegue(withIdentifier: "gotoRooms", sender: self)
+    }
+    
+    
     func setButtonBorder(button : UIButton) {
         button.backgroundColor = UIColor.clear
         
