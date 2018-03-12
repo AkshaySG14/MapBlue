@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF13454B2054CEDA00640178 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13454A2054CEDA00640178 /* Constants.swift */; };
 		AF2021D620519C37008F82A9 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021CA20519C36008F82A9 /* Icon-Small@2x.png */; };
 		AF2021D720519C37008F82A9 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021CB20519C36008F82A9 /* Icon-Small@3x.png */; };
 		AF2021D820519C37008F82A9 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021CC20519C36008F82A9 /* Icon-Small.png */; };
@@ -20,6 +21,8 @@
 		AF2021E020519C37008F82A9 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021D420519C37008F82A9 /* Icon-60@3x.png */; };
 		AF2021E120519C37008F82A9 /* Icon-Notification@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021D520519C37008F82A9 /* Icon-Notification@3x.png */; };
 		AF2021E42051A1C0008F82A9 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021E32051A1C0008F82A9 /* LaunchImage.png */; };
+		AF40F8012056F7FD006C362A /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40F8002056F7FD006C362A /* MapController.swift */; };
+		AF40F8032056F8F7006C362A /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40F8022056F8F7006C362A /* Variables.swift */; };
 		AF7E76B2204DD577002DCC46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E76B1204DD577002DCC46 /* AppDelegate.swift */; };
 		AF7E76B4204DD577002DCC46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E76B3204DD577002DCC46 /* ViewController.swift */; };
 		AF7E76B7204DD577002DCC46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76B5204DD577002DCC46 /* Main.storyboard */; };
@@ -30,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF13454A2054CEDA00640178 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "MapBlue/Auxiliary Classes/Constants.swift"; sourceTree = SOURCE_ROOT; };
 		AF2021CA20519C36008F82A9 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		AF2021CB20519C36008F82A9 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
 		AF2021CC20519C36008F82A9 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -43,6 +47,8 @@
 		AF2021D420519C37008F82A9 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
 		AF2021D520519C37008F82A9 /* Icon-Notification@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Notification@3x.png"; sourceTree = "<group>"; };
 		AF2021E32051A1C0008F82A9 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		AF40F8002056F7FD006C362A /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		AF40F8022056F8F7006C362A /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		AF7E76AE204DD577002DCC46 /* MapBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7E76B1204DD577002DCC46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7E76B3204DD577002DCC46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF13454C2054CF5500640178 /* Auxiliary Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AF13454A2054CEDA00640178 /* Constants.swift */,
+				AF40F8022056F8F7006C362A /* Variables.swift */,
+			);
+			path = "Auxiliary Classes";
+			sourceTree = "<group>";
+		};
 		AF2021E220519C3E008F82A9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +119,7 @@
 		AF7E76B0204DD577002DCC46 /* MapBlue */ = {
 			isa = PBXGroup;
 			children = (
+				AF13454C2054CF5500640178 /* Auxiliary Classes */,
 				AF2021E220519C3E008F82A9 /* Assets */,
 				AF8407CE204F9CE9001182CA /* View Controllers */,
 				AF7E76B1204DD577002DCC46 /* AppDelegate.swift */,
@@ -121,6 +137,7 @@
 				AF7E76B3204DD577002DCC46 /* ViewController.swift */,
 				AF8407CF204FA5C3001182CA /* BuildingViewController.swift */,
 				AFB80F1620524674003942E2 /* RoomViewController.swift */,
+				AF40F8002056F7FD006C362A /* MapController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -211,9 +228,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF8407D0204FA5C3001182CA /* BuildingViewController.swift in Sources */,
+				AF40F8032056F8F7006C362A /* Variables.swift in Sources */,
 				AF7E76B4204DD577002DCC46 /* ViewController.swift in Sources */,
 				AF7E76B2204DD577002DCC46 /* AppDelegate.swift in Sources */,
 				AFB80F1720524674003942E2 /* RoomViewController.swift in Sources */,
+				AF40F8012056F7FD006C362A /* MapController.swift in Sources */,
+				AF13454B2054CEDA00640178 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,29 +15,51 @@ class BuildingViewController: UIViewController {
     let borderAlpha : CGFloat = 0.7
     let cornerRadius : CGFloat = 5.0
     
-    func setButtonScripts(button : UIButton) {
-        button.setTitle("Touched!!", for: .highlighted)
-        button.setTitleColor(UIColor.red, for: .highlighted)
+    // Sets the building according to the button.
+    func getBuilding(_ sender: UIButton) -> Int {
+        switch (sender) {
+        case EECSButton:
+            return Building.EECS
+        case GGButton:
+            return Building.GGBrown
+        default:
+            return -1
+        }
     }
     
-
-    @IBAction func GGBgotoRooms(_ sender: UIButton) {
-        performSegue(withIdentifier: "gotoRooms", sender: self)
+    // Sends data to the next view (Room Controller View).
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoRooms" {
+            // Gets destination view controller as roomview controller and uses the set building function.
+            if let destinationVC = segue.destination as? RoomViewController {
+                // Forcibly casts the sender to UI button to set the building properly.
+                destinationVC.setBuilding(building: getBuilding((sender as? UIButton)!))
+            }
+        }
     }
+    
+    // Button segue for the GG Brown Button.
+    @IBAction func GGBgotoRooms(_ sender: UIButton) {
+        performSegue(withIdentifier: "gotoRooms", sender: sender)
+    }
+    
+    // Button segue for the EECS Building Button.
     @IBAction func EECSgotoRooms(_ sender: UIButton) {
-         performSegue(withIdentifier: "gotoRooms", sender: self)
+         performSegue(withIdentifier: "gotoRooms", sender: sender)
     }
     
     
     func setButtonBorder(button : UIButton) {
+        // Sets the background to clear.
         button.backgroundColor = UIColor.clear
-        
+        // Creates a top border for the button.
         let topBorder = CALayer()
+        // Sets the color, thickness, and position/dimensions.
         topBorder.borderColor = UIColor(white: 1.0, alpha: borderAlpha).cgColor
         topBorder.borderWidth = 1;
         topBorder.frame = CGRect(x: -button.frame.width, y: -10, width: button.frame.width * 2.5, height: 1)
         button.layer.addSublayer(topBorder)
-        
+        // Same but for the buttom border.
         let bottomBorder = CALayer()
         bottomBorder.borderColor = UIColor(white: 1.0, alpha: borderAlpha).cgColor
         bottomBorder.borderWidth = 1;
@@ -49,10 +71,6 @@ class BuildingViewController: UIViewController {
         // Sets the borders.
         self.setButtonBorder(button: EECSButton)
         self.setButtonBorder(button: GGButton)
-        // Sets the button scripts.
-        self.setButtonScripts(button: EECSButton)
-        self.setButtonScripts(button: GGButton)
-        // Set the button event handlers.
     }
     
     override func viewDidLoad() {
