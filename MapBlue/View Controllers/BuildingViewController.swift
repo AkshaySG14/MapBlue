@@ -12,9 +12,6 @@ class BuildingViewController: UIViewController {
     @IBOutlet weak var EECSButton: UIButton!
     @IBOutlet weak var GGButton: UIButton!
     
-    let borderAlpha : CGFloat = 0.7
-    let cornerRadius : CGFloat = 5.0
-    
     // Sets the building according to the button.
     func getBuilding(_ sender: UIButton) -> Int {
         switch (sender) {
@@ -50,6 +47,8 @@ class BuildingViewController: UIViewController {
     
     
     func setButtonBorder(button : UIButton) {
+        // Color for border.
+        let borderAlpha : CGFloat = 0.7
         // Sets the background to clear.
         button.backgroundColor = UIColor.clear
         // Creates a top border for the button.
@@ -67,6 +66,7 @@ class BuildingViewController: UIViewController {
         button.layer.addSublayer(bottomBorder)
     }
     
+    // Set different button properties (just border for now).
     func setButtonProperties() {
         // Sets the borders.
         self.setButtonBorder(button: EECSButton)
@@ -76,8 +76,7 @@ class BuildingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        // Hide the navigation bar on the this view controller
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        // Sets button properties.
         self.setButtonProperties()
     }
 
@@ -85,15 +84,4 @@ class BuildingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }

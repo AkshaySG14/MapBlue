@@ -10,14 +10,15 @@
 struct Building {
     static let EECS = 0
     static let GGBrown = 1
+    // Map that maps each building integer to a string.
     static let buildingMap = BuildingMap()
+    static let roomMap = RoomMap()
 }
 
 // All room constants
 struct Room {
     struct EECS {
         struct floor1 {
-            
         }
         
         struct floor2 {
