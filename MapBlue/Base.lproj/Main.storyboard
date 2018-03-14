@@ -105,20 +105,72 @@ Computer Science (EECS Building)</string>
             </objects>
             <point key="canvasLocation" x="927" y="393"/>
         </scene>
-        <!--View Controller-->
+        <!--Primary Map View Controller-->
         <scene sceneID="w5w-fx-4Mj">
             <objects>
-                <viewController id="nHT-Su-HZ4" sceneMemberID="viewController">
+                <viewController title="Primary Map View Controller" id="nHT-Su-HZ4" customClass="MapViewController" customModule="MapBlue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V0o-FI-3E1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.023902720104223674" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tyK-RU-zUV" userLabel="Back">
+                                <rect key="frame" x="16" y="20" width="44" height="33.5"/>
+                                <color key="backgroundColor" red="1" green="0.79607843140000001" blue="0.019607843140000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.79607843140000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Back">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="z7C-0d-GKu" kind="show" identifier="gotoRooms" id="tXD-gL-ozy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-tk-aTQ" userLabel="Map Title">
+                                <rect key="frame" x="68" y="57" width="238" height="73"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Placeholder Text">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EECSFirstFloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-Oa-hCX" userLabel="Map">
+                                <rect key="frame" x="16" y="258" width="343" height="323"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0026559203399999999" green="0.1509736478" blue="0.29837653040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="cCz-Ew-MxO" firstAttribute="trailing" secondItem="cfP-tk-aTQ" secondAttribute="trailing" constant="69" id="0qR-Sf-WN4"/>
+                            <constraint firstItem="tyK-RU-zUV" firstAttribute="top" secondItem="cCz-Ew-MxO" secondAttribute="top" id="5P3-0z-Yi5"/>
+                            <constraint firstItem="cfP-tk-aTQ" firstAttribute="top" secondItem="cCz-Ew-MxO" secondAttribute="top" constant="37" id="BkN-5Q-zKl"/>
+                            <constraint firstItem="cfP-tk-aTQ" firstAttribute="leading" secondItem="cCz-Ew-MxO" secondAttribute="leading" constant="68" id="EXK-tM-Q13"/>
+                            <constraint firstItem="cCz-Ew-MxO" firstAttribute="bottom" secondItem="Drj-Oa-hCX" secondAttribute="bottom" constant="86" id="JO4-e2-Vlb"/>
+                            <constraint firstItem="Drj-Oa-hCX" firstAttribute="top" secondItem="cCz-Ew-MxO" secondAttribute="top" constant="238" id="dj8-Tb-t4i"/>
+                            <constraint firstItem="cCz-Ew-MxO" firstAttribute="bottom" secondItem="cfP-tk-aTQ" secondAttribute="bottom" constant="537" id="iCt-L0-Y5S"/>
+                            <constraint firstItem="cCz-Ew-MxO" firstAttribute="trailing" secondItem="Drj-Oa-hCX" secondAttribute="trailing" constant="16" id="qf2-P4-GES"/>
+                            <constraint firstItem="tyK-RU-zUV" firstAttribute="leading" secondItem="cCz-Ew-MxO" secondAttribute="leading" constant="16" id="unG-T4-LHn"/>
+                            <constraint firstItem="Drj-Oa-hCX" firstAttribute="leading" secondItem="cCz-Ew-MxO" secondAttribute="leading" constant="16" id="yC4-Bv-fOo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cCz-Ew-MxO"/>
                     </view>
+                    <connections>
+                        <outlet property="mapImage" destination="Drj-Oa-hCX" id="OAl-5H-Ico"/>
+                        <outlet property="mapTitle" destination="cfP-tk-aTQ" id="Lsd-tg-Y1A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLg-Ob-yiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1385" y="-345"/>
+            <point key="canvasLocation" x="1384.8" y="-345.87706146926541"/>
         </scene>
         <!--Room View Controller-->
         <scene sceneID="JYR-75-crw">
@@ -175,7 +227,6 @@ Computer Science (EECS Building)</string>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="GoBack:" destination="z7C-0d-GKu" eventType="touchUpInside" id="5ie-UC-Qfh"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="gotoBuildings" id="Pir-s9-kyU"/>
                                 </connections>
                             </button>
@@ -229,7 +280,7 @@ Computer Science (EECS Building)</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.15294117647058825" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.0026559203399999999" green="0.1509736478" blue="0.29837653040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="w24-vg-7GB" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" id="16E-g1-Dqo"/>
                             <constraint firstItem="a7R-c6-8Qd" firstAttribute="trailing" secondItem="fm6-aj-Yss" secondAttribute="trailing" constant="19" id="5Dj-kw-bIz"/>
@@ -261,23 +312,23 @@ Computer Science (EECS Building)</string>
                         <viewLayoutGuide key="safeArea" id="a7R-c6-8Qd"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="w24-vg-7GB" id="KCt-zR-GDy"/>
                         <outlet property="buildingTitle" destination="WI9-e1-B8T" id="ooZ-Ze-NUj"/>
                         <outlet property="destinationRoomField" destination="vbn-Ri-weu" id="hc7-s6-eXn"/>
                         <outlet property="goButton" destination="IWU-hV-7wu" id="vfA-D6-hat"/>
                         <outlet property="roomOneError" destination="zya-bu-2lH" id="2VE-R1-DmB"/>
                         <outlet property="roomTwoError" destination="fm6-aj-Yss" id="5q4-ze-R58"/>
                         <outlet property="startRoomField" destination="4Gp-mu-pGC" id="0vO-rA-f3P"/>
+                        <segue destination="nHT-Su-HZ4" kind="show" identifier="gotoMap" id="in7-aP-sOz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEB-gk-JzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1796" y="392.65367316341832"/>
         </scene>
-        <!--View Controller-->
+        <!--Secondary Map View Controller-->
         <scene sceneID="QRj-zm-H4a">
             <objects>
-                <viewController id="gDZ-Rr-IO0" sceneMemberID="viewController">
+                <viewController title="Secondary Map View Controller" id="gDZ-Rr-IO0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AR4-pD-5hT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,4 +341,10 @@ Computer Science (EECS Building)</string>
             <point key="canvasLocation" x="66" y="-315"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="EECSFirstFloor.png" width="2981" height="1889"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tXD-gL-ozy"/>
+    </inferredMetricsTieBreakers>
 </document>

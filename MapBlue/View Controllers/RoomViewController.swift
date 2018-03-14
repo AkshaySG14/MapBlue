@@ -20,10 +20,25 @@ class RoomViewController: UIViewController {
     @IBOutlet weak var roomOneError: UILabel!
     @IBOutlet weak var roomTwoError: UILabel!
     // The building the controller is concerned with.
-    private var building = 0;
-    // The back buttton segue.
-    @IBAction func GoBack(_ sender: Any) {
-        performSegue(withIdentifier: "gotoBuildings", sender: sender)
+    private var building = 0
+    // Sends data to the next view (Map Controller View).
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoMap" {
+            // Gets destination view controller as roomview controller and uses the set building function.
+            if let destinationVC = segue.destination as? MapViewController {
+                // Forcibly casts the sender to UI button to set the building properly.
+                destinationVC.initialize(building : building, floor : self.getFloor(), startRoom: Int(self.startRoomField.text!)!, destRoom: Int(self.destinationRoomField.text!)!)
+            }
+        }
+    }
+    
+    // Gets first digit of the room (which is essentially the floor).
+    func getFloor() -> Int {
+        var floor = Int(self.startRoomField.text!)!
+        while (floor / 10 != 0) {
+            floor /= 10
+        }
+        return floor
     }
     
     func noErrors() -> Bool {
@@ -59,6 +74,7 @@ class RoomViewController: UIViewController {
         }
         // Checks if rooms are equivalent.
         if (check && Building.roomMap.roomEquals(room1: Int(startRoomField.text!)!, room2: Int(destinationRoomField.text!)!, building: building)) {
+            check = false
             roomOneError.text = "Rooms are in same location"
             roomTwoError.text = "Rooms are in the same location"
         }
@@ -69,6 +85,7 @@ class RoomViewController: UIViewController {
     @IBAction func GoMap(_ sender: Any) {
         // Checks for any errors in room or destination text field. If none, proceed to map screen.
         if (noErrors()) {
+            performSegue(withIdentifier: "gotoMap", sender: sender)
         }
     }
     
