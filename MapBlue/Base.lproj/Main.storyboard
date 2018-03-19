@@ -144,7 +144,7 @@ Computer Science (EECS Building)</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EECSFirstFloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-Oa-hCX" userLabel="Map">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EECSFIrstFloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-Oa-hCX" userLabel="Map">
                                 <rect key="frame" x="16" y="258" width="343" height="323"/>
                             </imageView>
                         </subviews>
@@ -342,7 +342,7 @@ Computer Science (EECS Building)</string>
         </scene>
     </scenes>
     <resources>
-        <image name="EECSFirstFloor.png" width="2981" height="1889"/>
+        <image name="EECSFIrstFloor.png" width="2981" height="1889"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tXD-gL-ozy"/>

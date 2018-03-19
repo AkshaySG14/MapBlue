@@ -27,7 +27,7 @@ class RoomViewController: UIViewController {
             // Gets destination view controller as roomview controller and uses the set building function.
             if let destinationVC = segue.destination as? MapViewController {
                 // Forcibly casts the sender to UI button to set the building properly.
-                destinationVC.initialize(building : building, floor : self.getFloor(), startRoom: Int(self.startRoomField.text!)!, destRoom: Int(self.destinationRoomField.text!)!)
+                destinationVC.initialize(building : building, floor : self.getFloor(), startRoom: self.startRoomField.text!, destRoom: self.destinationRoomField.text!)
             }
         }
     }
@@ -49,7 +49,7 @@ class RoomViewController: UIViewController {
             roomOneError.text = "Please enter a starting room"
         }
         // Checks if room does not exist.
-        else if (!Building.roomMap.roomExists(room: Int(startRoomField.text!)!, building: building)) {
+        else if (!Building.roomMap.roomExists(room: startRoomField.text!, building: building)) {
             check = false
             roomOneError.text = "Room does not exist"
         }
@@ -64,7 +64,7 @@ class RoomViewController: UIViewController {
             roomTwoError.text = "Please enter a destination room"
         }
         // Checks if room does not exist.
-        else if (!Building.roomMap.roomExists(room: Int(destinationRoomField.text!)!, building: building)) {
+        else if (!Building.roomMap.roomExists(room: destinationRoomField.text!, building: building)) {
             check = false
             roomTwoError.text = "Room does not exist"
         }
@@ -73,7 +73,7 @@ class RoomViewController: UIViewController {
             roomTwoError.text = ""
         }
         // Checks if rooms are equivalent.
-        if (check && Building.roomMap.roomEquals(room1: Int(startRoomField.text!)!, room2: Int(destinationRoomField.text!)!, building: building)) {
+        if (check && Building.roomMap.roomEquals(room1: startRoomField.text!, room2: destinationRoomField.text!, building: building)) {
             check = false
             roomOneError.text = "Rooms are in same location"
             roomTwoError.text = "Rooms are in the same location"

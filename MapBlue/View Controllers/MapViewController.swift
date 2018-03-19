@@ -11,14 +11,14 @@ import UIKit
 class MapViewController: UIViewController {
     private var building = 0
     private var floor = 0
-    private var startRoom = 0
-    private var destRoom = 0
+    private var startRoom = "0"
+    private var destRoom = "0"
     
     @IBOutlet weak var mapTitle: UILabel!
     @IBOutlet weak var mapImage: UIImageView!
 
     // Sets relevant variables.
-    func initialize(building : Int, floor : Int, startRoom : Int, destRoom : Int) {
+    func initialize(building : Int, floor : Int, startRoom : String, destRoom : String) {
         self.building = building
         self.floor = floor
         self.startRoom = startRoom

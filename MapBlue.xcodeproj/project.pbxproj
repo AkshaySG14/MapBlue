@@ -23,13 +23,13 @@
 		AF2021E42051A1C0008F82A9 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2021E32051A1C0008F82A9 /* LaunchImage.png */; };
 		AF40F8012056F7FD006C362A /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40F8002056F7FD006C362A /* MapController.swift */; };
 		AF40F8032056F8F7006C362A /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40F8022056F8F7006C362A /* Variables.swift */; };
-		AF753AE22059C152004781CB /* EECSFirstFloor.png in Resources */ = {isa = PBXBuildFile; fileRef = AF753AE12059C152004781CB /* EECSFirstFloor.png */; };
 		AF7E76B2204DD577002DCC46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E76B1204DD577002DCC46 /* AppDelegate.swift */; };
 		AF7E76B4204DD577002DCC46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E76B3204DD577002DCC46 /* ViewController.swift */; };
 		AF7E76B7204DD577002DCC46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76B5204DD577002DCC46 /* Main.storyboard */; };
 		AF7E76BC204DD577002DCC46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76BA204DD577002DCC46 /* LaunchScreen.storyboard */; };
 		AF7E76C6204DDEFF002DCC46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76C5204DDEFF002DCC46 /* Images.xcassets */; };
 		AF8407D0204FA5C3001182CA /* BuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8407CF204FA5C3001182CA /* BuildingViewController.swift */; };
+		AF88826620603DE70031D985 /* EECSFIrstFloor.png in Resources */ = {isa = PBXBuildFile; fileRef = AF88826520603DE70031D985 /* EECSFIrstFloor.png */; };
 		AFA44FC82059A52A00737A6E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA44FC72059A52A00737A6E /* MapViewController.swift */; };
 		AFB80F1720524674003942E2 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB80F1620524674003942E2 /* RoomViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,7 +51,6 @@
 		AF2021E32051A1C0008F82A9 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		AF40F8002056F7FD006C362A /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		AF40F8022056F8F7006C362A /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
-		AF753AE12059C152004781CB /* EECSFirstFloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EECSFirstFloor.png; path = ../../../../../Downloads/EECSFirstFloor.png; sourceTree = "<group>"; };
 		AF7E76AE204DD577002DCC46 /* MapBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7E76B1204DD577002DCC46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7E76B3204DD577002DCC46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		AF7E76BD204DD577002DCC46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7E76C5204DDEFF002DCC46 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF8407CF204FA5C3001182CA /* BuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingViewController.swift; sourceTree = "<group>"; };
+		AF88826520603DE70031D985 /* EECSFIrstFloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EECSFIrstFloor.png; sourceTree = "<group>"; };
 		AFA44FC72059A52A00737A6E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AFB80F1620524674003942E2 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +87,7 @@
 		AF2021E220519C3E008F82A9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				AF753AE12059C152004781CB /* EECSFirstFloor.png */,
+				AF88826520603DE70031D985 /* EECSFIrstFloor.png */,
 				AF2021CF20519C37008F82A9 /* Icon-60@2x.png */,
 				AF2021D420519C37008F82A9 /* Icon-60@3x.png */,
 				AF2021D520519C37008F82A9 /* Icon-Notification@3x.png */,
@@ -207,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF88826620603DE70031D985 /* EECSFIrstFloor.png in Resources */,
 				AF2021D820519C37008F82A9 /* Icon-Small.png in Resources */,
 				AF2021E120519C37008F82A9 /* Icon-Notification@3x.png in Resources */,
 				AF2021DF20519C37008F82A9 /* Icon-Small-40@2x.png in Resources */,
@@ -214,7 +215,6 @@
 				AF2021DA20519C37008F82A9 /* Icon.png in Resources */,
 				AF2021DB20519C37008F82A9 /* Icon-60@2x.png in Resources */,
 				AF2021D920519C37008F82A9 /* Icon-Small-40.png in Resources */,
-				AF753AE22059C152004781CB /* EECSFirstFloor.png in Resources */,
 				AF2021E020519C37008F82A9 /* Icon-60@3x.png in Resources */,
 				AF2021DD20519C37008F82A9 /* iTunesArtwork.png in Resources */,
 				AF7E76C6204DDEFF002DCC46 /* Images.xcassets in Resources */,

@@ -15,10 +15,16 @@ struct Building {
     static let roomMap = RoomMap()
 }
 
+struct Point {
+    var x = 0
+    var y = 0
+}
 // All room constants
 struct Room {
     struct EECS {
+        
         struct floor1 {
+            
         }
         
         struct floor2 {
