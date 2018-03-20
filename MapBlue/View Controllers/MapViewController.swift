@@ -25,10 +25,27 @@ class MapViewController: UIViewController {
         self.destRoom = destRoom
     }
     
+    //zooming with pinch gesture
+    let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(pinchHandler))
+    
+    @objc func pinchHandler(recognizer : UIPinchGestureRecognizer) {
+        
+        print ("PINCHING NOW")
+        
+        if let view = self.view {
+            view.transform = view.transform.scaledBy(x: recognizer.scale, y: recognizer.scale)
+            recognizer.scale = 1
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Sets label of map view controller.
         self.mapTitle.text = Building.buildingMap.getBuildingName(building: building) + " Floor " + String(self.floor) + " Map"
+        
+        //zooming recognizer
+        pinchGestureRecognizer.addTarget(self, action: #selector(pinchHandler))
+        view.addGestureRecognizer(pinchGestureRecognizer)
     }
 
     override func didReceiveMemoryWarning() {
