@@ -32,6 +32,7 @@
 		AF88826620603DE70031D985 /* EECSFIrstFloor.png in Resources */ = {isa = PBXBuildFile; fileRef = AF88826520603DE70031D985 /* EECSFIrstFloor.png */; };
 		AFA44FC82059A52A00737A6E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA44FC72059A52A00737A6E /* MapViewController.swift */; };
 		AFB80F1720524674003942E2 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB80F1620524674003942E2 /* RoomViewController.swift */; };
+		AFBCF66B2061A7AA001838E2 /* Indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBCF66A2061A7AA001838E2 /* Indicator.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		AF88826520603DE70031D985 /* EECSFIrstFloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EECSFIrstFloor.png; sourceTree = "<group>"; };
 		AFA44FC72059A52A00737A6E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AFB80F1620524674003942E2 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		AFBCF66A2061A7AA001838E2 /* Indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Indicator.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		AF2021E220519C3E008F82A9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AFBCF66A2061A7AA001838E2 /* Indicator.png */,
 				AF88826520603DE70031D985 /* EECSFIrstFloor.png */,
 				AF2021CF20519C37008F82A9 /* Icon-60@2x.png */,
 				AF2021D420519C37008F82A9 /* Icon-60@3x.png */,
@@ -216,6 +219,7 @@
 				AF2021DB20519C37008F82A9 /* Icon-60@2x.png in Resources */,
 				AF2021D920519C37008F82A9 /* Icon-Small-40.png in Resources */,
 				AF2021E020519C37008F82A9 /* Icon-60@3x.png in Resources */,
+				AFBCF66B2061A7AA001838E2 /* Indicator.png in Resources */,
 				AF2021DD20519C37008F82A9 /* iTunesArtwork.png in Resources */,
 				AF7E76C6204DDEFF002DCC46 /* Images.xcassets in Resources */,
 				AF2021E42051A1C0008F82A9 /* LaunchImage.png in Resources */,

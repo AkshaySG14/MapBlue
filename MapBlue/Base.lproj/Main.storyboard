@@ -144,28 +144,51 @@ Computer Science (EECS Building)</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EECSFIrstFloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-Oa-hCX" userLabel="Map">
-                                <rect key="frame" x="16" y="258" width="343" height="323"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-nU-Yqi">
+                                <rect key="frame" x="0.0" y="130" width="375" height="537"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EECSFIrstFloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-Oa-hCX" userLabel="Map">
+                                        <rect key="frame" x="0.0" y="0.0" width="2981" height="1889"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Indicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="XRx-pZ-ahz">
+                                        <rect key="frame" x="182" y="263" width="10" height="10"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Drj-Oa-hCX" firstAttribute="top" secondItem="TQM-nU-Yqi" secondAttribute="top" id="6HY-Tm-fDB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Drj-Oa-hCX" secondAttribute="bottom" id="Cvw-oE-Z02"/>
+                                    <constraint firstAttribute="trailing" secondItem="Drj-Oa-hCX" secondAttribute="trailing" id="JUs-ys-1zS"/>
+                                    <constraint firstItem="Drj-Oa-hCX" firstAttribute="leading" secondItem="TQM-nU-Yqi" secondAttribute="leading" id="hnp-9v-Yvf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="nHT-Su-HZ4" id="VbG-go-DY7"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.0026559203399999999" green="0.1509736478" blue="0.29837653040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="cCz-Ew-MxO" firstAttribute="trailing" secondItem="cfP-tk-aTQ" secondAttribute="trailing" constant="69" id="0qR-Sf-WN4"/>
                             <constraint firstItem="tyK-RU-zUV" firstAttribute="top" secondItem="cCz-Ew-MxO" secondAttribute="top" id="5P3-0z-Yi5"/>
+                            <constraint firstItem="cCz-Ew-MxO" firstAttribute="bottom" secondItem="TQM-nU-Yqi" secondAttribute="bottom" id="6rw-El-wkz"/>
                             <constraint firstItem="cfP-tk-aTQ" firstAttribute="top" secondItem="cCz-Ew-MxO" secondAttribute="top" constant="37" id="BkN-5Q-zKl"/>
                             <constraint firstItem="cfP-tk-aTQ" firstAttribute="leading" secondItem="cCz-Ew-MxO" secondAttribute="leading" constant="68" id="EXK-tM-Q13"/>
-                            <constraint firstItem="cCz-Ew-MxO" firstAttribute="bottom" secondItem="Drj-Oa-hCX" secondAttribute="bottom" constant="86" id="JO4-e2-Vlb"/>
-                            <constraint firstItem="Drj-Oa-hCX" firstAttribute="top" secondItem="cCz-Ew-MxO" secondAttribute="top" constant="238" id="dj8-Tb-t4i"/>
+                            <constraint firstItem="TQM-nU-Yqi" firstAttribute="top" secondItem="cfP-tk-aTQ" secondAttribute="bottom" id="OF2-0i-1w7"/>
+                            <constraint firstAttribute="trailing" secondItem="TQM-nU-Yqi" secondAttribute="trailing" id="UmB-39-ZYG"/>
                             <constraint firstItem="cCz-Ew-MxO" firstAttribute="bottom" secondItem="cfP-tk-aTQ" secondAttribute="bottom" constant="537" id="iCt-L0-Y5S"/>
-                            <constraint firstItem="cCz-Ew-MxO" firstAttribute="trailing" secondItem="Drj-Oa-hCX" secondAttribute="trailing" constant="16" id="qf2-P4-GES"/>
+                            <constraint firstItem="TQM-nU-Yqi" firstAttribute="leading" secondItem="cCz-Ew-MxO" secondAttribute="leading" id="jlV-Fh-vCs"/>
                             <constraint firstItem="tyK-RU-zUV" firstAttribute="leading" secondItem="cCz-Ew-MxO" secondAttribute="leading" constant="16" id="unG-T4-LHn"/>
-                            <constraint firstItem="Drj-Oa-hCX" firstAttribute="leading" secondItem="cCz-Ew-MxO" secondAttribute="leading" constant="16" id="yC4-Bv-fOo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cCz-Ew-MxO"/>
                     </view>
                     <connections>
                         <outlet property="mapImage" destination="Drj-Oa-hCX" id="OAl-5H-Ico"/>
+                        <outlet property="mapImageBottom" destination="Cvw-oE-Z02" id="Xs1-wZ-Oer"/>
+                        <outlet property="mapImageLeading" destination="hnp-9v-Yvf" id="3jj-Gx-aXq"/>
+                        <outlet property="mapImageTop" destination="6HY-Tm-fDB" id="VPu-N9-qDi"/>
+                        <outlet property="mapImageTrailing" destination="JUs-ys-1zS" id="psO-Sr-E7D"/>
                         <outlet property="mapTitle" destination="cfP-tk-aTQ" id="Lsd-tg-Y1A"/>
+                        <outlet property="scrollView" destination="TQM-nU-Yqi" id="Fs6-Al-kpi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLg-Ob-yiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -343,8 +366,9 @@ Computer Science (EECS Building)</string>
     </scenes>
     <resources>
         <image name="EECSFIrstFloor.png" width="2981" height="1889"/>
+        <image name="Indicator.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ags-PO-PNb"/>
+        <segue reference="tXD-gL-ozy"/>
     </inferredMetricsTieBreakers>
 </document>

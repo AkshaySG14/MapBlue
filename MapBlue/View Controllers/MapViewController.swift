@@ -17,6 +17,14 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapTitle: UILabel!
     @IBOutlet weak var mapImage: UIImageView!
 
+    // Map constraints.
+    @IBOutlet weak var mapImageTrailing: NSLayoutConstraint!
+    @IBOutlet weak var mapImageLeading: NSLayoutConstraint!
+    @IBOutlet weak var mapImageBottom: NSLayoutConstraint!
+    @IBOutlet weak var mapImageTop: NSLayoutConstraint!
+    // Scroll view.
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     // Sets relevant variables.
     func initialize(building : Int, floor : Int, startRoom : String, destRoom : String) {
         self.building = building
@@ -25,43 +33,62 @@ class MapViewController: UIViewController {
         self.destRoom = destRoom
     }
     
-    //zooming with pinch gesture
-    let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(pinchHandler))
-    
-    @objc func pinchHandler(recognizer : UIPinchGestureRecognizer) {
+    // Set position of the marker.
+    func setMarkerPosition() {
         
-        print ("PINCHING NOW")
-        
-        if let view = self.view {
-            view.transform = view.transform.scaledBy(x: recognizer.scale, y: recognizer.scale)
-            recognizer.scale = 1
-        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Sets label of map view controller.
         self.mapTitle.text = Building.buildingMap.getBuildingName(building: building) + " Floor " + String(self.floor) + " Map"
-        
-        //zooming recognizer
-        pinchGestureRecognizer.addTarget(self, action: #selector(pinchHandler))
-        view.addGestureRecognizer(pinchGestureRecognizer)
+    }
+    
+    // Sets initial constants.
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        updateMinZoomScaleForSize(scrollView.bounds.size)
+    }
+    
+    // Sets the scroll view to have a consistent zoom scale. This is to prevent over or under zooming.
+    fileprivate func updateMinZoomScaleForSize(_ size: CGSize) {
+        let widthScale = size.width / self.mapImage.bounds.width
+        let heightScale = size.height / self.mapImage.bounds.height
+        let minScale = min(widthScale, heightScale)
+
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+extension MapViewController: UIScrollViewDelegate {
+    // Links the map to be zoomed in on.
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return mapImage
+    }
+    
+    // Called when user zooms and upon initialization.
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        updateConstraintsForSize(scrollView.bounds.size)
+    }
+    
+    // Ensures that the map will stay in the center of the scroll view.
+    fileprivate func updateConstraintsForSize(_ size: CGSize) {
+        let yOffset = max(0, (size.height - mapImage.frame.height) / 2)
+        mapImageTop.constant = yOffset
+        mapImageBottom.constant = yOffset
+        
+        let xOffset = max(0, (size.width - mapImage.frame.width) / 2)
+        mapImageLeading.constant = xOffset
+        mapImageTrailing.constant = xOffset
+        
+        self.view.layoutIfNeeded()
+    }
+}
+
+
