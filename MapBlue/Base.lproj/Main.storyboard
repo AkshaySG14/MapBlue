@@ -148,17 +148,18 @@ Computer Science (EECS Building)</string>
                                 <rect key="frame" x="0.0" y="130" width="375" height="537"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EECSFIrstFloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-Oa-hCX" userLabel="Map">
-                                        <rect key="frame" x="0.0" y="0.0" width="2981" height="1889"/>
+                                        <rect key="frame" x="0.0" y="100" width="2981" height="1889"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Indicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="XRx-pZ-ahz">
-                                        <rect key="frame" x="182" y="263" width="10" height="10"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Indicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="XRx-pZ-ahz">
+                                        <rect key="frame" x="600" y="500" width="1" height="1"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Drj-Oa-hCX" firstAttribute="top" secondItem="TQM-nU-Yqi" secondAttribute="top" id="6HY-Tm-fDB"/>
+                                    <constraint firstItem="Drj-Oa-hCX" firstAttribute="top" secondItem="TQM-nU-Yqi" secondAttribute="top" constant="100" id="6HY-Tm-fDB"/>
+                                    <constraint firstItem="XRx-pZ-ahz" firstAttribute="top" secondItem="TQM-nU-Yqi" secondAttribute="top" constant="500" id="6t7-i3-7Ts"/>
                                     <constraint firstAttribute="bottom" secondItem="Drj-Oa-hCX" secondAttribute="bottom" id="Cvw-oE-Z02"/>
                                     <constraint firstAttribute="trailing" secondItem="Drj-Oa-hCX" secondAttribute="trailing" id="JUs-ys-1zS"/>
+                                    <constraint firstItem="XRx-pZ-ahz" firstAttribute="leading" secondItem="TQM-nU-Yqi" secondAttribute="leading" constant="600" id="br5-ep-E96"/>
                                     <constraint firstItem="Drj-Oa-hCX" firstAttribute="leading" secondItem="TQM-nU-Yqi" secondAttribute="leading" id="hnp-9v-Yvf"/>
                                 </constraints>
                                 <connections>
@@ -182,6 +183,9 @@ Computer Science (EECS Building)</string>
                         <viewLayoutGuide key="safeArea" id="cCz-Ew-MxO"/>
                     </view>
                     <connections>
+                        <outlet property="indicatorImage" destination="XRx-pZ-ahz" id="Nvv-WH-A2n"/>
+                        <outlet property="indicatorImageLeading" destination="br5-ep-E96" id="uGV-8g-0Kn"/>
+                        <outlet property="indicatorImageTop" destination="6t7-i3-7Ts" id="H5e-8c-jGK"/>
                         <outlet property="mapImage" destination="Drj-Oa-hCX" id="OAl-5H-Ico"/>
                         <outlet property="mapImageBottom" destination="Cvw-oE-Z02" id="Xs1-wZ-Oer"/>
                         <outlet property="mapImageLeading" destination="hnp-9v-Yvf" id="3jj-Gx-aXq"/>
@@ -369,6 +373,7 @@ Computer Science (EECS Building)</string>
         <image name="Indicator.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="in7-aP-sOz"/>
         <segue reference="tXD-gL-ozy"/>
     </inferredMetricsTieBreakers>
 </document>

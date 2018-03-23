@@ -16,7 +16,11 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapTitle: UILabel!
     @IBOutlet weak var mapImage: UIImageView!
-
+    @IBOutlet weak var indicatorImageTop: NSLayoutConstraint!
+    @IBOutlet weak var indicatorImageTrailing: NSLayoutConstraint!
+    @IBOutlet weak var indicatorImageBottom: NSLayoutConstraint!
+    @IBOutlet weak var indicatorImageLeading: NSLayoutConstraint!
+    @IBOutlet weak var indicatorImage: UIImageView!
     // Map constraints.
     @IBOutlet weak var mapImageTrailing: NSLayoutConstraint!
     @IBOutlet weak var mapImageLeading: NSLayoutConstraint!
@@ -24,6 +28,8 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapImageTop: NSLayoutConstraint!
     // Scroll view.
     @IBOutlet weak var scrollView: UIScrollView!
+    // Center of the indicator.
+    var indicator1ViewCenter : CGPoint = CGPoint.zero
     
     // Sets relevant variables.
     func initialize(building : Int, floor : Int, startRoom : String, destRoom : String) {
@@ -42,6 +48,8 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         // Sets label of map view controller.
         self.mapTitle.text = Building.buildingMap.getBuildingName(building: building) + " Floor " + String(self.floor) + " Map"
+        indicator1ViewCenter = indicatorImage.center
+        self.scrollView.contentSize = self.mapImage.frame.size
     }
     
     // Sets initial constants.
@@ -74,21 +82,36 @@ extension MapViewController: UIScrollViewDelegate {
     
     // Called when user zooms and upon initialization.
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        updateConstraintsForSize(scrollView.bounds.size)
+//        updateConstraintsForSize(scrollView.bounds.size)
+        let scaleAffineTransform = scrollView.transform.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
+        let translatedPoint = indicator1ViewCenter.applying(scaleAffineTransform)
+        self.indicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - indicator1ViewCenter.x, y: translatedPoint.y + 100 - indicator1ViewCenter.y)
     }
     
-    // Ensures that the map will stay in the center of the scroll view.
-    fileprivate func updateConstraintsForSize(_ size: CGSize) {
-        let yOffset = max(0, (size.height - mapImage.frame.height) / 2)
-        mapImageTop.constant = yOffset
-        mapImageBottom.constant = yOffset
-        
-        let xOffset = max(0, (size.width - mapImage.frame.width) / 2)
-        mapImageLeading.constant = xOffset
-        mapImageTrailing.constant = xOffset
-        
-        self.view.layoutIfNeeded()
+    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        let scaleAffineTransform = scrollView.transform.scaledBy(x: scale, y: scale)
+        scrollView.contentSize = self.mapImage.bounds.size.applying(scaleAffineTransform)
     }
+    
+//    fileprivate func updateConstraintsForSize(_ size: CGSize) {
+//        // Ensures that the map will stay in the center of the scroll view.
+//        let yMapOffset = max(0, (size.height - mapImage.frame.height) / 2)
+//        mapImageTop.constant = yMapOffset
+//        mapImageBottom.constant = yMapOffset
+//
+//        let xMapOffset = max(0, (size.width - mapImage.frame.width) / 2)
+//        mapImageLeading.constant = xMapOffset
+//        mapImageTrailing.constant = xMapOffset
+//
+//        // Same but for indicator image.
+//        let yIndicatorOffset = max(0, (size.height - indicatorImage.frame.height) / 2)
+//        indicatorImageTop.constant = yIndicatorOffset
+//
+//        let xIndicatorOffset = max(0, (size.width - indicatorImage.frame.width) / 2)
+//        indicatorImageLeading.constant = xIndicatorOffset
+//
+//        self.view.layoutIfNeeded()
+//    }
 }
 
 

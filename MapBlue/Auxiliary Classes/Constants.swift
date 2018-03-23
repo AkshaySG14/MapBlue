@@ -19,6 +19,7 @@ struct Point {
     var x = 0
     var y = 0
 }
+
 // All room constants
 struct Room {
     struct EECS {
