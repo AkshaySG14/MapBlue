@@ -24,6 +24,10 @@ class MapViewController: UIViewController {
     // Indicator Images.
     @IBOutlet weak var startIndicatorImage: UIImageView!
     @IBOutlet weak var destIndicatorImage: UIImageView!
+    // Point Images.
+    var pointNodes: [UIImageView] = []
+    // Point centers.
+    var pointCenters: [CGPoint] = []
     // Scroll view.
     @IBOutlet weak var scrollView: UIScrollView!
     // Center of the indicators.
@@ -49,10 +53,26 @@ class MapViewController: UIViewController {
         self.view.layoutIfNeeded()
     }
     
+    // Adds relevant points.
+    func setPoints() {
+        for point in Building.pointList.buildingNodes {
+            let imageName = "Point.png"
+            let image = UIImage(named: imageName)
+            let imageView = UIImageView(image: image!)
+            imageView.frame = CGRect(x: point.x, y: point.y, width: 10, height: 10)
+            pointNodes.append(imageView)
+            pointCenters.append(imageView.center)
+            view.addSubview(imageView)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Sets label of map view controller.
         Building.pointMap.initBuildingPointMap(building)
+        // Initializes all points.
+        Building.pointList.initPoints()
+        setPoints()
         self.mapTitle.text = Building.buildingMap.getBuildingName(building: building) + " Floor " + String(self.floor) + " Map"
         // Set marker starting positions.
         self.setMarkerPositions()
@@ -81,12 +101,18 @@ class MapViewController: UIViewController {
         // Obtains the offset value.
         let scaleAffineTransform = scrollView.transform.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
         
-        // Translates all indicators and points accordingly.
+        // Translates all indicators accordingly.
         var translatedPoint = startIndicatorViewCenter.applying(scaleAffineTransform)
         self.startIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - startIndicatorViewCenter.x, y: translatedPoint.y + 100 - startIndicatorViewCenter.y)
         
         translatedPoint = destIndicatorViewCenter.applying(scaleAffineTransform)
         self.destIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - destIndicatorViewCenter.x, y: translatedPoint.y + 100 - destIndicatorViewCenter.y)
+
+        // Translates all points accordingly.
+        for index in 0...pointNodes.count - 1 {
+            translatedPoint = pointCenters[index].applying(scaleAffineTransform)
+            pointNodes[index].transform = scrollView.transform.translatedBy(x: translatedPoint.x - pointCenters[index].x, y: translatedPoint.y + 100 - pointCenters[index].y)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,12 +132,18 @@ extension MapViewController: UIScrollViewDelegate {
         // Gets the offset value.
         let scaleAffineTransform = scrollView.transform.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
         
-        // Translates all points accordingly.
+        // Translates all indicators accordingly.
         var translatedPoint = startIndicatorViewCenter.applying(scaleAffineTransform)
         self.startIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - startIndicatorViewCenter.x, y: translatedPoint.y + 100 - startIndicatorViewCenter.y)
         
         translatedPoint = destIndicatorViewCenter.applying(scaleAffineTransform)
         self.destIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - destIndicatorViewCenter.x, y: translatedPoint.y + 100 - destIndicatorViewCenter.y)
+        
+        // Translates all points accordingly.
+        for index in 0...pointNodes.count - 1 {
+            translatedPoint = pointCenters[index].applying(scaleAffineTransform)
+            pointNodes[index].transform = scrollView.transform.translatedBy(x: translatedPoint.x - pointCenters[index].x, y: translatedPoint.y + 100 - pointCenters[index].y)
+        }
     }
     
     func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {

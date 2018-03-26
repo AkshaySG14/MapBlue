@@ -15,8 +15,7 @@ struct Building {
     static let buildingMap = BuildingMap()
     static let roomMap = RoomMap()
     static let pointMap = PointMap()
-    
-    static let nodes = PointList();
+    static let pointList = PointList();
 }
 
 // All room constants

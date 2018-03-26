@@ -33,9 +33,10 @@ class PointList {
     
     var buildingNodes: [Point] = []
     
-    func pointInit (point: Point)
+    func initPoints ()
     {
-        //initialize
+        buildingNodes.append(Point(x: 500, y: 500))
+        buildingNodes.append(Point(x: 1500, y: 1200))
     }
     
 }
@@ -163,7 +164,6 @@ class RoomMap {
     }
     
     func getRoomValue(room : String, building: Int) -> Int {
-        print(room)
         return getBuildingRoomMap(building)[room]!
     }
     
