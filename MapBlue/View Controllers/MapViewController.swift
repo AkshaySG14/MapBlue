@@ -16,21 +16,20 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapTitle: UILabel!
     @IBOutlet weak var mapImage: UIImageView!
-    @IBOutlet weak var indicatorImageTop: NSLayoutConstraint!
-    @IBOutlet weak var indicatorImageTrailing: NSLayoutConstraint!
-    @IBOutlet weak var indicatorImageBottom: NSLayoutConstraint!
-    @IBOutlet weak var indicatorImageLeading: NSLayoutConstraint!
-    @IBOutlet weak var indicatorImage: UIImageView!
-    // Map constraints.
-    @IBOutlet weak var mapImageTrailing: NSLayoutConstraint!
-    @IBOutlet weak var mapImageLeading: NSLayoutConstraint!
-    @IBOutlet weak var mapImageBottom: NSLayoutConstraint!
-    @IBOutlet weak var mapImageTop: NSLayoutConstraint!
+    // Constraints for Indicator Images.
+    @IBOutlet weak var startIndicatorImageTop: NSLayoutConstraint!
+    @IBOutlet weak var startIndicatorImageLeading: NSLayoutConstraint!
+    @IBOutlet weak var destIndicatorImageTop: NSLayoutConstraint!
+    @IBOutlet weak var destIndicatorImageLeading: NSLayoutConstraint!
+    // Indicator Images.
+    @IBOutlet weak var startIndicatorImage: UIImageView!
+    @IBOutlet weak var destIndicatorImage: UIImageView!
     // Scroll view.
     @IBOutlet weak var scrollView: UIScrollView!
-    // Center of the indicator.
-    var indicator1ViewCenter : CGPoint = CGPoint.zero
-    
+    // Center of the indicators.
+    var startIndicatorViewCenter : CGPoint = CGPoint.zero
+    var destIndicatorViewCenter : CGPoint = CGPoint.zero
+
     // Sets relevant variables.
     func initialize(building : Int, floor : Int, startRoom : String, destRoom : String) {
         self.building = building
@@ -39,16 +38,28 @@ class MapViewController: UIViewController {
         self.destRoom = destRoom
     }
     
-    // Set position of the marker.
-    func setMarkerPosition() {
-        
+    // Set position of the markers.
+    func setMarkerPositions() {
+        let startPoint = Building.pointMap.getBuildingPointMap(building)[Building.roomMap.getRoomValue(room: startRoom, building: building)]
+        let destPoint = Building.pointMap.getBuildingPointMap(building)[Building.roomMap.getRoomValue(room: destRoom, building: building)]
+        startIndicatorImageLeading.constant = startPoint!.x
+        startIndicatorImageTop.constant = startPoint!.y
+        destIndicatorImageLeading.constant = destPoint!.x
+        destIndicatorImageTop.constant = destPoint!.y
+        self.view.layoutIfNeeded()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Sets label of map view controller.
+        Building.pointMap.initBuildingPointMap(building)
         self.mapTitle.text = Building.buildingMap.getBuildingName(building: building) + " Floor " + String(self.floor) + " Map"
-        indicator1ViewCenter = indicatorImage.center
+        // Set marker starting positions.
+        self.setMarkerPositions()
+        // Sets indicator centers.
+        self.startIndicatorViewCenter = startIndicatorImage.center
+        self.destIndicatorViewCenter = destIndicatorImage.center
+        // Sets content size of scroll view.
         self.scrollView.contentSize = self.mapImage.frame.size
     }
     
@@ -66,6 +77,16 @@ class MapViewController: UIViewController {
 
         scrollView.minimumZoomScale = minScale
         scrollView.zoomScale = minScale
+        
+        // Obtains the offset value.
+        let scaleAffineTransform = scrollView.transform.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
+        
+        // Translates all indicators and points accordingly.
+        var translatedPoint = startIndicatorViewCenter.applying(scaleAffineTransform)
+        self.startIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - startIndicatorViewCenter.x, y: translatedPoint.y + 100 - startIndicatorViewCenter.y)
+        
+        translatedPoint = destIndicatorViewCenter.applying(scaleAffineTransform)
+        self.destIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - destIndicatorViewCenter.x, y: translatedPoint.y + 100 - destIndicatorViewCenter.y)
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,36 +103,19 @@ extension MapViewController: UIScrollViewDelegate {
     
     // Called when user zooms and upon initialization.
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
-//        updateConstraintsForSize(scrollView.bounds.size)
+        // Gets the offset value.
         let scaleAffineTransform = scrollView.transform.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
-        let translatedPoint = indicator1ViewCenter.applying(scaleAffineTransform)
-        self.indicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - indicator1ViewCenter.x, y: translatedPoint.y + 100 - indicator1ViewCenter.y)
+        
+        // Translates all points accordingly.
+        var translatedPoint = startIndicatorViewCenter.applying(scaleAffineTransform)
+        self.startIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - startIndicatorViewCenter.x, y: translatedPoint.y + 100 - startIndicatorViewCenter.y)
+        
+        translatedPoint = destIndicatorViewCenter.applying(scaleAffineTransform)
+        self.destIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - destIndicatorViewCenter.x, y: translatedPoint.y + 100 - destIndicatorViewCenter.y)
     }
     
     func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
         let scaleAffineTransform = scrollView.transform.scaledBy(x: scale, y: scale)
-        scrollView.contentSize = self.mapImage.bounds.size.applying(scaleAffineTransform)
+        self.scrollView.contentSize = self.mapImage.bounds.size.applying(scaleAffineTransform)
     }
-    
-//    fileprivate func updateConstraintsForSize(_ size: CGSize) {
-//        // Ensures that the map will stay in the center of the scroll view.
-//        let yMapOffset = max(0, (size.height - mapImage.frame.height) / 2)
-//        mapImageTop.constant = yMapOffset
-//        mapImageBottom.constant = yMapOffset
-//
-//        let xMapOffset = max(0, (size.width - mapImage.frame.width) / 2)
-//        mapImageLeading.constant = xMapOffset
-//        mapImageTrailing.constant = xMapOffset
-//
-//        // Same but for indicator image.
-//        let yIndicatorOffset = max(0, (size.height - indicatorImage.frame.height) / 2)
-//        indicatorImageTop.constant = yIndicatorOffset
-//
-//        let xIndicatorOffset = max(0, (size.width - indicatorImage.frame.width) / 2)
-//        indicatorImageLeading.constant = xIndicatorOffset
-//
-//        self.view.layoutIfNeeded()
-//    }
 }
-
-

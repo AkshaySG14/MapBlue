@@ -5,6 +5,7 @@
 //  Created by Akshay Subramaniam on 10/3/18.
 //  Copyright © 2018 MediocreAtBest. All rights reserved.
 //
+import UIKit
 
 // All building constants (EECS, GG Brown, etc.)
 struct Building {
@@ -13,41 +14,10 @@ struct Building {
     // Map that maps each building integer to a string.
     static let buildingMap = BuildingMap()
     static let roomMap = RoomMap()
+    static let pointMap = PointMap()
 }
 
 struct Point {
-    var x = 0
-    var y = 0
-}
-
-// All room constants
-struct Room {
-    struct EECS {
-        
-        struct floor1 {
-            
-        }
-        
-        struct floor2 {
-            
-        }
-        
-        struct floor3 {
-            
-        }
-    }
-    
-    struct GGBrown {
-        struct floor1 {
-            
-        }
-        
-        struct floor2 {
-            
-        }
-        
-        struct floor3 {
-            
-        }
-    }
+    var x : CGFloat = 0
+    var y : CGFloat = 0
 }

@@ -144,23 +144,36 @@ Computer Science (EECS Building)</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-nU-Yqi">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-nU-Yqi">
                                 <rect key="frame" x="0.0" y="130" width="375" height="537"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EECSFIrstFloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-Oa-hCX" userLabel="Map">
                                         <rect key="frame" x="0.0" y="100" width="2981" height="1889"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Indicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="XRx-pZ-ahz">
-                                        <rect key="frame" x="600" y="500" width="1" height="1"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Indicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="XRx-pZ-ahz">
+                                        <rect key="frame" x="0.0" y="0.0" width="12.5" height="12.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12.5" id="iwe-Qv-IUs"/>
+                                            <constraint firstAttribute="width" constant="12.5" id="ncM-bH-Ddm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Indicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="FYw-e1-SrK" userLabel="End Indicator Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="12.5" height="12.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12.5" id="XI3-8n-3tZ"/>
+                                            <constraint firstAttribute="width" constant="12.5" id="g7A-yO-MlM"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="FYw-e1-SrK" firstAttribute="top" secondItem="TQM-nU-Yqi" secondAttribute="top" id="4W1-Nl-wUM"/>
                                     <constraint firstItem="Drj-Oa-hCX" firstAttribute="top" secondItem="TQM-nU-Yqi" secondAttribute="top" constant="100" id="6HY-Tm-fDB"/>
-                                    <constraint firstItem="XRx-pZ-ahz" firstAttribute="top" secondItem="TQM-nU-Yqi" secondAttribute="top" constant="500" id="6t7-i3-7Ts"/>
+                                    <constraint firstItem="XRx-pZ-ahz" firstAttribute="top" secondItem="TQM-nU-Yqi" secondAttribute="top" id="6t7-i3-7Ts"/>
                                     <constraint firstAttribute="bottom" secondItem="Drj-Oa-hCX" secondAttribute="bottom" id="Cvw-oE-Z02"/>
                                     <constraint firstAttribute="trailing" secondItem="Drj-Oa-hCX" secondAttribute="trailing" id="JUs-ys-1zS"/>
-                                    <constraint firstItem="XRx-pZ-ahz" firstAttribute="leading" secondItem="TQM-nU-Yqi" secondAttribute="leading" constant="600" id="br5-ep-E96"/>
+                                    <constraint firstItem="XRx-pZ-ahz" firstAttribute="leading" secondItem="TQM-nU-Yqi" secondAttribute="leading" id="br5-ep-E96"/>
                                     <constraint firstItem="Drj-Oa-hCX" firstAttribute="leading" secondItem="TQM-nU-Yqi" secondAttribute="leading" id="hnp-9v-Yvf"/>
+                                    <constraint firstItem="FYw-e1-SrK" firstAttribute="leading" secondItem="TQM-nU-Yqi" secondAttribute="leading" id="jex-QB-Yck"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="nHT-Su-HZ4" id="VbG-go-DY7"/>
@@ -183,16 +196,15 @@ Computer Science (EECS Building)</string>
                         <viewLayoutGuide key="safeArea" id="cCz-Ew-MxO"/>
                     </view>
                     <connections>
-                        <outlet property="indicatorImage" destination="XRx-pZ-ahz" id="Nvv-WH-A2n"/>
-                        <outlet property="indicatorImageLeading" destination="br5-ep-E96" id="uGV-8g-0Kn"/>
-                        <outlet property="indicatorImageTop" destination="6t7-i3-7Ts" id="H5e-8c-jGK"/>
+                        <outlet property="destIndicatorImage" destination="FYw-e1-SrK" id="3sI-Mi-Rap"/>
+                        <outlet property="destIndicatorImageLeading" destination="jex-QB-Yck" id="WAW-E6-7iU"/>
+                        <outlet property="destIndicatorImageTop" destination="4W1-Nl-wUM" id="1PA-Ar-O6a"/>
                         <outlet property="mapImage" destination="Drj-Oa-hCX" id="OAl-5H-Ico"/>
-                        <outlet property="mapImageBottom" destination="Cvw-oE-Z02" id="Xs1-wZ-Oer"/>
-                        <outlet property="mapImageLeading" destination="hnp-9v-Yvf" id="3jj-Gx-aXq"/>
-                        <outlet property="mapImageTop" destination="6HY-Tm-fDB" id="VPu-N9-qDi"/>
-                        <outlet property="mapImageTrailing" destination="JUs-ys-1zS" id="psO-Sr-E7D"/>
                         <outlet property="mapTitle" destination="cfP-tk-aTQ" id="Lsd-tg-Y1A"/>
                         <outlet property="scrollView" destination="TQM-nU-Yqi" id="Fs6-Al-kpi"/>
+                        <outlet property="startIndicatorImage" destination="XRx-pZ-ahz" id="Nvv-WH-A2n"/>
+                        <outlet property="startIndicatorImageLeading" destination="br5-ep-E96" id="uGV-8g-0Kn"/>
+                        <outlet property="startIndicatorImageTop" destination="6t7-i3-7Ts" id="H5e-8c-jGK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLg-Ob-yiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -373,7 +385,6 @@ Computer Science (EECS Building)</string>
         <image name="Indicator.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="in7-aP-sOz"/>
         <segue reference="tXD-gL-ozy"/>
     </inferredMetricsTieBreakers>
 </document>

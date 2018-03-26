@@ -73,7 +73,7 @@ class RoomViewController: UIViewController {
             roomTwoError.text = ""
         }
         // Checks if rooms are equivalent.
-        if (check && Building.roomMap.roomEquals(room1: startRoomField.text!, room2: destinationRoomField.text!, building: building)) {
+        if (check && Building.roomMap.getRoomValue(room: startRoomField.text!, building: building) == Building.roomMap.getRoomValue(room: destinationRoomField.text!, building: building)) {
             check = false
             roomOneError.text = "Rooms are in same location"
             roomTwoError.text = "Rooms are in the same location"
