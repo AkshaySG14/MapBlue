@@ -59,10 +59,17 @@ class MapViewController: UIViewController {
             let imageName = "Point.png"
             let image = UIImage(named: imageName)
             let imageView = UIImageView(image: image!)
-            imageView.frame = CGRect(x: point.x, y: point.y, width: 10, height: 10)
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+            self.scrollView.addSubview(imageView)
+            let widthConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.width, multiplier: 1.0, constant: 20)
+            let heightConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.height, multiplier: 1.0, constant: 20)
+            let leadingConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: self.scrollView, attribute: NSLayoutAttribute.leading, multiplier: 1.0, constant: point.x)
+            let topConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: self.scrollView, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: point.y)
+            NSLayoutConstraint.activate([widthConstraint, heightConstraint, leadingConstraint, topConstraint])
+            self.view.layoutIfNeeded()
             pointNodes.append(imageView)
             pointCenters.append(imageView.center)
-            view.addSubview(imageView)
         }
     }
     
@@ -109,9 +116,11 @@ class MapViewController: UIViewController {
         self.destIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - destIndicatorViewCenter.x, y: translatedPoint.y + 100 - destIndicatorViewCenter.y)
 
         // Translates all points accordingly.
-        for index in 0...pointNodes.count - 1 {
-            translatedPoint = pointCenters[index].applying(scaleAffineTransform)
-            pointNodes[index].transform = scrollView.transform.translatedBy(x: translatedPoint.x - pointCenters[index].x, y: translatedPoint.y + 100 - pointCenters[index].y)
+        if (!pointNodes.isEmpty) {
+            for index in 0...pointNodes.count - 1 {
+                translatedPoint = pointCenters[index].applying(scaleAffineTransform)
+                pointNodes[index].transform = scrollView.transform.translatedBy(x: translatedPoint.x - pointCenters[index].x, y: translatedPoint.y + 100 - pointCenters[index].y)
+            }
         }
     }
 
@@ -140,9 +149,11 @@ extension MapViewController: UIScrollViewDelegate {
         self.destIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - destIndicatorViewCenter.x, y: translatedPoint.y + 100 - destIndicatorViewCenter.y)
         
         // Translates all points accordingly.
-        for index in 0...pointNodes.count - 1 {
-            translatedPoint = pointCenters[index].applying(scaleAffineTransform)
-            pointNodes[index].transform = scrollView.transform.translatedBy(x: translatedPoint.x - pointCenters[index].x, y: translatedPoint.y + 100 - pointCenters[index].y)
+        if (!pointNodes.isEmpty) {
+            for index in 0...pointNodes.count - 1 {
+                translatedPoint = pointCenters[index].applying(scaleAffineTransform)
+                pointNodes[index].transform = scrollView.transform.translatedBy(x: translatedPoint.x - pointCenters[index].x, y: translatedPoint.y + 100 - pointCenters[index].y)
+            }
         }
     }
     

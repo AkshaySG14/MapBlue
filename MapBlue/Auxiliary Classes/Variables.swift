@@ -30,11 +30,9 @@ class BuildingMap {
 
 
 class PointList {
-    
     var buildingNodes: [Point] = []
     
-    func initPoints ()
-    {
+    func initPoints () {
         buildingNodes.append(Point(x: 500, y: 500))
         buildingNodes.append(Point(x: 1500, y: 1200))
     }
