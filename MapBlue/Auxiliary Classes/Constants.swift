@@ -17,7 +17,34 @@ struct Building {
     static let pointMap = PointMap()
 }
 
-struct Point {
-    var x : CGFloat = 0
-    var y : CGFloat = 0
+// All room constants
+struct Room {
+    struct EECS {
+        
+        struct floor1 {
+            
+        }
+        
+        struct floor2 {
+            
+        }
+        
+        struct floor3 {
+            
+        }
+    }
+    
+    struct GGBrown {
+        struct floor1 {
+            
+        }
+        
+        struct floor2 {
+            
+        }
+        
+        struct floor3 {
+            
+        }
+    }
 }
