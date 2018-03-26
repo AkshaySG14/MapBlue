@@ -25,7 +25,21 @@ class BuildingMap {
     func getBuildingName(building : Int) -> String {
         return buildingMap[building]!
     }
+    
 }
+
+
+class PointList {
+    
+    var buildingNodes: [Point] = []
+    
+    func pointInit (point: Point)
+    {
+        //initialize
+    }
+    
+}
+
 
 class RoomMap {
     private var GGBrownBuildingRoomMap = [String: Int]()
