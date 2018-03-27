@@ -74,6 +74,7 @@ class PointList {
         
     }
     
+<<<<<<< HEAD
     private  func initEECSBuildingFloor2() {
         
     }
@@ -84,6 +85,26 @@ class PointList {
     
     private  func initEECSBuildingFloor4() {
         
+=======
+    func initPoints ()
+    {
+        buildingNodes.append(Point(x: 75, y: 2325))
+        buildingNodes.append(Point(x: 225, y: 2325))
+        buildingNodes.append(Point(x: 375, y: 2325))
+        buildingNodes.append(Point(x: 525, y: 2325))
+        buildingNodes.append(Point(x: 675, y: 2325))
+        buildingNodes.append(Point(x: 825, y: 2325))
+        buildingNodes.append(Point(x: 975, y: 2325))
+        buildingNodes.append(Point(x: 1050, y: 2250))
+        buildingNodes.append(Point(x: 1150, y: 2250))
+        buildingNodes.append(Point(x: 1275, y: 2250))
+        buildingNodes.append(Point(x: 1400, y: 2250))
+        buildingNodes.append(Point(x: 1525, y: 2250))
+        buildingNodes.append(Point(x: 1650, y: 2250))
+        buildingNodes.append(Point(x: 1650, y: 2125))
+        buildingNodes.append(Point(x: 1650, y: 2000))
+
+>>>>>>> Merge attempt
     }
     
     private func initGGBrownPointNodes (_ floor : Int) {
