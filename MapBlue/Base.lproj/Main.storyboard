@@ -144,24 +144,24 @@ Computer Science (EECS Building)</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-nU-Yqi">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-nU-Yqi">
                                 <rect key="frame" x="0.0" y="130" width="375" height="537"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EECSFIrstFloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-Oa-hCX" userLabel="Map">
                                         <rect key="frame" x="0.0" y="100" width="2981" height="1889"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Indicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="XRx-pZ-ahz">
-                                        <rect key="frame" x="0.0" y="0.0" width="12.5" height="12.5"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startIndicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="XRx-pZ-ahz">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="12.5" id="iwe-Qv-IUs"/>
-                                            <constraint firstAttribute="width" constant="12.5" id="ncM-bH-Ddm"/>
+                                            <constraint firstAttribute="height" constant="40" id="iwe-Qv-IUs"/>
+                                            <constraint firstAttribute="width" constant="40" id="ncM-bH-Ddm"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Indicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="FYw-e1-SrK" userLabel="End Indicator Image">
-                                        <rect key="frame" x="0.0" y="0.0" width="12.5" height="12.5"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endIndicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="FYw-e1-SrK" userLabel="End Indicator Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="12.5" id="XI3-8n-3tZ"/>
-                                            <constraint firstAttribute="width" constant="12.5" id="g7A-yO-MlM"/>
+                                            <constraint firstAttribute="height" constant="40" id="XI3-8n-3tZ"/>
+                                            <constraint firstAttribute="width" constant="40" id="g7A-yO-MlM"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -169,8 +169,6 @@ Computer Science (EECS Building)</string>
                                     <constraint firstItem="FYw-e1-SrK" firstAttribute="top" secondItem="TQM-nU-Yqi" secondAttribute="top" id="4W1-Nl-wUM"/>
                                     <constraint firstItem="Drj-Oa-hCX" firstAttribute="top" secondItem="TQM-nU-Yqi" secondAttribute="top" constant="100" id="6HY-Tm-fDB"/>
                                     <constraint firstItem="XRx-pZ-ahz" firstAttribute="top" secondItem="TQM-nU-Yqi" secondAttribute="top" id="6t7-i3-7Ts"/>
-                                    <constraint firstAttribute="bottom" secondItem="Drj-Oa-hCX" secondAttribute="bottom" id="Cvw-oE-Z02"/>
-                                    <constraint firstAttribute="trailing" secondItem="Drj-Oa-hCX" secondAttribute="trailing" id="JUs-ys-1zS"/>
                                     <constraint firstItem="XRx-pZ-ahz" firstAttribute="leading" secondItem="TQM-nU-Yqi" secondAttribute="leading" id="br5-ep-E96"/>
                                     <constraint firstItem="Drj-Oa-hCX" firstAttribute="leading" secondItem="TQM-nU-Yqi" secondAttribute="leading" id="hnp-9v-Yvf"/>
                                     <constraint firstItem="FYw-e1-SrK" firstAttribute="leading" secondItem="TQM-nU-Yqi" secondAttribute="leading" id="jex-QB-Yck"/>
@@ -420,7 +418,8 @@ Computer Science (EECS Building)</string>
         <image name="29345229_1809175502710488_260406404_n.png" width="512" height="512"/>
         <image name="29550470_1179423755520894_1330064458_n.png" width="300" height="300"/>
         <image name="EECSFIrstFloor.png" width="2981" height="1889"/>
-        <image name="Indicator.png" width="50" height="50"/>
+        <image name="endIndicator.png" width="512" height="512"/>
+        <image name="startIndicator.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tXD-gL-ozy"/>

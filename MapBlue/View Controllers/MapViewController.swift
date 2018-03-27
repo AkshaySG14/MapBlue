@@ -32,7 +32,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     // Center of the indicators.
     var startIndicatorViewCenter : CGPoint = CGPoint.zero
-    var destIndicatorViewCenter : CGPoint = CGPoint.zero
+    var destIndicatorViewBottom : CGPoint = CGPoint.zero
 
     // Sets relevant variables.
     func initialize(building : Int, floor : Int, startRoom : String, destRoom : String) {
@@ -46,8 +46,10 @@ class MapViewController: UIViewController {
     func setMarkerPositions() {
         let startPoint = Building.pointMap.getBuildingPointMap(building)[Building.roomMap.getRoomValue(room: startRoom, building: building)]
         let destPoint = Building.pointMap.getBuildingPointMap(building)[Building.roomMap.getRoomValue(room: destRoom, building: building)]
+        
         startIndicatorImageLeading.constant = startPoint!.x
         startIndicatorImageTop.constant = startPoint!.y
+        
         destIndicatorImageLeading.constant = destPoint!.x
         destIndicatorImageTop.constant = destPoint!.y
         self.view.layoutIfNeeded()
@@ -85,7 +87,7 @@ class MapViewController: UIViewController {
         self.setMarkerPositions()
         // Sets indicator centers.
         self.startIndicatorViewCenter = startIndicatorImage.center
-        self.destIndicatorViewCenter = destIndicatorImage.center
+        self.destIndicatorViewBottom = CGPoint(x: destIndicatorImage.center.x, y: destIndicatorImage.frame.maxY)
         // Sets content size of scroll view.
         self.scrollView.contentSize = self.mapImage.frame.size
     }
@@ -112,9 +114,11 @@ class MapViewController: UIViewController {
         var translatedPoint = startIndicatorViewCenter.applying(scaleAffineTransform)
         self.startIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - startIndicatorViewCenter.x, y: translatedPoint.y + 100 - startIndicatorViewCenter.y)
         
-        translatedPoint = destIndicatorViewCenter.applying(scaleAffineTransform)
-        self.destIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - destIndicatorViewCenter.x, y: translatedPoint.y + 100 - destIndicatorViewCenter.y)
+        translatedPoint = destIndicatorViewBottom.applying(scaleAffineTransform)
+        self.destIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - destIndicatorViewBottom.x, y: translatedPoint.y + 100 - destIndicatorViewBottom.y)
 
+        print(destIndicatorViewBottom.y)
+        
         // Translates all points accordingly.
         if (!pointNodes.isEmpty) {
             for index in 0...pointNodes.count - 1 {
@@ -145,9 +149,10 @@ extension MapViewController: UIScrollViewDelegate {
         var translatedPoint = startIndicatorViewCenter.applying(scaleAffineTransform)
         self.startIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - startIndicatorViewCenter.x, y: translatedPoint.y + 100 - startIndicatorViewCenter.y)
         
-        translatedPoint = destIndicatorViewCenter.applying(scaleAffineTransform)
-        self.destIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - destIndicatorViewCenter.x, y: translatedPoint.y + 100 - destIndicatorViewCenter.y)
-        
+        translatedPoint = destIndicatorViewBottom.applying(scaleAffineTransform)
+        self.destIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - destIndicatorViewBottom.x, y: translatedPoint.y + 100 - destIndicatorViewBottom.y)
+        print(destIndicatorViewBottom.y)
+
         // Translates all points accordingly.
         if (!pointNodes.isEmpty) {
             for index in 0...pointNodes.count - 1 {
