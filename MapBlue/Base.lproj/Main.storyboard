@@ -144,7 +144,7 @@ Computer Science (EECS Building)</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-nU-Yqi">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-nU-Yqi">
                                 <rect key="frame" x="0.0" y="130" width="375" height="537"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EECSFIrstFloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-Oa-hCX" userLabel="Map">
@@ -177,11 +177,11 @@ Computer Science (EECS Building)</string>
                                     <outlet property="delegate" destination="nHT-Su-HZ4" id="VbG-go-DY7"/>
                                 </connections>
                             </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="29550470_1179423755520894_1330064458_n.png" translatesAutoresizingMaskIntoConstraints="NO" id="J6t-OB-OEk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="startIndicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="J6t-OB-OEk" userLabel="startIndicatorLegend">
                                 <rect key="frame" x="92.5" y="192.5" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="29345229_1809175502710488_260406404_n.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fgm-fO-EGN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="endIndicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fgm-fO-EGN" userLabel="endIndicatorLegend">
                                 <rect key="frame" x="90" y="230" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -415,8 +415,6 @@ Computer Science (EECS Building)</string>
         </scene>
     </scenes>
     <resources>
-        <image name="29345229_1809175502710488_260406404_n.png" width="512" height="512"/>
-        <image name="29550470_1179423755520894_1330064458_n.png" width="300" height="300"/>
         <image name="EECSFIrstFloor.png" width="2981" height="1889"/>
         <image name="endIndicator.png" width="512" height="512"/>
         <image name="startIndicator.png" width="300" height="300"/>

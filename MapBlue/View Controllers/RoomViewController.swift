@@ -49,7 +49,7 @@ class RoomViewController: UIViewController {
             roomOneError.text = "Please enter a starting room"
         }
         // Checks if room does not exist.
-        else if (!Building.roomMap.roomExists(room: startRoomField.text!, building: building)) {
+        else if (!Building.roomMap.roomExists(room: startRoomField.text!)) {
             check = false
             roomOneError.text = "Room does not exist"
         }
@@ -64,7 +64,7 @@ class RoomViewController: UIViewController {
             roomTwoError.text = "Please enter a destination room"
         }
         // Checks if room does not exist.
-        else if (!Building.roomMap.roomExists(room: destinationRoomField.text!, building: building)) {
+        else if (!Building.roomMap.roomExists(room: destinationRoomField.text!)) {
             check = false
             roomTwoError.text = "Room does not exist"
         }
@@ -73,7 +73,7 @@ class RoomViewController: UIViewController {
             roomTwoError.text = ""
         }
         // Checks if rooms are equivalent.
-        if (check && Building.roomMap.getRoomValue(room: startRoomField.text!, building: building) == Building.roomMap.getRoomValue(room: destinationRoomField.text!, building: building)) {
+        if (check && Building.roomMap.getRoomValue(room: startRoomField.text!) == Building.roomMap.getRoomValue(room: destinationRoomField.text!)) {
             check = false
             roomOneError.text = "Rooms are in same location"
             roomTwoError.text = "Rooms are in the same location"
