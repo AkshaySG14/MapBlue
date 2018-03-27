@@ -81,7 +81,7 @@ class RoomMap {
         }
     }
     
-    func initEECSBuildingRoomMap() {
+    func initEECSBuildingFloor1() {
         var count = -1
         buildingRoomMap["1000"] = incrementNum(count: &count) // 0
         buildingRoomMap["1001"] = count
@@ -92,15 +92,25 @@ class RoomMap {
         buildingRoomMap["1012"] = incrementNum(count: &count)
         buildingRoomMap["1016"] = incrementNum(count: &count)
         
+        buildingRoomMap["1200"] = incrementNum(count: &count)
         buildingRoomMap["1222"] = incrementNum(count: &count)
         buildingRoomMap["1222A"] = incrementNum(count: &count)
-        buildingRoomMap["1200"] = incrementNum(count: &count)
         buildingRoomMap["1226"] = incrementNum(count: &count)
+        
+        buildingRoomMap["1226"] = incrementNum(count: &count)
+        buildingRoomMap["1226A"] = count
+        buildingRoomMap["1226B"] = count
+        
         buildingRoomMap["1230"] = incrementNum(count: &count)
         
         buildingRoomMap["1234"] = incrementNum(count: &count)
+        buildingRoomMap["1234A"] = count
         buildingRoomMap["1240"] = count
         buildingRoomMap["1246"] = count
+        buildingRoomMap["1246A"] = count
+        buildingRoomMap["1246B"] = count
+        buildingRoomMap["1246C"] = count
+        buildingRoomMap["1246D"] = count
         buildingRoomMap["1239"] = count
         
         buildingRoomMap["1241"] = incrementNum(count: &count)
@@ -114,6 +124,11 @@ class RoomMap {
         buildingRoomMap["1325"] = incrementNum(count: &count)
         buildingRoomMap["1327"] = count
         
+        buildingRoomMap["1333M"] = incrementNum(count: &count)
+        
+        buildingRoomMap["1324W"] = incrementNum(count: &count)
+        buildingRoomMap["1326"] = count
+
         buildingRoomMap["1334"] = incrementNum(count: &count)
         buildingRoomMap["1336"] = count
         buildingRoomMap["1340"] = count
@@ -122,29 +137,42 @@ class RoomMap {
         buildingRoomMap["1348"] = incrementNum(count: &count)
         
         buildingRoomMap["1332"] = incrementNum(count: &count)
+        buildingRoomMap["1322A"] = count
+        buildingRoomMap["1322C"] = count
+        buildingRoomMap["14C9"] = count
         buildingRoomMap["1432"] = count
         buildingRoomMap["1436"] = count
         
         buildingRoomMap["1400"] = incrementNum(count: &count)
+        buildingRoomMap["1401A"] = count
+        buildingRoomMap["1401B"] = count
         buildingRoomMap["1403"] = count
         buildingRoomMap["1406"] = count
         
         buildingRoomMap["1410"] = incrementNum(count: &count)
+        buildingRoomMap["1410A"] = count
+        buildingRoomMap["1411A"] = count
         buildingRoomMap["1412"] = count
         buildingRoomMap["1414"] = count
         
         buildingRoomMap["1411"] = incrementNum(count: &count)
         buildingRoomMap["1417"] = count
-    
+        
         buildingRoomMap["1421"] = incrementNum(count: &count)
         
         buildingRoomMap["1427"] = incrementNum(count: &count)
         buildingRoomMap["1437"] = count
         
         buildingRoomMap["1428"] = incrementNum(count: &count)
-        
-        buildingRoomMap["1440"] = incrementNum(count: &count)
+        buildingRoomMap["1428A"] = count
+
+        buildingRoomMap["14C7"] = incrementNum(count: &count)
+        buildingRoomMap["14C4"] = count
+        buildingRoomMap["1440"] = count
+        buildingRoomMap["1440E"] = count
+        buildingRoomMap["1440S"] = count
         buildingRoomMap["1445"] = count
+        buildingRoomMap["1445S"] = count
         buildingRoomMap["1448"] = count
         buildingRoomMap["1450"] = count
         buildingRoomMap["1452"] = count
@@ -157,6 +185,10 @@ class RoomMap {
         buildingRoomMap["1475"] = count
         buildingRoomMap["1479"] = count
         buildingRoomMap["1500"] = count
+    }
+    
+    func initEECSBuildingRoomMap() {
+        
     }
     
     func initGGBrownRoomMap() {
@@ -216,9 +248,6 @@ class PointMap {
 
         buildingPointMap[Building.roomMap.getRoomValue(room: "1346")] = Point(x: 1140, y: 870) // Room 1346
 
-        
-        
-        /* CANT DO CUZ I DONT HAVE ACTUAL MAP - JAMES
         buildingPointMap[Building.roomMap.getRoomValue(room: "1234")] = Point(x: 2565, y: 1200) // Room 1234
         buildingPointMap[Building.roomMap.getRoomValue(room: "1240")] = Point(x: 2565, y: 1200) // Room 1240
         buildingPointMap[Building.roomMap.getRoomValue(room: "1239")] = Point(x: 2565, y: 1200) // Room 1239
@@ -231,11 +260,6 @@ class PointMap {
         buildingPointMap[Building.roomMap.getRoomValue(room: "1334")] = Point(x: 2565, y: 1200) // Room 1334
         buildingPointMap[Building.roomMap.getRoomValue(room: "1336")] = Point(x: 2565, y: 1200) // Room 1336
         buildingPointMap[Building.roomMap.getRoomValue(room: "1340")] = Point(x: 2565, y: 1200) // Room 1340
-
-            plus pretty much the rest of the rooms on eecs floor 1
-        */
-        
-        
     }
     
     private func initGGBrownPointMap() {
