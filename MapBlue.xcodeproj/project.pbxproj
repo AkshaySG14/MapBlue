@@ -26,13 +26,16 @@
 		AF40F8032056F8F7006C362A /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40F8022056F8F7006C362A /* Variables.swift */; };
 		AF47CA0C206AE7BF008B9C59 /* startIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = AF47CA0A206AE7BF008B9C59 /* startIndicator.png */; };
 		AF47CA0D206AE7BF008B9C59 /* endIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = AF47CA0B206AE7BF008B9C59 /* endIndicator.png */; };
+		AF47CA0F206B1D48008B9C59 /* EECSSecondFloor.png in Resources */ = {isa = PBXBuildFile; fileRef = AF47CA0E206B1D48008B9C59 /* EECSSecondFloor.png */; };
+		AF47CA12206B23EF008B9C59 /* EECSFourthFloor.png in Resources */ = {isa = PBXBuildFile; fileRef = AF47CA10206B23EE008B9C59 /* EECSFourthFloor.png */; };
+		AF47CA13206B23EF008B9C59 /* EECSThirdFloor.png in Resources */ = {isa = PBXBuildFile; fileRef = AF47CA11206B23EE008B9C59 /* EECSThirdFloor.png */; };
 		AF7E76B2204DD577002DCC46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E76B1204DD577002DCC46 /* AppDelegate.swift */; };
 		AF7E76B4204DD577002DCC46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E76B3204DD577002DCC46 /* ViewController.swift */; };
 		AF7E76B7204DD577002DCC46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76B5204DD577002DCC46 /* Main.storyboard */; };
 		AF7E76BC204DD577002DCC46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76BA204DD577002DCC46 /* LaunchScreen.storyboard */; };
 		AF7E76C6204DDEFF002DCC46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7E76C5204DDEFF002DCC46 /* Images.xcassets */; };
 		AF8407D0204FA5C3001182CA /* BuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8407CF204FA5C3001182CA /* BuildingViewController.swift */; };
-		AF88826620603DE70031D985 /* EECSFIrstFloor.png in Resources */ = {isa = PBXBuildFile; fileRef = AF88826520603DE70031D985 /* EECSFIrstFloor.png */; };
+		AF88826620603DE70031D985 /* EECSFirstFloor.png in Resources */ = {isa = PBXBuildFile; fileRef = AF88826520603DE70031D985 /* EECSFirstFloor.png */; };
 		AFA44FC82059A52A00737A6E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA44FC72059A52A00737A6E /* MapViewController.swift */; };
 		AFB80F1720524674003942E2 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB80F1620524674003942E2 /* RoomViewController.swift */; };
 		AFBCF66B2061A7AA001838E2 /* Indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBCF66A2061A7AA001838E2 /* Indicator.png */; };
@@ -58,6 +61,9 @@
 		AF40F8022056F8F7006C362A /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		AF47CA0A206AE7BF008B9C59 /* startIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startIndicator.png; sourceTree = "<group>"; };
 		AF47CA0B206AE7BF008B9C59 /* endIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = endIndicator.png; sourceTree = "<group>"; };
+		AF47CA0E206B1D48008B9C59 /* EECSSecondFloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EECSSecondFloor.png; sourceTree = "<group>"; };
+		AF47CA10206B23EE008B9C59 /* EECSFourthFloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EECSFourthFloor.png; sourceTree = "<group>"; };
+		AF47CA11206B23EE008B9C59 /* EECSThirdFloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EECSThirdFloor.png; sourceTree = "<group>"; };
 		AF7E76AE204DD577002DCC46 /* MapBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7E76B1204DD577002DCC46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7E76B3204DD577002DCC46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +72,7 @@
 		AF7E76BD204DD577002DCC46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7E76C5204DDEFF002DCC46 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF8407CF204FA5C3001182CA /* BuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingViewController.swift; sourceTree = "<group>"; };
-		AF88826520603DE70031D985 /* EECSFIrstFloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EECSFIrstFloor.png; sourceTree = "<group>"; };
+		AF88826520603DE70031D985 /* EECSFirstFloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EECSFirstFloor.png; sourceTree = "<group>"; };
 		AFA44FC72059A52A00737A6E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AFB80F1620524674003942E2 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		AFBCF66A2061A7AA001838E2 /* Indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Indicator.png; sourceTree = "<group>"; };
@@ -96,11 +102,14 @@
 		AF2021E220519C3E008F82A9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AF47CA10206B23EE008B9C59 /* EECSFourthFloor.png */,
+				AF47CA11206B23EE008B9C59 /* EECSThirdFloor.png */,
 				AF47CA0B206AE7BF008B9C59 /* endIndicator.png */,
 				AF47CA0A206AE7BF008B9C59 /* startIndicator.png */,
 				3DAB8D85206A9DC90048209A /* Point.png */,
 				AFBCF66A2061A7AA001838E2 /* Indicator.png */,
-				AF88826520603DE70031D985 /* EECSFIrstFloor.png */,
+				AF88826520603DE70031D985 /* EECSFirstFloor.png */,
+				AF47CA0E206B1D48008B9C59 /* EECSSecondFloor.png */,
 				AF2021CF20519C37008F82A9 /* Icon-60@2x.png */,
 				AF2021D420519C37008F82A9 /* Icon-60@3x.png */,
 				AF2021D520519C37008F82A9 /* Icon-Notification@3x.png */,
@@ -220,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF47CA0C206AE7BF008B9C59 /* startIndicator.png in Resources */,
-				AF88826620603DE70031D985 /* EECSFIrstFloor.png in Resources */,
+				AF88826620603DE70031D985 /* EECSFirstFloor.png in Resources */,
 				AF2021D820519C37008F82A9 /* Icon-Small.png in Resources */,
 				AF2021E120519C37008F82A9 /* Icon-Notification@3x.png in Resources */,
 				AF2021DF20519C37008F82A9 /* Icon-Small-40@2x.png in Resources */,
@@ -229,13 +238,16 @@
 				AF2021DA20519C37008F82A9 /* Icon.png in Resources */,
 				AF2021DB20519C37008F82A9 /* Icon-60@2x.png in Resources */,
 				AF2021D920519C37008F82A9 /* Icon-Small-40.png in Resources */,
+				AF47CA13206B23EF008B9C59 /* EECSThirdFloor.png in Resources */,
 				AF2021E020519C37008F82A9 /* Icon-60@3x.png in Resources */,
 				AFBCF66B2061A7AA001838E2 /* Indicator.png in Resources */,
 				AF2021DD20519C37008F82A9 /* iTunesArtwork.png in Resources */,
 				AF7E76C6204DDEFF002DCC46 /* Images.xcassets in Resources */,
+				AF47CA0F206B1D48008B9C59 /* EECSSecondFloor.png in Resources */,
 				AF2021E42051A1C0008F82A9 /* LaunchImage.png in Resources */,
 				3DAB8D86206A9DCA0048209A /* Point.png in Resources */,
 				AF2021DE20519C37008F82A9 /* iTunesArtwork@2x.png in Resources */,
+				AF47CA12206B23EF008B9C59 /* EECSFourthFloor.png in Resources */,
 				AF2021D620519C37008F82A9 /* Icon-Small@2x.png in Resources */,
 				AF7E76BC204DD577002DCC46 /* LaunchScreen.storyboard in Resources */,
 				AF2021D720519C37008F82A9 /* Icon-Small@3x.png in Resources */,

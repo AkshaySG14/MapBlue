@@ -34,11 +34,7 @@ class RoomViewController: UIViewController {
     
     // Gets first digit of the room (which is essentially the floor).
     func getFloor() -> Int {
-        var floor = Int(self.startRoomField.text!)!
-        while (floor / 10 != 0) {
-            floor /= 10
-        }
-        return floor
+        return Int(self.startRoomField.text![0..<1])!
     }
     
     func noErrors() -> Bool {
@@ -107,5 +103,19 @@ class RoomViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+extension String {
+    subscript (bounds: CountableClosedRange<Int>) -> String {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return String(self[start...end])
+    }
+    
+    subscript (bounds: CountableRange<Int>) -> String {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return String(self[start..<end])
     }
 }

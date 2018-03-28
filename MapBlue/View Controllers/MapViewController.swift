@@ -78,6 +78,8 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Sets the map image itself. 
+        mapImage.image = UIImage(named: getImage(building: building, floor: floor))
         // Sets label of map view controller.
         Building.pointMap.initBuildingPointMap(building: building, floor: floor)
         // Initializes all points.
