@@ -36,27 +36,41 @@ class PointList {
         return buildingNodes
     }
 
-    func initPointNodes(_ building : Int) {
+    func initPointNodes(building : Int, floor : Int) {
         switch (building) {
         case Building.GGBrown:
-            initGGBrownPointNodes()
+            initGGBrownPointNodes(floor)
             break
         case Building.EECS:
-            initEECSPointNodes()
+            initEECSPointNodes(floor)
             break
         default:
             break
         }
     }
     
-    func initGGBrownPointNodes () {
-        buildingNodes.append(Point(x: 500, y: 500))
-        buildingNodes.append(Point(x: 1500, y: 1200))
+    private  func initEECSBuildingFloor1() {
+        
+    }
+    
+    private  func initEECSBuildingFloor2() {
+        
+    }
+    
+    private func initGGBrownPointNodes (_ floor : Int) {
     }
 
-    func initEECSPointNodes () {
-        buildingNodes.append(Point(x: 500, y: 500))
-        buildingNodes.append(Point(x: 1500, y: 1200))
+    private func initEECSPointNodes (_ floor : Int) {
+        switch (floor) {
+        case 1:
+            initEECSBuildingFloor1()
+            break
+        case 2:
+            initEECSBuildingFloor2()
+            break
+        default:
+            return
+        }
     }
 }
 
@@ -81,7 +95,7 @@ class RoomMap {
         }
     }
     
-    func initEECSBuildingFloor1() {
+    private func initEECSBuildingFloor1() {
         var count = -1
         buildingRoomMap["1000"] = incrementNum(count: &count) // 0
         buildingRoomMap["1001"] = count
@@ -187,11 +201,16 @@ class RoomMap {
         buildingRoomMap["1500"] = count
     }
     
-    func initEECSBuildingRoomMap() {
+    private func initEECSBuildingFloor2() {
         
     }
     
-    func initGGBrownRoomMap() {
+    private func initEECSBuildingRoomMap() {
+        initEECSBuildingFloor1()
+        initEECSBuildingFloor2()
+    }
+    
+    private func initGGBrownRoomMap() {
         
     }
     
@@ -216,20 +235,20 @@ class PointMap {
         return buildingPointMap
     }
 
-    func initBuildingPointMap(_ building : Int) {
+    func initBuildingPointMap(building : Int, floor : Int) {
         switch (building) {
         case Building.GGBrown:
-            initGGBrownPointMap()
+            initGGBrownPointMap(floor)
             break
         case Building.EECS:
-            initbuildingPointMap()
+            initEECSBuildingPointMap(floor)
             break
         default:
             break
         }
     }
     
-    private func initbuildingPointMap() {
+    private func initEECSBuildingFloor1() {
         buildingPointMap[Building.roomMap.getRoomValue(room: "1000")] = Point(x: 2500, y: 1750) // Room 1000/1001
         buildingPointMap[Building.roomMap.getRoomValue(room: "1003")] = Point(x: 2575, y: 1575) // Room 1003
         buildingPointMap[Building.roomMap.getRoomValue(room: "1005")] = Point(x: 2575, y: 1385) // Room 1005
@@ -245,16 +264,16 @@ class PointMap {
         buildingPointMap[Building.roomMap.getRoomValue(room: "1303")] = Point(x: 2565, y: 840) // Room 1303
         buildingPointMap[Building.roomMap.getRoomValue(room: "1311")] = Point(x: 2325, y: 840) // Room 1311
         buildingPointMap[Building.roomMap.getRoomValue(room: "1322")] = Point(x: 1900, y: 650) // Room 1322
-
+        
         buildingPointMap[Building.roomMap.getRoomValue(room: "1346")] = Point(x: 1140, y: 870) // Room 1346
-
+        
         buildingPointMap[Building.roomMap.getRoomValue(room: "1234")] = Point(x: 2565, y: 1200) // Room 1234
         buildingPointMap[Building.roomMap.getRoomValue(room: "1240")] = Point(x: 2565, y: 1200) // Room 1240
         buildingPointMap[Building.roomMap.getRoomValue(room: "1239")] = Point(x: 2565, y: 1200) // Room 1239
         buildingPointMap[Building.roomMap.getRoomValue(room: "1241")] = Point(x: 2565, y: 1200) // Room 1241
         buildingPointMap[Building.roomMap.getRoomValue(room: "1243")] = Point(x: 2565, y: 1200) // Room 1243
         buildingPointMap[Building.roomMap.getRoomValue(room: "1247")] = Point(x: 2565, y: 1200) // Room 1247
-         
+        
         buildingPointMap[Building.roomMap.getRoomValue(room: "1325")] = Point(x: 2565, y: 1200) // Room 1325
         buildingPointMap[Building.roomMap.getRoomValue(room: "1327")] = Point(x: 2565, y: 1200) // Room 1327
         buildingPointMap[Building.roomMap.getRoomValue(room: "1334")] = Point(x: 2565, y: 1200) // Room 1334
@@ -262,7 +281,24 @@ class PointMap {
         buildingPointMap[Building.roomMap.getRoomValue(room: "1340")] = Point(x: 2565, y: 1200) // Room 1340
     }
     
-    private func initGGBrownPointMap() {
+    private func initEECSBuildingFloor2() {
+        
+    }
+    
+    private func initEECSBuildingPointMap(_ floor : Int) {
+        switch (floor) {
+        case 1:
+            initEECSBuildingFloor1()
+            break
+        case 2:
+            initEECSBuildingFloor2()
+            break
+        default:
+            return
+        }
+    }
+    
+    private func initGGBrownPointMap(_ floor : Int) {
         
     }
 

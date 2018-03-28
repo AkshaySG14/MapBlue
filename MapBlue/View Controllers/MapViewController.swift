@@ -79,9 +79,9 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Sets label of map view controller.
-        Building.pointMap.initBuildingPointMap(building)
+        Building.pointMap.initBuildingPointMap(building: building, floor: floor)
         // Initializes all points.
-        Building.pointList.initPointNodes(building)
+        Building.pointList.initPointNodes(building: building, floor: floor)
         setPoints()
         self.mapTitle.text = Building.buildingMap.getBuildingName(building: building) + " Floor " + String(self.floor) + " Map"
         // Set marker starting positions.
