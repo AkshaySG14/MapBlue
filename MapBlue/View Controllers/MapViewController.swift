@@ -65,8 +65,8 @@ class MapViewController: UIViewController {
             imageView.translatesAutoresizingMaskIntoConstraints = false
             imageView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
             self.scrollView.addSubview(imageView)
-            let widthConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.width, multiplier: 1.0, constant: 10)
-            let heightConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.height, multiplier: 1.0, constant: 10)
+            let widthConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.width, multiplier: 1.0, constant: 15)
+            let heightConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.height, multiplier: 1.0, constant: 15)
             let leadingConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: self.scrollView, attribute: NSLayoutAttribute.leading, multiplier: 1.0, constant: point.x)
             let topConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: self.scrollView, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: point.y)
             NSLayoutConstraint.activate([widthConstraint, heightConstraint, leadingConstraint, topConstraint])
@@ -124,7 +124,7 @@ class MapViewController: UIViewController {
         if (!pointNodes.isEmpty) {
             for index in 0...pointNodes.count - 1 {
                 translatedPoint = pointCenters[index].applying(scaleAffineTransform)
-                pointNodes[index].transform = scrollView.transform.translatedBy(x: translatedPoint.x - pointCenters[index].x, y: translatedPoint.y + 100 - pointCenters[index].y)
+                pointNodes[index].transform = scrollView.transform.translatedBy(x: translatedPoint.x - pointCenters[index].x, y: translatedPoint.y + 100 - pointCenters[index].y).scaledBy(x: 0.5 + scrollView.zoomScale, y: 0.5 + scrollView.zoomScale)
             }
         }
     }
