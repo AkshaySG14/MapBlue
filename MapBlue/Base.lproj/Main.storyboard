@@ -398,10 +398,10 @@ Computer Science (EECS Building)</string>
             </objects>
             <point key="canvasLocation" x="1796" y="392.65367316341832"/>
         </scene>
-        <!--Primary Map View Controller-->
+        <!--Seoncary Map View Controller-->
         <scene sceneID="KvT-Va-HUr">
             <objects>
-                <viewController title="Primary Map View Controller" id="UIi-Hm-PGG" customClass="PrimaryMapViewController" customModule="MapBlue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Primary Map View Controller" id="UIi-Hm-PGG" userLabel="Seoncary Map View Controller" customClass="PrimaryMapViewController" customModule="MapBlue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D1x-Me-Mkd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -542,6 +542,7 @@ Computer Science (EECS Building)</string>
         <image name="startIndicator.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="in7-aP-sOz"/>
         <segue reference="tXD-gL-ozy"/>
     </inferredMetricsTieBreakers>
 </document>

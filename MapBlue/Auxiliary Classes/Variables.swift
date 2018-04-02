@@ -291,8 +291,7 @@ class RoomMap {
         }
     }
     
-    private func initEECSBuildingFloor1() {
-        var count = -1
+    private func initEECSBuildingFloor1(_ count : inout Int) {
         buildingRoomMap["1000"] = incrementNum(count: &count) // 0
         buildingRoomMap["1001"] = count
         
@@ -403,8 +402,7 @@ class RoomMap {
         buildingRoomMap["stairs5"] = incrementNum(count: &count)
     }
     
-    private func initEECSBuildingFloor2() {
-        var count = -1
+    private func initEECSBuildingFloor2(_ count : inout Int) {
         buildingRoomMap["2001"] = incrementNum(count : &count)
         buildingRoomMap["2001B"] = count
         
@@ -545,8 +543,7 @@ class RoomMap {
         buildingRoomMap["stairs5"] = incrementNum(count: &count)
     }
     
-    private func initEECSBuildingFloor3() {
-        var count = -1
+    private func initEECSBuildingFloor3(_ count : inout Int) {
         buildingRoomMap["3001"] = incrementNum(count : &count)
         buildingRoomMap["3001A"] = count
         buildingRoomMap["3001B"] = count
@@ -677,8 +674,7 @@ class RoomMap {
         buildingRoomMap["stairs5"] = incrementNum(count: &count)
     }
     
-    private func initEECSBuildingFloor4() {
-        var count = -1
+    private func initEECSBuildingFloor4(_ count : inout Int) {
         buildingRoomMap["4110"] = incrementNum(count : &count)
         buildingRoomMap["4112"] = count
         buildingRoomMap["4114"] = count
@@ -773,10 +769,11 @@ class RoomMap {
     }
     
     private func initbuildingRoomMap() {
-        initEECSBuildingFloor1()
-        initEECSBuildingFloor2()
-        initEECSBuildingFloor3()
-        initEECSBuildingFloor4()
+        var count = -1
+        initEECSBuildingFloor1(&count)
+        initEECSBuildingFloor2(&count)
+        initEECSBuildingFloor3(&count)
+        initEECSBuildingFloor4(&count)
     }
     
     private func initGGBrownRoomMap() {
