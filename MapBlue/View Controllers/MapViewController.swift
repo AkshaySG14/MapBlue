@@ -9,10 +9,10 @@
 import UIKit
 
 class MapViewController: UIViewController {
-    private var building = 0
-    private var floor = 0, secondFloor = -1
-    private var startRoom = "0"
-    private var destRoom = "0"
+    internal var building = 0
+    internal var floor = 0
+    internal var startRoom = "0"
+    internal var destRoom = "0"
     
     @IBOutlet weak var mapTitle: UILabel!
     @IBOutlet weak var mapImage: UIImageView!
@@ -26,20 +26,20 @@ class MapViewController: UIViewController {
     @IBOutlet weak var startIndicatorImage: UIImageView!
     @IBOutlet weak var destIndicatorImage: UIImageView!
     // Indicator Points.
-    private var startPoint = Point(x: 0, y: 0)
-    private var destPoint = Point(x: 0, y: 0)
+    internal var startPoint = Point(x: 0, y: 0)
+    internal var destPoint = Point(x: 0, y: 0)
     // Point Nodes.
-    private var points : [Point] = []
+    internal var points : [Point] = []
     // Point Images.
-    private var pointNodes : [UIImageView] = []
+    internal var pointNodes : [UIImageView] = []
     // Point centers.
-    private var pointCenters : [CGPoint] = []
+    internal var pointCenters : [CGPoint] = []
     // Scroll view.
     @IBOutlet weak var scrollView: UIScrollView!
     // Center of the indicators.
-    private var startIndicatorViewCenter : CGPoint = CGPoint.zero
-    private var destIndicatorViewBottom : CGPoint = CGPoint.zero
-
+    internal var startIndicatorViewCenter : CGPoint = CGPoint.zero
+    internal var destIndicatorViewBottom : CGPoint = CGPoint.zero
+    
     // Sets relevant variables. This is when the floor is the same for both start and end rooms.
     func initialize(building : Int, floor : Int, startRoom : String, destRoom : String) {
         self.building = building
@@ -48,37 +48,9 @@ class MapViewController: UIViewController {
         self.destRoom = destRoom
     }
     
-    // Sets relevant variables. This is when the floor is the same for both start and end rooms.
-    func initialize(building : Int, floor1 : Int, floor2: Int, startRoom : String, destRoom : String) {
-        self.building = building
-        self.floor = floor1
-        self.secondFloor = floor2
-        self.startRoom = startRoom
-        self.destRoom = destRoom
-    }
-    
-    // Set position of the markers.
+    // Set position of the markers. Note that Map View Controller is NOT responsible for this method.
     func setMarkerPositions() {
-        // Gets the point map.
-        let pointMap = Building.pointMap.getBuildingPointMap()
-        // Sets the starting location of each indicator (start and end).
-        self.startPoint = pointMap[Building.roomMap.getRoomValue(room: startRoom)]!
-        // If on the same floor, set as ending point normally, else get the stairs position.
-        if (self.secondFloor == -1) {
-            self.destPoint = pointMap[Building.roomMap.getRoomValue(room: destRoom)]!
-        }
-        else {
-            // Creates list of stairs.
-            let stairList = Building.pointMap.getStairs(self.building)
-            self.destPoint = Building.pointList.getNearestNode(point: self.startPoint, nodes: stairList)
-        }
-        
-        self.startIndicatorImageLeading.constant = startPoint.x
-        self.startIndicatorImageTop.constant = startPoint.y
-        
-        self.destIndicatorImageLeading.constant = destPoint.x
-        self.destIndicatorImageTop.constant = destPoint.y - destIndicatorImage.frame.height / 2
-        self.view.layoutIfNeeded()
+        preconditionFailure("This method must be overridden")
     }
     
     // Adds relevant points.
@@ -116,7 +88,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Sets the map image itself. 
+        // Sets the map image itself.
         mapImage.image = UIImage(named: getImage(building: building, floor: floor))
         // Sets label of map view controller.
         Building.pointMap.initBuildingPointMap(building: building, floor: floor)
@@ -147,7 +119,7 @@ class MapViewController: UIViewController {
         let widthScale = size.width / self.mapImage.bounds.width
         let heightScale = size.height / self.mapImage.bounds.height
         let minScale = min(widthScale, heightScale)
-
+        
         scrollView.minimumZoomScale = minScale
         scrollView.zoomScale = minScale
         
@@ -160,7 +132,7 @@ class MapViewController: UIViewController {
         
         translatedPoint = destIndicatorViewBottom.applying(scaleAffineTransform)
         self.destIndicatorImage.transform = scrollView.transform.translatedBy(x: translatedPoint.x - destIndicatorViewBottom.x, y: translatedPoint.y + 100 - destIndicatorViewBottom.y).scaledBy(x: 0.5 + scrollView.zoomScale, y: 0.5 + scrollView.zoomScale)
-
+        
         // Translates all points accordingly.
         if (!pointNodes.isEmpty) {
             for index in 0...pointNodes.count - 1 {
@@ -169,7 +141,7 @@ class MapViewController: UIViewController {
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -211,3 +183,4 @@ extension MapViewController: UIScrollViewDelegate {
         self.scrollView.contentSize.height = self.scrollView.contentSize.height * 1.1 // Account for bottom portion.
     }
 }
+
