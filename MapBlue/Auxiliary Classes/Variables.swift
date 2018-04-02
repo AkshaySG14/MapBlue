@@ -304,7 +304,6 @@ class RoomMap {
         buildingRoomMap["1200"] = incrementNum(count: &count)
         buildingRoomMap["1222"] = incrementNum(count: &count)
         buildingRoomMap["1222A"] = incrementNum(count: &count)
-        buildingRoomMap["1226"] = incrementNum(count: &count)
         
         buildingRoomMap["1226"] = incrementNum(count: &count)
         buildingRoomMap["1226A"] = count

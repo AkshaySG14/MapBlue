@@ -174,7 +174,7 @@ Computer Science (EECS Building)</string>
                                     <constraint firstItem="FYw-e1-SrK" firstAttribute="leading" secondItem="TQM-nU-Yqi" secondAttribute="leading" id="jex-QB-Yck"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="delegate" destination="nHT-Su-HZ4" id="VbG-go-DY7"/>
+                                    <outlet property="delegate" destination="nHT-Su-HZ4" id="bVT-9e-50K"/>
                                 </connections>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="startIndicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="J6t-OB-OEk" userLabel="startIndicatorLegend">
@@ -271,6 +271,9 @@ Computer Science (EECS Building)</string>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="z7C-0d-GKu" id="4Hm-dt-j0n"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WI9-e1-B8T">
                                 <rect key="frame" x="16" y="89" width="343" height="73"/>
@@ -321,6 +324,9 @@ Computer Science (EECS Building)</string>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="z7C-0d-GKu" id="ztR-al-9gX"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-hV-7wu">
                                 <rect key="frame" x="147" y="536" width="78" height="71.5"/>

@@ -98,10 +98,16 @@ class RoomViewController: UIViewController {
         self.building = building!
     }
     
+    // Upon pressing enter key, exit keyboard. Possible due to text field delegation.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Sets up the keyboard's dismissal upon screen being touched.
+        setupKeyboard()
         // Sets label of room view controller.
         self.buildingTitle.text = "You are in " + Building.buildingMap.getBuildingName(building: building)
         // Initialize building room map.
