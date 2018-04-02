@@ -21,20 +21,28 @@ class RoomViewController: UIViewController {
     @IBOutlet weak var roomTwoError: UILabel!
     // The building the controller is concerned with.
     private var building = 0
+    
     // Sends data to the next view (Map Controller View).
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoMap" {
             // Gets destination view controller as roomview controller and uses the set building function.
             if let destinationVC = segue.destination as? MapViewController {
                 // Forcibly casts the sender to UI button to set the building properly.
-                destinationVC.initialize(building : building, floor : self.getFloor(), startRoom: self.startRoomField.text!, destRoom: self.destinationRoomField.text!)
+                // If start and dest are on same floor.
+                if (getFloor(startRoomField.text!) == getFloor(destinationRoomField.text!)) {
+                    destinationVC.initialize(building : building, floor : self.getFloor(self.startRoomField.text!), startRoom: self.startRoomField.text!, destRoom: self.destinationRoomField.text!)
+                }
+                // Else initialize with two floors.
+                else {
+                    destinationVC.initialize(building : building, floor1 : self.getFloor(self.startRoomField.text!), floor2: self.getFloor(self.destinationRoomField.text!), startRoom: self.startRoomField.text!, destRoom: self.destinationRoomField.text!)
+                }
             }
         }
     }
     
     // Gets first digit of the room (which is essentially the floor).
-    func getFloor() -> Int {
-        return Int(self.startRoomField.text![0..<1])!
+    func getFloor(_ text : String) -> Int {
+        return Int(text[0..<1])!
     }
     
     func noErrors() -> Bool {
@@ -69,7 +77,7 @@ class RoomViewController: UIViewController {
             roomTwoError.text = ""
         }
         // Checks if rooms are equivalent.
-        if (check && Building.roomMap.getRoomValue(room: startRoomField.text!) == Building.roomMap.getRoomValue(room: destinationRoomField.text!)) {
+        if (check && Building.roomMap.getRoomValue(room: startRoomField.text!) == Building.roomMap.getRoomValue(room: destinationRoomField.text!) && getFloor(startRoomField.text!) == getFloor(destinationRoomField.text!)) {
             check = false
             roomOneError.text = "Rooms are in same location"
             roomTwoError.text = "Rooms are in the same location"

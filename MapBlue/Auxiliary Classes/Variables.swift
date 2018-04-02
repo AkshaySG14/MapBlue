@@ -6,6 +6,8 @@
 //  Copyright © 2018 MediocreAtBest. All rights reserved.
 //
 
+import UIKit
+
 // Gets the appropriate map name for the image.
 func getImage(building : Int, floor: Int) -> String {
     switch (building) {
@@ -55,6 +57,19 @@ class PointList {
     
     func getPointNodes() -> [Point] {
         return buildingNodes
+    }
+    
+    func getNearestNode(point : Point, nodes : [Point]) -> Point {
+        var min : CGFloat = Point.getDistance(a: point, b: nodes[0])
+        var nearestPoint : Point = nodes[0]
+        for node in nodes {
+            let distance = Point.getDistance(a: point, b: node)
+            if (distance < min) {
+                min = distance
+                nearestPoint = node
+            }
+        }
+        return nearestPoint
     }
     
     func initPointNodes(building : Int, floor : Int) {
@@ -140,13 +155,12 @@ class PointList {
     }
     
     // Auxiliary function so that act of adding neighbors is a mutual action.
-    private func addMutualNeighbors(one : Point, two : Point) {
+    func addMutualNeighbors(one : Point, two : Point) {
         one.neighbors.append(two)
         two.neighbors.append(one)
     }
     
     private func initEECSBuildingFloor1Neighbors() {
-        // Farthest left nodes (below Nanofabrication Facility).
         addMutualNeighbors(one: buildingNodes[0], two: buildingNodes[1])
         addMutualNeighbors(one: buildingNodes[1], two: buildingNodes[2])
         addMutualNeighbors(one: buildingNodes[2], two: buildingNodes[3])
@@ -193,6 +207,7 @@ class PointList {
         addMutualNeighbors(one: buildingNodes[38], two: buildingNodes[48])
         addMutualNeighbors(one: buildingNodes[38], two: buildingNodes[60])
         addMutualNeighbors(one: buildingNodes[39], two: buildingNodes[50])
+        addMutualNeighbors(one: buildingNodes[39], two: buildingNodes[40])
         addMutualNeighbors(one: buildingNodes[40], two: buildingNodes[41])
         addMutualNeighbors(one: buildingNodes[40], two: buildingNodes[51])
         addMutualNeighbors(one: buildingNodes[41], two: buildingNodes[42])
@@ -238,6 +253,7 @@ class PointList {
         switch (floor) {
         case 1:
             initEECSBuildingFloor1()
+            initEECSBuildingFloor1Neighbors()
             break
         case 2:
             initEECSBuildingFloor2()
@@ -788,6 +804,17 @@ class PointMap {
         return buildingPointMap
     }
     
+    func getStairs(_ building : Int) -> [Point] {
+        switch (building) {
+        case Building.EECS:
+            return [buildingPointMap[Building.roomMap.getRoomValue(room: "stairs1")]!, buildingPointMap[Building.roomMap.getRoomValue(room: "stairs2")]!, buildingPointMap[Building.roomMap.getRoomValue(room: "stairs3")]!, buildingPointMap[Building.roomMap.getRoomValue(room: "stairs4")]!, buildingPointMap[Building.roomMap.getRoomValue(room: "stairs5")]!]
+        case Building.GGBrown:
+            return []
+        default:
+            return []
+        }
+    }
+    
     func initBuildingPointMap(building : Int, floor : Int) {
         switch (building) {
         case Building.GGBrown:
@@ -869,15 +896,12 @@ class PointMap {
         buildingPointMap[Building.roomMap.getRoomValue(room: "1475")] = Point(x: 2565, y: 1200) // Room 1475
         buildingPointMap[Building.roomMap.getRoomValue(room: "1479")] = Point(x: 2565, y: 1200) // Room 1479
         buildingPointMap[Building.roomMap.getRoomValue(room: "1500")] = Point(x: 2565, y: 1200) // Room 1500
-        
-        
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs1")] = Point(x: 2565, y: 1200) // Stairs 1
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs2")] = Point(x: 2565, y: 1200) // Stairs 2
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs3")] = Point(x: 2565, y: 1200) // Stairs 3
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs4")] = Point(x: 2565, y: 1200) // Stairs 4
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs5")] = Point(x: 2565, y: 1200) // Stairs 5
-        
-        
+    
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs1")] = Point(x: 500, y: 500) // Stairs 1
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs2")] = Point(x: 500, y: 500) // Stairs 2
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs3")] = Point(x: 500, y: 500) // Stairs 3
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs4")] = Point(x: 500, y: 500) // Stairs 4
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs5")] = Point(x: 500, y: 500) // Stairs 5
     }
     
     private func initEECSBuildingFloor2() {

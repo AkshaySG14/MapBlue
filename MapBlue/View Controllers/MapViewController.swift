@@ -10,7 +10,7 @@ import UIKit
 
 class MapViewController: UIViewController {
     private var building = 0
-    private var floor = 0
+    private var floor = 0, secondFloor = -1
     private var startRoom = "0"
     private var destRoom = "0"
     
@@ -25,17 +25,22 @@ class MapViewController: UIViewController {
     // Indicator Images.
     @IBOutlet weak var startIndicatorImage: UIImageView!
     @IBOutlet weak var destIndicatorImage: UIImageView!
+    // Indicator Points.
+    private var startPoint = Point(x: 0, y: 0)
+    private var destPoint = Point(x: 0, y: 0)
+    // Point Nodes.
+    private var points : [Point] = []
     // Point Images.
-    var pointNodes: [UIImageView] = []
+    private var pointNodes : [UIImageView] = []
     // Point centers.
-    var pointCenters: [CGPoint] = []
+    private var pointCenters : [CGPoint] = []
     // Scroll view.
     @IBOutlet weak var scrollView: UIScrollView!
     // Center of the indicators.
-    var startIndicatorViewCenter : CGPoint = CGPoint.zero
-    var destIndicatorViewBottom : CGPoint = CGPoint.zero
+    private var startIndicatorViewCenter : CGPoint = CGPoint.zero
+    private var destIndicatorViewBottom : CGPoint = CGPoint.zero
 
-    // Sets relevant variables.
+    // Sets relevant variables. This is when the floor is the same for both start and end rooms.
     func initialize(building : Int, floor : Int, startRoom : String, destRoom : String) {
         self.building = building
         self.floor = floor
@@ -43,37 +48,70 @@ class MapViewController: UIViewController {
         self.destRoom = destRoom
     }
     
+    // Sets relevant variables. This is when the floor is the same for both start and end rooms.
+    func initialize(building : Int, floor1 : Int, floor2: Int, startRoom : String, destRoom : String) {
+        self.building = building
+        self.floor = floor1
+        self.secondFloor = floor2
+        self.startRoom = startRoom
+        self.destRoom = destRoom
+    }
+    
     // Set position of the markers.
     func setMarkerPositions() {
-        let startPoint = Building.pointMap.getBuildingPointMap()[Building.roomMap.getRoomValue(room: startRoom)]
-        let destPoint = Building.pointMap.getBuildingPointMap()[Building.roomMap.getRoomValue(room: destRoom)]
+        // Gets the point map.
+        let pointMap = Building.pointMap.getBuildingPointMap()
+        // Sets the starting location of each indicator (start and end).
+        self.startPoint = pointMap[Building.roomMap.getRoomValue(room: startRoom)]!
+        // If on the same floor, set as ending point normally, else get the stairs position.
+        if (self.secondFloor == -1) {
+            self.destPoint = pointMap[Building.roomMap.getRoomValue(room: destRoom)]!
+        }
+        else {
+            // Creates list of stairs.
+            let stairList = Building.pointMap.getStairs(self.building)
+            self.destPoint = Building.pointList.getNearestNode(point: self.startPoint, nodes: stairList)
+        }
         
-        startIndicatorImageLeading.constant = startPoint!.x
-        startIndicatorImageTop.constant = startPoint!.y
+        self.startIndicatorImageLeading.constant = startPoint.x
+        self.startIndicatorImageTop.constant = startPoint.y
         
-        destIndicatorImageLeading.constant = destPoint!.x
-        destIndicatorImageTop.constant = destPoint!.y - destIndicatorImage.frame.height / 2
+        self.destIndicatorImageLeading.constant = destPoint.x
+        self.destIndicatorImageTop.constant = destPoint.y - destIndicatorImage.frame.height / 2
         self.view.layoutIfNeeded()
     }
     
     // Adds relevant points.
     func setPoints() {
-        for point in Building.pointList.getPointNodes() {
+        // Gets the points that links starting to destination.
+        startPoint.getFirstNeighbor().getNodeList(dest : destPoint.getFirstNeighbor(), from : startPoint, nodes : &points)
+        for point in self.points {
+            // Creates the image of the point itself and sets frame accordingly.
             let imageName = "Point.png"
             let image = UIImage(named: imageName)
             let imageView = UIImageView(image: image!)
             imageView.translatesAutoresizingMaskIntoConstraints = false
             imageView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+            // Adds image UI element to the scroll view.
             self.scrollView.addSubview(imageView)
+            // Sets the constraints of the image. This is important because without these constraints the initial position would be impossible to set.
             let widthConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.width, multiplier: 1.0, constant: 15)
             let heightConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.height, multiplier: 1.0, constant: 15)
             let leadingConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: self.scrollView, attribute: NSLayoutAttribute.leading, multiplier: 1.0, constant: point.x)
             let topConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: self.scrollView, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: point.y)
             NSLayoutConstraint.activate([widthConstraint, heightConstraint, leadingConstraint, topConstraint])
+            // Updates view.
             self.view.layoutIfNeeded()
+            // Appends the image to the image list, and the center of the image to the center point list.
             pointNodes.append(imageView)
             pointCenters.append(imageView.center)
         }
+    }
+    
+    // Initializes all points from the be.
+    func setPointChain() {
+        Building.pointList.addMutualNeighbors(one: startPoint, two: Building.pointList.getNearestNode(point: startPoint, nodes: Building.pointList.getPointNodes()))
+        Building.pointList.addMutualNeighbors(one: destPoint, two: Building.pointList.getNearestNode(point: destPoint, nodes: Building.pointList.getPointNodes()))
     }
     
     override func viewDidLoad() {
@@ -84,7 +122,6 @@ class MapViewController: UIViewController {
         Building.pointMap.initBuildingPointMap(building: building, floor: floor)
         // Initializes all points.
         Building.pointList.initPointNodes(building: building, floor: floor)
-        setPoints()
         self.mapTitle.text = Building.buildingMap.getBuildingName(building: building) + " Floor " + String(self.floor) + " Map"
         // Set marker starting positions.
         self.setMarkerPositions()
@@ -93,6 +130,10 @@ class MapViewController: UIViewController {
         self.destIndicatorViewBottom = CGPoint(x: destIndicatorImage.center.x, y: destIndicatorImage.center.y + destIndicatorImage.frame.height / 2)
         // Sets content size of scroll view.
         self.scrollView.contentSize = self.mapImage.frame.size
+        // Set neighbors of starting and ending indicator.
+        setPointChain()
+        // Set the point positions.
+        setPoints()
     }
     
     // Sets initial constants.
@@ -135,6 +176,7 @@ class MapViewController: UIViewController {
     }
 }
 
+// Various zoom functions.
 extension MapViewController: UIScrollViewDelegate {
     // Links the map to be zoomed in on.
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -162,6 +204,7 @@ extension MapViewController: UIScrollViewDelegate {
         }
     }
     
+    // Reset content size of scroll view.
     func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
         let scaleAffineTransform = scrollView.transform.scaledBy(x: scale, y: scale)
         self.scrollView.contentSize = self.mapImage.bounds.size.applying(scaleAffineTransform)
