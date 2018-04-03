@@ -284,7 +284,7 @@ Computer Science (EECS Building)</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O78-UU-s51">
-                                <rect key="frame" x="19" y="172" width="340" height="28"/>
+                                <rect key="frame" x="19" y="189" width="340" height="28"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Which room are you closest to?">
                                         <attributes>
@@ -297,7 +297,7 @@ Computer Science (EECS Building)</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbn-Ri-weu">
-                                <rect key="frame" x="54" y="342" width="264" height="30"/>
+                                <rect key="frame" x="54" y="355" width="264" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -337,7 +337,7 @@ Computer Science (EECS Building)</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvQ-Ms-qX0">
-                                <rect key="frame" x="16" y="294" width="340" height="28"/>
+                                <rect key="frame" x="16" y="307" width="340" height="28"/>
                                 <attributedString key="attributedText">
                                     <fragment content="What is your destination?">
                                         <attributes>
@@ -350,7 +350,7 @@ Computer Science (EECS Building)</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Gp-mu-pGC" userLabel="Starting Room Field">
-                                <rect key="frame" x="57" y="219" width="264" height="30"/>
+                                <rect key="frame" x="57" y="236" width="264" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -405,15 +405,15 @@ Computer Science (EECS Building)</string>
                             <constraint firstItem="zya-bu-2lH" firstAttribute="leading" secondItem="a7R-c6-8Qd" secondAttribute="leading" constant="16" id="avt-Qk-RL5"/>
                             <constraint firstItem="a7R-c6-8Qd" firstAttribute="trailing" secondItem="vbn-Ri-weu" secondAttribute="trailing" constant="57" id="bLO-PV-TSM"/>
                             <constraint firstItem="fm6-aj-Yss" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="472" id="cq1-Lm-2oI"/>
-                            <constraint firstItem="CvQ-Ms-qX0" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="274" id="eam-H5-BQY"/>
-                            <constraint firstItem="O78-UU-s51" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="152" id="f97-Ub-Qtg"/>
-                            <constraint firstItem="vbn-Ri-weu" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="322" id="hTh-mc-4vn"/>
+                            <constraint firstItem="CvQ-Ms-qX0" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="287" id="eam-H5-BQY"/>
+                            <constraint firstItem="O78-UU-s51" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="169" id="f97-Ub-Qtg"/>
+                            <constraint firstItem="vbn-Ri-weu" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="335" id="hTh-mc-4vn"/>
                             <constraint firstItem="WI9-e1-B8T" firstAttribute="leading" secondItem="a7R-c6-8Qd" secondAttribute="leading" constant="16" id="lDj-oW-4J0"/>
                             <constraint firstItem="a7R-c6-8Qd" firstAttribute="trailing" secondItem="4Gp-mu-pGC" secondAttribute="trailing" constant="54" id="lc6-YP-YEZ"/>
                             <constraint firstItem="a7R-c6-8Qd" firstAttribute="trailing" secondItem="CvQ-Ms-qX0" secondAttribute="trailing" constant="19" id="nIJ-iJ-lYe"/>
                             <constraint firstItem="fm6-aj-Yss" firstAttribute="leading" secondItem="a7R-c6-8Qd" secondAttribute="leading" constant="16" id="o17-Ya-0nf"/>
                             <constraint firstItem="O78-UU-s51" firstAttribute="leading" secondItem="a7R-c6-8Qd" secondAttribute="leading" constant="19" id="oVU-gi-d7X"/>
-                            <constraint firstItem="4Gp-mu-pGC" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="199" id="tsS-4J-V9n"/>
+                            <constraint firstItem="4Gp-mu-pGC" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="216" id="tsS-4J-V9n"/>
                             <constraint firstItem="a7R-c6-8Qd" firstAttribute="trailing" secondItem="WI9-e1-B8T" secondAttribute="trailing" constant="16" id="v4r-4D-OPA"/>
                             <constraint firstItem="vbn-Ri-weu" firstAttribute="leading" secondItem="a7R-c6-8Qd" secondAttribute="leading" constant="54" id="v74-uL-tOn"/>
                             <constraint firstItem="zya-bu-2lH" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="303" id="wEE-Ld-Bgd"/>
