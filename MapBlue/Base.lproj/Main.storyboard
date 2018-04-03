@@ -25,12 +25,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEC-lV-zOg">
-                                <rect key="frame" x="29" y="53" width="317" height="29"/>
+                                <rect key="frame" x="29" y="53" width="317" height="31"/>
                                 <attributedString key="attributedText">
                                     <fragment content="What building are you in?">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="24" name="HelveticaNeue-Bold"/>
+                                            <font key="NSFont" size="26" name="HelveticaNeue-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -38,17 +38,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WSm-0C-GTq">
-                                <rect key="frame" x="0.0" y="119" width="384" height="128"/>
+                                <rect key="frame" x="0.0" y="119" width="384" height="121"/>
                                 <subviews>
                                     <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAZ-Cl-ev1">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="40"/>
+                                        <rect key="frame" x="16" y="0.0" width="352" height="37.5"/>
                                         <color key="backgroundColor" red="0.98363727850000005" green="1" blue="0.98907430620000003" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="George G. (GG) Brown Laboratories">
                                                     <attributes>
                                                         <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                                        <font key="NSFont" size="22" name="HelveticaNeue"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -60,7 +60,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-7x-jm8">
-                                        <rect key="frame" x="4" y="60" width="376" height="68"/>
+                                        <rect key="frame" x="20" y="57.5" width="344" height="63.5"/>
                                         <color key="backgroundColor" red="0.98363727846159543" green="1" blue="0.9890743061922963" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -69,7 +69,7 @@
 Computer Science (EECS Building)</string>
                                                     <attributes>
                                                         <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                                        <font key="NSFont" size="22" name="HelveticaNeue"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -581,7 +581,7 @@ Computer Science (EECS Building)</string>
         <image name="startIndicator.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tXD-gL-ozy"/>
+        <segue reference="Ags-PO-PNb"/>
         <segue reference="in7-aP-sOz"/>
     </inferredMetricsTieBreakers>
 </document>
