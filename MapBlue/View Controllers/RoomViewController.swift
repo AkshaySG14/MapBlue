@@ -25,9 +25,8 @@ class RoomViewController: UIViewController {
     // Sends data to the next view (Map Controller View).
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoMap" {
-            // Gets destination view controller as roomview controller and uses the set building function.
+            // Gets destination view controller as primary map view controller and uses the initialize function.
             if let destinationVC = segue.destination as? PrimaryMapViewController {
-                // Forcibly casts the sender to UI button to set the building properly.
                 // If start and dest are on same floor.
                 if (getFloor(startRoomField.text!) == getFloor(destinationRoomField.text!)) {
                     destinationVC.initialize(building : building, floor : self.getFloor(self.startRoomField.text!), startRoom: self.startRoomField.text!, destRoom: self.destinationRoomField.text!)

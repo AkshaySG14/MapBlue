@@ -9,8 +9,21 @@
 import UIKit
 
 class PrimaryMapViewController: MapViewController {
+    // Nextmap button.
+    @IBOutlet weak var nextMap: UIButton!
     // The primary map view controller could need to pass on a second floor.
     var secondFloor = -1
+    
+    // Sends data to the next view (Secondary Map Controller View).
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoSecondaryMap" {
+            // Gets destination view controller as Secondary Map View controller and uses the set building function.
+            if let destinationVC = segue.destination as? SecondaryMapViewController {
+                // If start and dest are on same floor.
+                destinationVC.initialize(building : building, floor : self.secondFloor, startRoom: self.getStairsName(), destRoom: self.destRoom)
+            }
+        }
+    }
     
     // Sets relevant variables. This is when the start and end floor are different.
     func initialize(building : Int, floor1 : Int, floor2: Int, startRoom : String, destRoom : String) {
@@ -19,6 +32,30 @@ class PrimaryMapViewController: MapViewController {
         self.secondFloor = floor2
         self.startRoom = startRoom
         self.destRoom = destRoom
+    }
+    
+    // Gets the name of the stairs to pass to the secondary map view controller.
+    func getStairsName() -> String{
+        let pointMap = Building.pointMap.getBuildingPointMap()
+        let stairList = Building.pointMap.getStairs(self.building)
+        // Loops through stairs until appropriate stairs is found for destination point.
+        for index in 1...stairList.count {
+            if (self.destPoint == pointMap[Building.roomMap.getRoomValue(room: "stairs" + String(index))]!) {
+                return "stairs" + String(index)
+            }
+        }
+        return ""
+    }
+    
+    // Enables the second map button.
+    func enableSecondMapButton() {
+        nextMap.isEnabled = true
+        nextMap.isSelected = false
+        nextMap.isHidden = false
+        nextMap.setTitle("Go to Floor " + String(self.secondFloor) + " Map", for: .normal)
+        nextMap.setTitle("Go to Floor " + String(self.secondFloor) + " Map", for: .disabled)
+        nextMap.layoutIfNeeded()
+        nextMap.setNeedsLayout()
     }
     
     // Set position of the markers.
@@ -44,4 +81,20 @@ class PrimaryMapViewController: MapViewController {
         self.destIndicatorImageTop.constant = destPoint.y - destIndicatorImage.frame.height / 2
         self.view.layoutIfNeeded()
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // If second room exists, enable button.
+        if (self.secondFloor != -1) {
+            enableSecondMapButton()
+        }
+        // Else set button to have no text.
+        else {
+            nextMap.setTitle("", for: .normal)
+            nextMap.setTitle("", for: .disabled)
+        }
+        nextMap.layoutIfNeeded()
+        nextMap.setNeedsLayout()
+    }
 }
+

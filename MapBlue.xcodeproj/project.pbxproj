@@ -37,6 +37,7 @@
 		AF8407D0204FA5C3001182CA /* BuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8407CF204FA5C3001182CA /* BuildingViewController.swift */; };
 		AF88826620603DE70031D985 /* EECSFirstFloor.png in Resources */ = {isa = PBXBuildFile; fileRef = AF88826520603DE70031D985 /* EECSFirstFloor.png */; };
 		AFA1BD96207277DF005A5E05 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA1BD95207277DF005A5E05 /* MapViewController.swift */; };
+		AFA1BD98207347B9005A5E05 /* SecondaryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA1BD97207347B9005A5E05 /* SecondaryMapViewController.swift */; };
 		AFA44FC82059A52A00737A6E /* PrimaryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA44FC72059A52A00737A6E /* PrimaryMapViewController.swift */; };
 		AFB80F1720524674003942E2 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB80F1620524674003942E2 /* RoomViewController.swift */; };
 		AFBCF66B2061A7AA001838E2 /* Indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBCF66A2061A7AA001838E2 /* Indicator.png */; };
@@ -75,6 +76,7 @@
 		AF8407CF204FA5C3001182CA /* BuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingViewController.swift; sourceTree = "<group>"; };
 		AF88826520603DE70031D985 /* EECSFirstFloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EECSFirstFloor.png; sourceTree = "<group>"; };
 		AFA1BD95207277DF005A5E05 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AFA1BD97207347B9005A5E05 /* SecondaryMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryMapViewController.swift; sourceTree = "<group>"; };
 		AFA44FC72059A52A00737A6E /* PrimaryMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryMapViewController.swift; sourceTree = "<group>"; };
 		AFB80F1620524674003942E2 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		AFBCF66A2061A7AA001838E2 /* Indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Indicator.png; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				AF8407CF204FA5C3001182CA /* BuildingViewController.swift */,
 				AFB80F1620524674003942E2 /* RoomViewController.swift */,
 				AFA44FC72059A52A00737A6E /* PrimaryMapViewController.swift */,
+				AFA1BD97207347B9005A5E05 /* SecondaryMapViewController.swift */,
 				AFA1BD95207277DF005A5E05 /* MapViewController.swift */,
 			);
 			path = "View Controllers";
@@ -271,6 +274,7 @@
 				AF7E76B2204DD577002DCC46 /* AppDelegate.swift in Sources */,
 				AFA1BD96207277DF005A5E05 /* MapViewController.swift in Sources */,
 				AFB80F1720524674003942E2 /* RoomViewController.swift in Sources */,
+				AFA1BD98207347B9005A5E05 /* SecondaryMapViewController.swift in Sources */,
 				3D953CB42065A063009A50E2 /* Point.swift in Sources */,
 				AF13454B2054CEDA00640178 /* Constants.swift in Sources */,
 				AFA44FC82059A52A00737A6E /* PrimaryMapViewController.swift in Sources */,
