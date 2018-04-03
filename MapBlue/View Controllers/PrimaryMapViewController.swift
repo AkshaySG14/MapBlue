@@ -50,12 +50,8 @@ class PrimaryMapViewController: MapViewController {
     // Enables the second map button.
     func enableSecondMapButton() {
         nextMap.isEnabled = true
-        nextMap.isSelected = false
-        nextMap.isHidden = false
         nextMap.setTitle("Go to Floor " + String(self.secondFloor) + " Map", for: .normal)
-        nextMap.setTitle("Go to Floor " + String(self.secondFloor) + " Map", for: .disabled)
-        nextMap.layoutIfNeeded()
-        nextMap.setNeedsLayout()
+        nextMap.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
     }
     
     // Set position of the markers.
@@ -88,13 +84,6 @@ class PrimaryMapViewController: MapViewController {
         if (self.secondFloor != -1) {
             enableSecondMapButton()
         }
-        // Else set button to have no text.
-        else {
-            nextMap.setTitle("", for: .normal)
-            nextMap.setTitle("", for: .disabled)
-        }
-        nextMap.layoutIfNeeded()
-        nextMap.setNeedsLayout()
     }
 }
 

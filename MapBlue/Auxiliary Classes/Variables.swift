@@ -41,7 +41,7 @@ class BuildingMap {
     private var buildingMap = [Int: String]()
     
     init() {
-        buildingMap[Building.EECS] = "the EECS Building"
+        buildingMap[Building.EECS] = "EECS Building"
         buildingMap[Building.GGBrown] = "G. G. Brown"
     }
     
