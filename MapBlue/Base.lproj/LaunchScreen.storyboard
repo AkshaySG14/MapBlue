@@ -19,12 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LaunchImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="dch-7s-YPB">
-                                <rect key="frame" x="37" y="252" width="246" height="231"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="dch-7s-YPB">
+                                <rect key="frame" x="64.5" y="228" width="246" height="231"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="1fe-22-62F"/>
-                                    <constraint firstAttribute="width" constant="300" id="GIb-VD-EMo"/>
-                                    <constraint firstAttribute="width" secondItem="dch-7s-YPB" secondAttribute="height" multiplier="1:1" id="KFS-76-Kmd"/>
+                                    <constraint firstAttribute="height" constant="231" id="1fe-22-62F"/>
+                                    <constraint firstAttribute="width" constant="246" id="GIb-VD-EMo"/>
+                                    <constraint firstAttribute="width" secondItem="dch-7s-YPB" secondAttribute="height" multiplier="1:1" constant="15" id="KFS-76-Kmd"/>
                                 </constraints>
                             </imageView>
                         </subviews>
