@@ -359,13 +359,13 @@ Computer Science (EECS Building)</string>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zya-bu-2lH">
-                                <rect key="frame" x="16" y="323" width="340" height="0.0"/>
+                                <rect key="frame" x="16" y="280" width="340" height="0.0"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.056107677719999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fm6-aj-Yss">
-                                <rect key="frame" x="16" y="492" width="340" height="0.0"/>
+                                <rect key="frame" x="16" y="400" width="340" height="0.0"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.056107677719999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -404,7 +404,7 @@ Computer Science (EECS Building)</string>
                             <constraint firstItem="4Gp-mu-pGC" firstAttribute="leading" secondItem="a7R-c6-8Qd" secondAttribute="leading" constant="57" id="TDQ-z9-QlD"/>
                             <constraint firstItem="zya-bu-2lH" firstAttribute="leading" secondItem="a7R-c6-8Qd" secondAttribute="leading" constant="16" id="avt-Qk-RL5"/>
                             <constraint firstItem="a7R-c6-8Qd" firstAttribute="trailing" secondItem="vbn-Ri-weu" secondAttribute="trailing" constant="57" id="bLO-PV-TSM"/>
-                            <constraint firstItem="fm6-aj-Yss" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="472" id="cq1-Lm-2oI"/>
+                            <constraint firstItem="fm6-aj-Yss" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="380" id="cq1-Lm-2oI"/>
                             <constraint firstItem="CvQ-Ms-qX0" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="287" id="eam-H5-BQY"/>
                             <constraint firstItem="O78-UU-s51" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="169" id="f97-Ub-Qtg"/>
                             <constraint firstItem="vbn-Ri-weu" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="335" id="hTh-mc-4vn"/>
@@ -416,7 +416,7 @@ Computer Science (EECS Building)</string>
                             <constraint firstItem="4Gp-mu-pGC" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="216" id="tsS-4J-V9n"/>
                             <constraint firstItem="a7R-c6-8Qd" firstAttribute="trailing" secondItem="WI9-e1-B8T" secondAttribute="trailing" constant="16" id="v4r-4D-OPA"/>
                             <constraint firstItem="vbn-Ri-weu" firstAttribute="leading" secondItem="a7R-c6-8Qd" secondAttribute="leading" constant="54" id="v74-uL-tOn"/>
-                            <constraint firstItem="zya-bu-2lH" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="303" id="wEE-Ld-Bgd"/>
+                            <constraint firstItem="zya-bu-2lH" firstAttribute="top" secondItem="a7R-c6-8Qd" secondAttribute="top" constant="260" id="wEE-Ld-Bgd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a7R-c6-8Qd"/>
                     </view>
