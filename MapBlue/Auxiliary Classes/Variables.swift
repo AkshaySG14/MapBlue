@@ -832,73 +832,45 @@ class PointMap {
         buildingPointMap[Building.roomMap.getRoomValue(room: "1012")] = Point(x: 2285, y: 1275) // Room 1012
         buildingPointMap[Building.roomMap.getRoomValue(room: "1016")] = Point(x: 2265, y: 1125) // Room 1016
         buildingPointMap[Building.roomMap.getRoomValue(room: "1222")] = Point(x: 2105, y: 1115) // Room 1222
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1222A")] = Point(x: 2125, y: 1200) // Room 1222A
         buildingPointMap[Building.roomMap.getRoomValue(room: "1200")] = Point(x: 2565, y: 1200) // Room 1200
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1222A")] = Point(x: 2125, y: 1200) // Room 1222A
         buildingPointMap[Building.roomMap.getRoomValue(room: "1226")] = Point(x: 2105, y: 1350) // Room 1226
         buildingPointMap[Building.roomMap.getRoomValue(room: "1230")] = Point(x: 1850, y: 1310) // Room 1230
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1241")] = Point(x: 1500, y: 1170) // Room 1241
         
         buildingPointMap[Building.roomMap.getRoomValue(room: "1303")] = Point(x: 2565, y: 840) // Room 1303
         buildingPointMap[Building.roomMap.getRoomValue(room: "1311")] = Point(x: 2325, y: 840) // Room 1311
         buildingPointMap[Building.roomMap.getRoomValue(room: "1322")] = Point(x: 1900, y: 650) // Room 1322
         
         buildingPointMap[Building.roomMap.getRoomValue(room: "1346")] = Point(x: 1140, y: 870) // Room 1346
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1348")] = Point(x: 910, y: 770) // Room 1348
         
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1234")] = Point(x: 1500, y: 1000) // Room 1234
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1234")] = Point(x: 1650, y: 1280) // Room 1234
         
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1325")] = Point(x: 2565, y: 1200) // Room 1325
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1333M")] = Point(x: 2565, y: 1200) // Room 1333M
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1324W")] = Point(x: 2565, y: 1200) // Room 1324W
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1334")] = Point(x: 2565, y: 1200) // Room 1334
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1336")] = Point(x: 2565, y: 1200) // Room 1336
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1348")] = Point(x: 2565, y: 1200) // Room 1348
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1332")] = Point(x: 2565, y: 1200) // Room 1332
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1322A")] = Point(x: 2565, y: 1200) // Room 1322A
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1322C")] = Point(x: 2565, y: 1200) // Room 1322C
-        buildingPointMap[Building.roomMap.getRoomValue(room: "14C9")] = Point(x: 2565, y: 1200) // Room 14C9
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1436")] = Point(x: 2565, y: 1200) // Room 1436
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1400")] = Point(x: 2565, y: 1200) // Room 1400
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1401A")] = Point(x: 2565, y: 1200) // Room 1401A
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1401B")] = Point(x: 2565, y: 1200) // Room 1401B
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1403")] = Point(x: 2565, y: 1200) // Room 1403
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1406")] = Point(x: 2565, y: 1200) // Room 1406
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1410")] = Point(x: 2565, y: 1200) // Room 1410
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1410A")] = Point(x: 2565, y: 1200) // Room 1410A
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1411A")] = Point(x: 2565, y: 1200) // Room 1411A
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1412")] = Point(x: 2565, y: 1200) // Room 1412
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1414")] = Point(x: 2565, y: 1200) // Room 1414
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1411")] = Point(x: 2565, y: 1200) // Room 1411
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1417")] = Point(x: 2565, y: 1200) // Room 1417
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1421")] = Point(x: 2565, y: 1200) // Room 1421
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1427")] = Point(x: 2565, y: 1200) // Room 1427
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1437")] = Point(x: 2565, y: 1200) // Room 1437
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1428")] = Point(x: 2565, y: 1200) // Room 1428
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1428A")] = Point(x: 2565, y: 1200) // Room 1428A
-        buildingPointMap[Building.roomMap.getRoomValue(room: "14C7")] = Point(x: 2565, y: 1200) // Room 14C7
-        buildingPointMap[Building.roomMap.getRoomValue(room: "14C4")] = Point(x: 2565, y: 1200) // Room 14C4
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1440")] = Point(x: 2565, y: 1200) // Room 1440
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1440E")] = Point(x: 2565, y: 1200) // Room 1440E
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1440S")] = Point(x: 2565, y: 1200) // Room 1440S
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1445")] = Point(x: 2565, y: 1200) // Room 1445
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1445S")] = Point(x: 2565, y: 1200) // Room 1445S
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1448")] = Point(x: 2565, y: 1200) // Room 1448
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1450")] = Point(x: 2565, y: 1200) // Room 1450
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1452")] = Point(x: 2565, y: 1200) // Room 1452
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1454")] = Point(x: 2565, y: 1200) // Room 1454
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1456")] = Point(x: 2565, y: 1200) // Room 1456
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1460")] = Point(x: 2565, y: 1200) // Room 1460
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1462")] = Point(x: 2565, y: 1200) // Room 1462
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1471")] = Point(x: 2565, y: 1200) // Room 1471
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1473")] = Point(x: 2565, y: 1200) // Room 1473
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1475")] = Point(x: 2565, y: 1200) // Room 1475
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1479")] = Point(x: 2565, y: 1200) // Room 1479
-        buildingPointMap[Building.roomMap.getRoomValue(room: "1500")] = Point(x: 2565, y: 1200) // Room 1500
-    
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs1")] = Point(x: 500, y: 500) // Stairs 1
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs2")] = Point(x: 500, y: 500) // Stairs 2
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs3")] = Point(x: 500, y: 500) // Stairs 3
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs4")] = Point(x: 500, y: 500) // Stairs 4
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs5")] = Point(x: 500, y: 500) // Stairs 5
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1325")] = Point(x: 2120, y: 820) // Room 1325
+        
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1333M")] = Point(x: 1790, y: 760) // Room 1333M
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1324W")] = Point(x: 1880, y: 760) // Room 1324W
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1334")] = Point(x: 1500, y: 850) // Room 1334
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1332")] = Point(x: 1550, y: 700) // Room 1332
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1400")] = Point(x: 2600, y: 600) // Room 1400
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1410")] = Point(x: 2300, y: 600) // Room 1410
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1411")] = Point(x: 2200, y: 400) // Room 1411
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1421")] = Point(x: 1900, y: 400) // Room 1421
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1427")] = Point(x: 1700, y: 400) // Room 1427
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1428")] = Point(x: 1725, y: 650) // Room 1428
+        buildingPointMap[Building.roomMap.getRoomValue(room: "14C7")] = Point(x: 650, y: 600) // Room 14C7
+        
+        
+        
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs1")] = Point(x: 2300, y: 1500) // Stairs 1
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs2")] = Point(x: 2370, y: 400) // Stairs 2
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs3")] = Point(x: 1725, y: 800) // Stairs 3
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs4")] = Point(x: 1250, y: 1200) // Stairs 4
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs5")] = Point(x: 1250, y: 400) // Stairs 5
+        
     }
+
     
     private func initEECSBuildingFloor2() {
         buildingPointMap[Building.roomMap.getRoomValue(room: "2001")] = Point(x: 500, y: 500) // Room 2001
