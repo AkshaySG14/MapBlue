@@ -196,7 +196,7 @@ Computer Science (EECS Building)</string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="25" name="Helvetica-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -209,7 +209,7 @@ Computer Science (EECS Building)</string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="25" name="Helvetica-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -273,7 +273,7 @@ Computer Science (EECS Building)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLg-Ob-yiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384.8" y="-345.87706146926541"/>
+            <point key="canvasLocation" x="2348" y="-448"/>
         </scene>
         <!--Room View Controller-->
         <scene sceneID="JYR-75-crw">
@@ -437,7 +437,7 @@ Computer Science (EECS Building)</string>
         <!--Secondary Map View Controller-->
         <scene sceneID="KvT-Va-HUr">
             <objects>
-                <viewController title="Primary Map View Controller" id="UIi-Hm-PGG" userLabel="Secondary Map View Controller" customClass="PrimaryMapViewController" customModule="MapBlue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Primary Map View Controller" id="UIi-Hm-PGG" userLabel="Secondary Map View Controller" customClass="SecondaryMapViewController" customModule="MapBlue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D1x-Me-Mkd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,7 +457,7 @@ Computer Science (EECS Building)</string>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="nHT-Su-HZ4" kind="show" id="4vd-Pw-w52"/>
+                                    <segue destination="nHT-Su-HZ4" kind="show" identifier="backToPrimaryView" id="jcB-E7-RxE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddD-6G-3WT" userLabel="Map Title">
@@ -581,7 +581,7 @@ Computer Science (EECS Building)</string>
         <image name="startIndicator.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ags-PO-PNb"/>
-        <segue reference="in7-aP-sOz"/>
+        <segue reference="tXD-gL-ozy"/>
+        <segue reference="jcB-E7-RxE"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -48,11 +48,23 @@ class MapViewController: UIViewController {
         self.destRoom = destRoom
     }
     
-    // Set position of the markers. Note that Map View Controller is NOT responsible for this method.
+    // Set position of the markers.
     func setMarkerPositions() {
-        preconditionFailure("This method must be overridden")
+        // Gets the point map.
+        let pointMap = Building.pointMap.getBuildingPointMap()
+        // Sets the starting location of each indicator (start and end).
+        self.startPoint = pointMap[Building.roomMap.getRoomValue(room: startRoom)]!
+        // If on the same floor, set as ending point normally, else get the stairs position.
+        self.destPoint = pointMap[Building.roomMap.getRoomValue(room: destRoom)]!
+
+        self.startIndicatorImageLeading.constant = startPoint.x
+        self.startIndicatorImageTop.constant = startPoint.y
+        
+        self.destIndicatorImageLeading.constant = destPoint.x
+        self.destIndicatorImageTop.constant = destPoint.y - destIndicatorImage.frame.height / 2
+        self.view.layoutIfNeeded()
     }
-    
+
     // Adds relevant points.
     func setPoints() {
         // Gets the points that links starting to destination.

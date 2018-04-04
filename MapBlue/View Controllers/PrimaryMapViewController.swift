@@ -19,8 +19,7 @@ class PrimaryMapViewController: MapViewController {
         if segue.identifier == "gotoSecondaryMap" {
             // Gets destination view controller as Secondary Map View controller and uses the set building function.
             if let destinationVC = segue.destination as? SecondaryMapViewController {
-                // If start and dest are on same floor.
-                destinationVC.initialize(building : building, floor : self.secondFloor, startRoom: self.getStairsName(), destRoom: self.destRoom)
+                destinationVC.initialize(building : building, floor1: self.floor, floor2 : self.secondFloor, startRoom: self.getStairsName(), destRoom: self.destRoom, floorStart: self.startRoom)
             }
         }
     }
@@ -35,7 +34,7 @@ class PrimaryMapViewController: MapViewController {
     }
     
     // Gets the name of the stairs to pass to the secondary map view controller.
-    func getStairsName() -> String{
+    func getStairsName() -> String {
         let pointMap = Building.pointMap.getBuildingPointMap()
         let stairList = Building.pointMap.getStairs(self.building)
         // Loops through stairs until appropriate stairs is found for destination point.
@@ -59,6 +58,7 @@ class PrimaryMapViewController: MapViewController {
         // Gets the point map.
         let pointMap = Building.pointMap.getBuildingPointMap()
         // Sets the starting location of each indicator (start and end).
+        print(startRoom)
         self.startPoint = pointMap[Building.roomMap.getRoomValue(room: startRoom)]!
         // If on the same floor, set as ending point normally, else get the stairs position.
         if (self.secondFloor == -1) {
