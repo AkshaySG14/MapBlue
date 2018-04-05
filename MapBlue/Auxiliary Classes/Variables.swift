@@ -873,24 +873,26 @@ class PointMap {
 
     
     private func initEECSBuildingFloor2() {
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2001")] = Point(x: 500, y: 500) // Room 2001
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2003")] = Point(x: 500, y: 500) // Room 2003
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2111")] = Point(x: 500, y: 500) // Room 2111
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2114")] = Point(x: 500, y: 500) // Room 2114
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2200")] = Point(x: 500, y: 500) // Room 2200
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2210")] = Point(x: 500, y: 500) // Room 2210
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2211")] = Point(x: 500, y: 500) // Room 2211
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2222")] = Point(x: 500, y: 500) // Room 2222
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2223")] = Point(x: 500, y: 500) // Room 2223
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2228")] = Point(x: 500, y: 500) // Room 2228
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2237")] = Point(x: 500, y: 500) // Room 2237
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2301")] = Point(x: 500, y: 500) // Room 2301
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2312")] = Point(x: 500, y: 500) // Room 2312
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2327")] = Point(x: 500, y: 500) // Room 2327
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2332")] = Point(x: 500, y: 500) // Room 2332
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2340")] = Point(x: 500, y: 500) // Room 2340
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2341")] = Point(x: 500, y: 500) // Room 2341
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2310")] = Point(x: 500, y: 500) // Room 2310
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2001")] = Point(x: 1250, y: 1280) // Room 2001
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2003")] = Point(x: 1250, y: 1050) // Room 2003
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2111")] = Point(x: 1000, y: 870) // Room 2111
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2114")] = Point(x: 1000, y: 960) // Room 2114
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2200")] = Point(x: 1250, y: 770) // Room 2200
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2210")] = Point(x: 1000, y: 800) // Room 2210
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2211")] = Point(x: 1000, y: 720) // Room 2211
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2222")] = Point(x: 800, y: 850) // Room 2222
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2223")] = Point(x: 700, y: 720) // Room 2223
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2228")] = Point(x: 570, y: 850) // Room 2228
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2237")] = Point(x: 450, y: 720) // Room 2237
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2301")] = Point(x: 1250, y: 450) // Room 2301
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2312")] = Point(x: 1070, y: 500) // Room 2312
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2327")] = Point(x: 950, y: 500) // Room 2327
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2332")] = Point(x: 500, y: 400) // Room 2332
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2340")] = Point(x: 150, y: 400) // Room 2340
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2341")] = Point(x: 370, y: 400) // Room 2341
+        
+        //james do below
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2310")] = Point(x: 1070, y: 400) // Room 2310
         buildingPointMap[Building.roomMap.getRoomValue(room: "2310A")] = Point(x: 500, y: 500) // Room 2310A
         buildingPointMap[Building.roomMap.getRoomValue(room: "2401")] = Point(x: 500, y: 500) // Room 2401
         buildingPointMap[Building.roomMap.getRoomValue(room: "2417")] = Point(x: 500, y: 500) // Room 2417
