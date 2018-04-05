@@ -124,7 +124,7 @@ class PointList {
         buildingNodes.append(Point(x: 2400, y: 425)) // 35
         buildingNodes.append(Point(x: 2275, y: 1000)) // 36
         buildingNodes.append(Point(x: 2150, y: 1000)) // 37
-        buildingNodes.append(Point(x: 2025, y: 1000)) // 38 
+        buildingNodes.append(Point(x: 2025, y: 1000)) // 38
         buildingNodes.append(Point(x: 1900, y: 1000)) // 39
         buildingNodes.append(Point(x: 1775, y: 1000)) // 40
         buildingNodes.append(Point(x: 1650, y: 1000)) // 41
@@ -492,7 +492,6 @@ class RoomMap {
         buildingRoomMap["2345"] = count
         
         buildingRoomMap["2310"] = incrementNum(count : &count)
-        
         buildingRoomMap["2310A"] = count
         buildingRoomMap["2416"] = count
         buildingRoomMap["2418"] = count
@@ -531,7 +530,10 @@ class RoomMap {
         buildingRoomMap["2420B"] = count
         buildingRoomMap["2420C"] = count
         
-        buildingRoomMap["2422"] = incrementNum(count : &count)
+        
+        buildingRoomMap["2322"] = incrementNum(count : &count) //was 2422 but prob intended to be 2322 -james
+        
+        buildingRoomMap["2331"] = incrementNum(count : &count) //added by james
         
         buildingRoomMap["2426"] = incrementNum(count : &count)
         
@@ -870,7 +872,7 @@ class PointMap {
         buildingPointMap[Building.roomMap.getRoomValue(room: "stairs5")] = Point(x: 1250, y: 400) // Stairs 5
         
     }
-
+    
     
     private func initEECSBuildingFloor2() {
         buildingPointMap[Building.roomMap.getRoomValue(room: "2001")] = Point(x: 1250, y: 1280) // Room 2001
@@ -891,21 +893,20 @@ class PointMap {
         buildingPointMap[Building.roomMap.getRoomValue(room: "2340")] = Point(x: 150, y: 400) // Room 2340
         buildingPointMap[Building.roomMap.getRoomValue(room: "2341")] = Point(x: 370, y: 400) // Room 2341
         
-        //james do below
         buildingPointMap[Building.roomMap.getRoomValue(room: "2310")] = Point(x: 1070, y: 400) // Room 2310
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2310A")] = Point(x: 500, y: 500) // Room 2310A
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2401")] = Point(x: 500, y: 500) // Room 2401
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2417")] = Point(x: 500, y: 500) // Room 2417
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2421")] = Point(x: 500, y: 500) // Room 2421
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2420")] = Point(x: 500, y: 500) // Room 2420
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2422")] = Point(x: 500, y: 500) // Room 2422
-        buildingPointMap[Building.roomMap.getRoomValue(room: "2426")] = Point(x: 500, y: 500) // Room 2426
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2401")] = Point(x: 1300, y: 150) // Room 2401
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2417")] = Point(x: 1000, y: 200) // Room 2417
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2421")] = Point(x: 600, y: 200) // Room 2421
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2420")] = Point(x: 950, y: 380) // Room 2420
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2322")] = Point(x: 800, y: 350) // Room 2322
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2331")] = Point(x: 660, y: 350) // Room 2331
+        buildingPointMap[Building.roomMap.getRoomValue(room: "2426")] = Point(x: 710, y: 350) // Room 2426
         
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs1")] = Point(x: 500, y: 500) // Stairs 1
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs2")] = Point(x: 500, y: 500) // Stairs 2
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs3")] = Point(x: 500, y: 500) // Stairs 3
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs4")] = Point(x: 500, y: 500) // Stairs 4
-        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs5")] = Point(x: 500, y: 500) // Stairs 5
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs1")] = Point(x: 265, y: 200) // Stairs 1
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs2")] = Point(x: 265, y: 830) // Stairs 2
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs3")] = Point(x: 660, y: 500) // Stairs 3
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs4")] = Point(x: 1150, y: 200) // Stairs 4
+        buildingPointMap[Building.roomMap.getRoomValue(room: "stairs5")] = Point(x: 1150, y: 1050) // Stairs 5
     }
     
     private func initEECSBuildingFloor3() {
@@ -992,4 +993,5 @@ class PointMap {
     }
     
 }
+
 
