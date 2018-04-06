@@ -567,6 +567,7 @@ Computer Science (EECS Building)</string>
         <image name="startIndicator.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Xra-pg-8Wv"/>
         <segue reference="tXD-gL-ozy"/>
         <segue reference="jcB-E7-RxE"/>
     </inferredMetricsTieBreakers>

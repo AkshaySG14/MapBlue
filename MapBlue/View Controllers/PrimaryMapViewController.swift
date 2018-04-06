@@ -22,6 +22,13 @@ class PrimaryMapViewController: MapViewController {
                 destinationVC.initialize(building : building, floor1: self.floor, floor2 : self.secondFloor, startRoom: self.getStairsName(), destRoom: self.destRoom, floorStart: self.startRoom)
             }
         }
+            // For back button.
+        else if segue.identifier == "gotoBuilding" {
+            // Gets destination view controller as room view controller and uses the initialize function.
+            if let destinationVC = segue.destination as? RoomViewController {
+                destinationVC.setBuilding(building: self.building)
+            }
+        }
     }
     
     // Sets relevant variables. This is when the start and end floor are different.
@@ -36,11 +43,11 @@ class PrimaryMapViewController: MapViewController {
     // Gets the name of the stairs to pass to the secondary map view controller.
     func getStairsName() -> String {
         let pointMap = Building.pointMap.getBuildingPointMap()
-        let stairList = Building.pointMap.getStairs(self.building)
+        let stairList = Building.pointMap.getStairs(building: self.building, floor: self.floor)
         // Loops through stairs until appropriate stairs is found for destination point.
         for index in 1...stairList.count {
-            if (self.destPoint == pointMap[Building.roomMap.getRoomValue(room: "stairs" + String(index))]!) {
-                return "stairs" + String(index)
+            if (self.destPoint == pointMap[Building.roomMap.getRoomValue(room: "stairs" + String(self.floor) + String(index))]!) {
+                return "stairs" + String(self.secondFloor) + String(index)
             }
         }
         return ""
@@ -58,7 +65,6 @@ class PrimaryMapViewController: MapViewController {
         // Gets the point map.
         let pointMap = Building.pointMap.getBuildingPointMap()
         // Sets the starting location of each indicator (start and end).
-        print(startRoom)
         self.startPoint = pointMap[Building.roomMap.getRoomValue(room: startRoom)]!
         // If on the same floor, set as ending point normally, else get the stairs position.
         if (self.secondFloor == -1) {
@@ -66,7 +72,7 @@ class PrimaryMapViewController: MapViewController {
         }
         else {
             // Creates list of stairs.
-            let stairList = Building.pointMap.getStairs(self.building)
+            let stairList = Building.pointMap.getStairs(building: self.building, floor: self.floor)
             self.destPoint = Building.pointList.getNearestNode(point: self.startPoint, nodes: stairList)
         }
         

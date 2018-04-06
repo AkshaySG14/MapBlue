@@ -53,6 +53,9 @@ class MapViewController: UIViewController {
         // Gets the point map.
         let pointMap = Building.pointMap.getBuildingPointMap()
         // Sets the starting location of each indicator (start and end).
+        print("Doge")
+        print(startRoom)
+        print("Doge")
         self.startPoint = pointMap[Building.roomMap.getRoomValue(room: startRoom)]!
         // If on the same floor, set as ending point normally, else get the stairs position.
         self.destPoint = pointMap[Building.roomMap.getRoomValue(room: destRoom)]!
@@ -102,9 +105,9 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         // Sets the map image itself.
         mapImage.image = UIImage(named: getImage(building: building, floor: floor))
-        // Sets label of map view controller.
-        Building.pointMap.initBuildingPointMap(building: building, floor: floor)
         // Initializes all points.
+        Building.pointMap.initBuildingPointMap(building: building, floor: floor)
+        // Initializes all nodes.
         Building.pointList.initPointNodes(building: building, floor: floor)
         self.mapTitle.text = Building.buildingMap.getBuildingName(building: building) + " Floor " + String(self.floor) + " Map"
         // Set marker starting positions.

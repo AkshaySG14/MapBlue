@@ -32,7 +32,6 @@ class SecondaryMapViewController: MapViewController {
         // This is the room the user is in.
         self.floorStart = floorStart
     }
-
 }
 
 
