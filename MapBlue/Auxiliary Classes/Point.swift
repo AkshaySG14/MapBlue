@@ -22,10 +22,13 @@ class Point {
     
     static func getDistance(a : Point, b : Point) -> CGFloat
     {
-        return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2))
+        return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2)).rounded()
     }
     
     func getNodeList(dest : Point, from : Point, nodes : inout [Point]) -> Bool {
+        if (self.neighbors.count == 0) {
+            return false
+        }
         // This point is the destination point.
         if (self == dest) {
             nodes.append(self)
@@ -37,14 +40,12 @@ class Point {
         while (self.neighbors.count > 0) {
             // Get the next point (nearest point to destination)
             let nP = self.nextPoint(dest: dest)
+            // Remove point from neighbors.
+            self.neighbors.remove(at: getPoint(point: nP, nodes: self.neighbors))
             // If the node does not lead to dead end, add this node the list.
             if (nP.getNodeList(dest: dest, from: self, nodes: &nodes)) {
                 nodes.append(self)
                 return true
-            }
-            // We have encountered a dead end, remove this neighbor.
-            else {
-                self.neighbors.remove(at: getPoint(point: nP, nodes: self.neighbors))
             }
         }
         // This node leads to a dead end every way.
@@ -72,7 +73,7 @@ class Point {
     }
     
     private func getPoint(point : Point, nodes : [Point]) -> Int {
-        for index in 0...nodes.count {
+        for index in 0...nodes.count - 1 {
             if (nodes[index] == point) {
                 return index
             }

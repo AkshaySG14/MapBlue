@@ -136,8 +136,8 @@ class PointList {
         buildingNodes.append(Point(x: 2025, y: 790)) // 47
         buildingNodes.append(Point(x: 2025, y: 915)) // 48
         buildingNodes.append(Point(x: 1650, y: 900)) // 49
-        buildingNodes.append(Point(x: 1900, y: 1125)) // 50
-        buildingNodes.append(Point(x: 1775, y: 1125)) // 51
+        buildingNodes.append(Point(x: 1833, y: 1125)) // 50
+        buildingNodes.append(Point(x: 1833, y: 1125)) // 51. Note that this is the exact same point as the previous as removal of this point would affect those in front.
         buildingNodes.append(Point(x: 2400, y: 1100)) // 52
         buildingNodes.append(Point(x: 2400, y: 1225)) // 53
         buildingNodes.append(Point(x: 2400, y: 1350)) // 54
@@ -182,7 +182,7 @@ class PointList {
         addMutualNeighbors(one: buildingNodes[15], two: buildingNodes[16])
         addMutualNeighbors(one: buildingNodes[16], two: buildingNodes[17])
         addMutualNeighbors(one: buildingNodes[17], two: buildingNodes[18])
-        addMutualNeighbors(one: buildingNodes[17], two: buildingNodes[38])
+        addMutualNeighbors(one: buildingNodes[17], two: buildingNodes[46])
         addMutualNeighbors(one: buildingNodes[18], two: buildingNodes[19])
         addMutualNeighbors(one: buildingNodes[19], two: buildingNodes[20])
         addMutualNeighbors(one: buildingNodes[20], two: buildingNodes[21])
@@ -199,6 +199,7 @@ class PointList {
         addMutualNeighbors(one: buildingNodes[30], two: buildingNodes[31])
         addMutualNeighbors(one: buildingNodes[31], two: buildingNodes[32])
         addMutualNeighbors(one: buildingNodes[32], two: buildingNodes[33])
+        addMutualNeighbors(one: buildingNodes[33], two: buildingNodes[34])
         addMutualNeighbors(one: buildingNodes[34], two: buildingNodes[36])
         addMutualNeighbors(one: buildingNodes[34], two: buildingNodes[52])
         addMutualNeighbors(one: buildingNodes[36], two: buildingNodes[37])
@@ -215,11 +216,12 @@ class PointList {
         addMutualNeighbors(one: buildingNodes[42], two: buildingNodes[43])
         addMutualNeighbors(one: buildingNodes[43], two: buildingNodes[44])
         addMutualNeighbors(one: buildingNodes[44], two: buildingNodes[45])
-        addMutualNeighbors(one: buildingNodes[45], two: buildingNodes[60])
+        addMutualNeighbors(one: buildingNodes[44], two: buildingNodes[61])
         addMutualNeighbors(one: buildingNodes[48], two: buildingNodes[47])
         addMutualNeighbors(one: buildingNodes[47], two: buildingNodes[46])
-        addMutualNeighbors(one: buildingNodes[49], two: buildingNodes[64])
         addMutualNeighbors(one: buildingNodes[50], two: buildingNodes[51])
+        addMutualNeighbors(one: buildingNodes[50], two: buildingNodes[60])
+        addMutualNeighbors(one: buildingNodes[51], two: buildingNodes[65])
         addMutualNeighbors(one: buildingNodes[52], two: buildingNodes[53])
         addMutualNeighbors(one: buildingNodes[53], two: buildingNodes[54])
         addMutualNeighbors(one: buildingNodes[54], two: buildingNodes[55])
@@ -392,7 +394,8 @@ class RoomMap {
         buildingRoomMap["1473"] = count
         buildingRoomMap["1475"] = count
         buildingRoomMap["1479"] = count
-        buildingRoomMap["1500"] = count
+        
+        buildingRoomMap["1500"] = incrementNum(count: &count)
         
         buildingRoomMap["stairs11"] = incrementNum(count: &count)
         buildingRoomMap["stairs12"] = incrementNum(count: &count)
@@ -862,7 +865,8 @@ class PointMap {
         buildingPointMap[Building.roomMap.getRoomValue(room: "1427")] = Point(x: 1700, y: 400) // Room 1427
         buildingPointMap[Building.roomMap.getRoomValue(room: "1428")] = Point(x: 1725, y: 650) // Room 1428
         buildingPointMap[Building.roomMap.getRoomValue(room: "14C7")] = Point(x: 650, y: 600) // Room 14C7
-        
+        buildingPointMap[Building.roomMap.getRoomValue(room: "1500")] = Point(x: 650, y: 600) // Room 1500
+
         buildingPointMap[Building.roomMap.getRoomValue(room: "stairs11")] = Point(x: 2300, y: 1500) // Stairs 1
         buildingPointMap[Building.roomMap.getRoomValue(room: "stairs12")] = Point(x: 2370, y: 400) // Stairs 2
         buildingPointMap[Building.roomMap.getRoomValue(room: "stairs13")] = Point(x: 1725, y: 800) // Stairs 3
