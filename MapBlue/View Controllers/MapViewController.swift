@@ -53,9 +53,6 @@ class MapViewController: UIViewController {
         // Gets the point map.
         let pointMap = Building.pointMap.getBuildingPointMap()
         // Sets the starting location of each indicator (start and end).
-        print("Doge")
-        print(startRoom)
-        print("Doge")
         self.startPoint = pointMap[Building.roomMap.getRoomValue(room: startRoom)]!
         // If on the same floor, set as ending point normally, else get the stairs position.
         self.destPoint = pointMap[Building.roomMap.getRoomValue(room: destRoom)]!
