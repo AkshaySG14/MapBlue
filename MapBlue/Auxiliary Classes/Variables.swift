@@ -239,8 +239,8 @@ class PointList {
     private  func initEECSBuildingFloor2() {
         buildingNodes.append(Point(x: 285, y: 740)) // 0
         buildingNodes.append(Point(x: 285, y: 655)) // 1
-        buildingNodes.append(Point(x: 285, y: 580)) // 2
-        buildingNodes.append(Point(x: 285, y: 500)) // 3 ----above atrium
+        buildingNodes.append(Point(x: 285, y: 580)) // 2 ----above atrium
+        buildingNodes.append(Point(x: 285, y: 500)) // 3
         buildingNodes.append(Point(x: 285, y: 440)) // 4
         buildingNodes.append(Point(x: 285, y: 365)) // 5
         buildingNodes.append(Point(x: 285, y: 290)) // 6
@@ -266,58 +266,58 @@ class PointList {
         buildingNodes.append(Point(x: 810, y: 580)) // 26
         buildingNodes.append(Point(x: 870, y: 580)) // 27 ----intersect with sec col
         buildingNodes.append(Point(x: 950, y: 580)) // 28
-        buildingNodes.append(Point(x: 1035, y: 580)) // 28
-        buildingNodes.append(Point(x: 1110, y: 580)) // 29
-        buildingNodes.append(Point(x: 1160, y: 580)) // 30 ----interesect with thir col
-        buildingNodes.append(Point(x: 335, y: 740)) // 31
-        buildingNodes.append(Point(x: 335, y: 785)) // 32
-        buildingNodes.append(Point(x: 1210, y: 290)) // 33 ---filler from before
-        buildingNodes.append(Point(x: 335, y: 785)) // 34 ----2246 above row
-        buildingNodes.append(Point(x: 416, y: 785)) // 35
-        buildingNodes.append(Point(x: 497, y: 785)) // 36
-        buildingNodes.append(Point(x: 580, y: 785)) // 37 --inter first col
-        buildingNodes.append(Point(x: 660, y: 785)) // 38
-        buildingNodes.append(Point(x: 735, y: 785)) // 39
-        buildingNodes.append(Point(x: 810, y: 785)) // 40
-        buildingNodes.append(Point(x: 870, y: 785)) // 41 ----intersect with sec col
-        buildingNodes.append(Point(x: 950, y: 785)) // 42
-        buildingNodes.append(Point(x: 1035, y: 785)) // 43
-        buildingNodes.append(Point(x: 1110, y: 785)) // 44
-        buildingNodes.append(Point(x: 1160, y: 785)) // 45 ----interesect with thir col
-        buildingNodes.append(Point(x: 580, y: 365)) // 46 --- first col down
-        buildingNodes.append(Point(x: 580, y: 440)) // 47
-        buildingNodes.append(Point(x: 580, y: 500)) // 48
-        buildingNodes.append(Point(x: 580, y: 655)) // 49
-        buildingNodes.append(Point(x: 580, y: 720)) // 50
-        buildingNodes.append(Point(x: 870, y: 365)) // 51 --- sec col down
-        buildingNodes.append(Point(x: 870, y: 440)) // 52
-        buildingNodes.append(Point(x: 870, y: 500)) // 53
-        buildingNodes.append(Point(x: 870, y: 655)) // 54
-        buildingNodes.append(Point(x: 870, y: 720)) // 55
-        buildingNodes.append(Point(x: 870, y: 860)) // 56
-        buildingNodes.append(Point(x: 870, y: 935)) // 57
-        buildingNodes.append(Point(x: 950, y: 935)) // 58 ---bottom small col
-        buildingNodes.append(Point(x: 1035, y: 935)) // 59
-        buildingNodes.append(Point(x: 1110, y: 935)) // 60
-        buildingNodes.append(Point(x: 1160, y: 935)) // 61 ---intersect thir col
-        buildingNodes.append(Point(x: 1210, y: 935)) // 62
-        buildingNodes.append(Point(x: 1160, y: 365)) // 63 ---thir col down
-        buildingNodes.append(Point(x: 1160, y: 440)) // 64
-        buildingNodes.append(Point(x: 1160, y: 500)) // 65
-        buildingNodes.append(Point(x: 1160, y: 655)) // 66
-        buildingNodes.append(Point(x: 1160, y: 720)) // 67
-        buildingNodes.append(Point(x: 1160, y: 860)) // 68
-        buildingNodes.append(Point(x: 1210, y: 1010)) // 69
-        buildingNodes.append(Point(x: 1210, y: 1085)) // 70
-        buildingNodes.append(Point(x: 1210, y: 1180)) // 71
-        buildingNodes.append(Point(x: 1135, y: 1180)) // 72
-        buildingNodes.append(Point(x: 1135, y: 1255)) // 73
-        buildingNodes.append(Point(x: 1135, y: 1330)) // 74
+        buildingNodes.append(Point(x: 1035, y: 580)) // 29
+        buildingNodes.append(Point(x: 1110, y: 580)) // 30
+        buildingNodes.append(Point(x: 1160, y: 580)) // 31 ----interesect with thir col
+        buildingNodes.append(Point(x: 335, y: 740)) // 32
+        buildingNodes.append(Point(x: 335, y: 785)) // 33
+        buildingNodes.append(Point(x: 1210, y: 290)) // 34 ---filler from before
+        buildingNodes.append(Point(x: 335, y: 785)) // 35 ----2246 above row
+        buildingNodes.append(Point(x: 416, y: 785)) // 36
+        buildingNodes.append(Point(x: 497, y: 785)) // 37
+        buildingNodes.append(Point(x: 580, y: 785)) // 38 --inter first col
+        buildingNodes.append(Point(x: 660, y: 785)) // 39
+        buildingNodes.append(Point(x: 735, y: 785)) // 40
+        buildingNodes.append(Point(x: 810, y: 785)) // 41
+        buildingNodes.append(Point(x: 870, y: 785)) // 42 ----intersect with sec col
+        buildingNodes.append(Point(x: 950, y: 785)) // 43
+        buildingNodes.append(Point(x: 1035, y: 785)) // 44
+        buildingNodes.append(Point(x: 1110, y: 785)) // 45
+        buildingNodes.append(Point(x: 1160, y: 785)) // 46 ----interesect with thir col
+        buildingNodes.append(Point(x: 580, y: 365)) // 47--- first col down
+        buildingNodes.append(Point(x: 580, y: 440)) // 48
+        buildingNodes.append(Point(x: 580, y: 500)) // 49
+        buildingNodes.append(Point(x: 580, y: 655)) // 50
+        buildingNodes.append(Point(x: 580, y: 720)) // 51
+        buildingNodes.append(Point(x: 870, y: 365)) // 52 --- sec col down
+        buildingNodes.append(Point(x: 870, y: 440)) // 53
+        buildingNodes.append(Point(x: 870, y: 500)) // 54
+        buildingNodes.append(Point(x: 870, y: 655)) // 55
+        buildingNodes.append(Point(x: 870, y: 720)) // 56
+        buildingNodes.append(Point(x: 870, y: 860)) // 57
+        buildingNodes.append(Point(x: 870, y: 935)) // 58
+        buildingNodes.append(Point(x: 950, y: 935)) // 59 ---bottom small col
+        buildingNodes.append(Point(x: 1035, y: 935)) // 60
+        buildingNodes.append(Point(x: 1110, y: 935)) // 61
+        buildingNodes.append(Point(x: 1160, y: 935)) // 62 ---intersect thir col
+        buildingNodes.append(Point(x: 1210, y: 935)) // 63
+        buildingNodes.append(Point(x: 1160, y: 365)) // 64 ---thir col down
+        buildingNodes.append(Point(x: 1160, y: 440)) // 65
+        buildingNodes.append(Point(x: 1160, y: 500)) // 66
+        buildingNodes.append(Point(x: 1160, y: 655)) // 67
+        buildingNodes.append(Point(x: 1160, y: 720)) // 68
+        buildingNodes.append(Point(x: 1160, y: 860)) // 69
+        buildingNodes.append(Point(x: 1210, y: 1010)) // 70
+        buildingNodes.append(Point(x: 1210, y: 1085)) // 71
+        buildingNodes.append(Point(x: 1210, y: 1180)) // 72
+        buildingNodes.append(Point(x: 1135, y: 1180)) // 73
+        buildingNodes.append(Point(x: 1135, y: 1255)) // 74
+        buildingNodes.append(Point(x: 1135, y: 1330)) // 75
     }
     
     private func initEECSBuildingFloor2Neighbors() {
         addMutualNeighbors(one: buildingNodes[0], two: buildingNodes[1])
-        addMutualNeighbors(one: buildingNodes[0], two: buildingNodes[31])
+        addMutualNeighbors(one: buildingNodes[0], two: buildingNodes[32])
         addMutualNeighbors(one: buildingNodes[1], two: buildingNodes[2])
         addMutualNeighbors(one: buildingNodes[2], two: buildingNodes[3])
         addMutualNeighbors(one: buildingNodes[3], two: buildingNodes[4])
@@ -335,8 +335,8 @@ class PointList {
         addMutualNeighbors(one: buildingNodes[15], two: buildingNodes[16])
         addMutualNeighbors(one: buildingNodes[16], two: buildingNodes[17])
         addMutualNeighbors(one: buildingNodes[17], two: buildingNodes[18])
-        addMutualNeighbors(one: buildingNodes[18], two: buildingNodes[33])
-        addMutualNeighbors(one: buildingNodes[33], two: buildingNodes[19])
+        addMutualNeighbors(one: buildingNodes[18], two: buildingNodes[34])
+        addMutualNeighbors(one: buildingNodes[34], two: buildingNodes[19])
         addMutualNeighbors(one: buildingNodes[2], two: buildingNodes[20])
         addMutualNeighbors(one: buildingNodes[20], two: buildingNodes[21])
         addMutualNeighbors(one: buildingNodes[21], two: buildingNodes[22])
@@ -348,7 +348,8 @@ class PointList {
         addMutualNeighbors(one: buildingNodes[27], two: buildingNodes[28])
         addMutualNeighbors(one: buildingNodes[28], two: buildingNodes[29])
         addMutualNeighbors(one: buildingNodes[29], two: buildingNodes[30])
-        addMutualNeighbors(one: buildingNodes[31], two: buildingNodes[32])
+        addMutualNeighbors(one: buildingNodes[30], two: buildingNodes[31])
+        
         addMutualNeighbors(one: buildingNodes[32], two: buildingNodes[33])
         addMutualNeighbors(one: buildingNodes[33], two: buildingNodes[34])
         addMutualNeighbors(one: buildingNodes[34], two: buildingNodes[35])
@@ -362,42 +363,43 @@ class PointList {
         addMutualNeighbors(one: buildingNodes[42], two: buildingNodes[43])
         addMutualNeighbors(one: buildingNodes[43], two: buildingNodes[44])
         addMutualNeighbors(one: buildingNodes[44], two: buildingNodes[45])
-        addMutualNeighbors(one: buildingNodes[46], two: buildingNodes[10])
-        addMutualNeighbors(one: buildingNodes[46], two: buildingNodes[47])
+        addMutualNeighbors(one: buildingNodes[45], two: buildingNodes[46])
+        addMutualNeighbors(one: buildingNodes[47], two: buildingNodes[10])
         addMutualNeighbors(one: buildingNodes[47], two: buildingNodes[48])
-        addMutualNeighbors(one: buildingNodes[48], two: buildingNodes[23])
+        addMutualNeighbors(one: buildingNodes[48], two: buildingNodes[49])
         addMutualNeighbors(one: buildingNodes[49], two: buildingNodes[23])
-        addMutualNeighbors(one: buildingNodes[49], two: buildingNodes[50])
-        addMutualNeighbors(one: buildingNodes[50], two: buildingNodes[37])
-        addMutualNeighbors(one: buildingNodes[51], two: buildingNodes[14])
-        addMutualNeighbors(one: buildingNodes[51], two: buildingNodes[52])
+        addMutualNeighbors(one: buildingNodes[50], two: buildingNodes[23])
+        addMutualNeighbors(one: buildingNodes[50], two: buildingNodes[51])
+        addMutualNeighbors(one: buildingNodes[51], two: buildingNodes[38])
+        addMutualNeighbors(one: buildingNodes[52], two: buildingNodes[14])
         addMutualNeighbors(one: buildingNodes[52], two: buildingNodes[53])
-        addMutualNeighbors(one: buildingNodes[53], two: buildingNodes[27])
+        addMutualNeighbors(one: buildingNodes[53], two: buildingNodes[54])
         addMutualNeighbors(one: buildingNodes[54], two: buildingNodes[27])
-        addMutualNeighbors(one: buildingNodes[54], two: buildingNodes[55])
-        addMutualNeighbors(one: buildingNodes[55], two: buildingNodes[41])
-        addMutualNeighbors(one: buildingNodes[56], two: buildingNodes[41])
-        addMutualNeighbors(one: buildingNodes[56], two: buildingNodes[57])
+        addMutualNeighbors(one: buildingNodes[55], two: buildingNodes[27])
+        addMutualNeighbors(one: buildingNodes[55], two: buildingNodes[56])
+        addMutualNeighbors(one: buildingNodes[56], two: buildingNodes[42])
+        addMutualNeighbors(one: buildingNodes[57], two: buildingNodes[42])
         addMutualNeighbors(one: buildingNodes[57], two: buildingNodes[58])
         addMutualNeighbors(one: buildingNodes[58], two: buildingNodes[59])
         addMutualNeighbors(one: buildingNodes[59], two: buildingNodes[60])
         addMutualNeighbors(one: buildingNodes[60], two: buildingNodes[61])
         addMutualNeighbors(one: buildingNodes[61], two: buildingNodes[62])
-        addMutualNeighbors(one: buildingNodes[61], two: buildingNodes[68])
-        addMutualNeighbors(one: buildingNodes[63], two: buildingNodes[18])
-        addMutualNeighbors(one: buildingNodes[63], two: buildingNodes[64])
+        addMutualNeighbors(one: buildingNodes[62], two: buildingNodes[63])
+        addMutualNeighbors(one: buildingNodes[63], two: buildingNodes[69])
+        addMutualNeighbors(one: buildingNodes[64], two: buildingNodes[18])
         addMutualNeighbors(one: buildingNodes[64], two: buildingNodes[65])
-        addMutualNeighbors(one: buildingNodes[65], two: buildingNodes[30])
-        addMutualNeighbors(one: buildingNodes[30], two: buildingNodes[66])
-        addMutualNeighbors(one: buildingNodes[66], two: buildingNodes[67])
-        addMutualNeighbors(one: buildingNodes[67], two: buildingNodes[45])
-        addMutualNeighbors(one: buildingNodes[45], two: buildingNodes[68])
-        addMutualNeighbors(one: buildingNodes[62], two: buildingNodes[69])
-        addMutualNeighbors(one: buildingNodes[69], two: buildingNodes[70])
+        addMutualNeighbors(one: buildingNodes[65], two: buildingNodes[66])
+        addMutualNeighbors(one: buildingNodes[66], two: buildingNodes[31])
+        addMutualNeighbors(one: buildingNodes[31], two: buildingNodes[67])
+        addMutualNeighbors(one: buildingNodes[67], two: buildingNodes[68])
+        addMutualNeighbors(one: buildingNodes[68], two: buildingNodes[46])
+        addMutualNeighbors(one: buildingNodes[46], two: buildingNodes[69])
+        addMutualNeighbors(one: buildingNodes[63], two: buildingNodes[70])
         addMutualNeighbors(one: buildingNodes[70], two: buildingNodes[71])
         addMutualNeighbors(one: buildingNodes[71], two: buildingNodes[72])
         addMutualNeighbors(one: buildingNodes[72], two: buildingNodes[73])
         addMutualNeighbors(one: buildingNodes[73], two: buildingNodes[74])
+        addMutualNeighbors(one: buildingNodes[74], two: buildingNodes[75])
     }
     
     private  func initEECSBuildingFloor3() {
