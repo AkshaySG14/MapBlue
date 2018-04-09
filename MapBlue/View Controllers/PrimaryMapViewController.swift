@@ -42,11 +42,11 @@ class PrimaryMapViewController: MapViewController {
     
     // Gets the name of the stairs to pass to the secondary map view controller.
     func getStairsName() -> String {
-        let pointMap = Building.pointMap.getBuildingPointMap()
-        let stairList = Building.pointMap.getStairs(building: self.building, floor: self.floor)
+        let pointMap = Building.relay.getPointMap(self.building)
+        let stairList = Building.relay.getStairs(building: self.building, floor: self.floor)
         // Loops through stairs until appropriate stairs is found for destination point.
         for index in 1...stairList.count {
-            if (self.destPoint == pointMap[Building.roomMap.getRoomValue(room: "stairs" + String(self.floor) + String(index))]!) {
+            if (self.destPoint == pointMap[Building.relay.getRoomValue(building: building, room: "stairs" + String(self.floor) + String(index))]!) {
                 return "stairs" + String(self.secondFloor) + String(index)
             }
         }
@@ -63,17 +63,17 @@ class PrimaryMapViewController: MapViewController {
     // Set position of the markers.
     override func setMarkerPositions() {
         // Gets the point map.
-        let pointMap = Building.pointMap.getBuildingPointMap()
+        let pointMap = Building.relay.getPointMap(building)
         // Sets the starting location of each indicator (start and end).
-        self.startPoint = pointMap[Building.roomMap.getRoomValue(room: startRoom)]!
+        self.startPoint = pointMap[Building.relay.getRoomValue(building: building, room: startRoom)]!
         // If on the same floor, set as ending point normally, else get the stairs position.
         if (self.secondFloor == -1) {
-            self.destPoint = pointMap[Building.roomMap.getRoomValue(room: destRoom)]!
+            self.destPoint = pointMap[Building.relay.getRoomValue(building: building, room: destRoom)]!
         }
         else {
             // Creates list of stairs.
-            let stairList = Building.pointMap.getStairs(building: self.building, floor: self.floor)
-            self.destPoint = Building.pointList.getNearestNode(point: self.startPoint, nodes: stairList)
+            let stairList = Building.relay.getStairs(building: self.building, floor: self.floor)
+            self.destPoint = Building.relay.getNearestNode(building: self.building, point: self.startPoint, nodes: stairList)
         }
         
         self.startIndicatorImageLeading.constant = startPoint.x

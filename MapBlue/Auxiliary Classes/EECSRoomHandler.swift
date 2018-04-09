@@ -13,11 +13,11 @@ import UIKit
 class EECSRoomHandler {
     private var buildingRoomMap = [String: Int]()
     
-    func getBuildingRoomMap() -> [String:Int] {
+    func getRoomMap() -> [String:Int] {
         return buildingRoomMap
     }
     
-    func roomExists(room : String) -> Bool {
+    func roomExists(_ room : String) -> Bool {
         return buildingRoomMap[room] != nil
     }
     
@@ -25,7 +25,7 @@ class EECSRoomHandler {
         return buildingRoomMap[room1] == buildingRoomMap[room2]
     }
     
-    func getRoomValue(room : String) -> Int {
+    func getRoomValue(_ room : String) -> Int {
         return buildingRoomMap[room]!
     }
     

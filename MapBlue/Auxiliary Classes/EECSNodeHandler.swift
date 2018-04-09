@@ -20,13 +20,13 @@ class EECSNodeHandler {
     }
     
     // Auxiliary function so that act of adding neighbors is a mutual action.
-    private func addMutualNeighbors(one : Point, two : Point) {
+    func addMutualNeighbors(one : Point, two : Point) {
         one.neighbors.append(two)
         two.neighbors.append(one)
     }
     
     // Point nodes.
-    func getPointNodes() -> [Point] {
+    func getNodes() -> [Point] {
         return nodes
     }
     
@@ -43,7 +43,7 @@ class EECSNodeHandler {
         return nearestPoint
     }
     
-    private func initEECSPointNodes (_ floor : Int) {
+    func initNodes (_ floor : Int) {
         switch (floor) {
         case 1:
             initEECSBuildingFloor1()
@@ -759,28 +759,5 @@ class EECSNodeHandler {
         addMutualNeighbors(one: nodes[87], two: nodes[88])
         addMutualNeighbors(one: nodes[88], two: nodes[89])
         addMutualNeighbors(one: nodes[89], two: nodes[44])
-    }
-    
-    private func initNodes (_ floor : Int) {
-        switch (floor) {
-        case 1:
-            initEECSBuildingFloor1()
-            initEECSBuildingFloor1Neighbors()
-            break
-        case 2:
-            initEECSBuildingFloor2()
-            initEECSBuildingFloor2Neighbors()
-            break
-        case 3:
-            initEECSBuildingFloor3()
-            initEECSBuildingFloor3Neighbors()
-            break
-        case 4:
-            initEECSBuildingFloor4()
-            initEECSBuildingFloor4Neighbors()
-            break
-        default:
-            return
-        }
-    }
+    }    
 }

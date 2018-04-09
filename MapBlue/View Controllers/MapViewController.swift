@@ -51,11 +51,11 @@ class MapViewController: UIViewController {
     // Set position of the markers.
     func setMarkerPositions() {
         // Gets the point map.
-        let pointMap = Building.pointMap.getBuildingPointMap()
+        let pointMap = Building.relay.getPointMap(building)
         // Sets the starting location of each indicator (start and end).
-        self.startPoint = pointMap[Building.roomMap.getRoomValue(room: startRoom)]!
+        self.startPoint = pointMap[Building.relay.getRoomValue(building: building, room: startRoom)]!
         // If on the same floor, set as ending point normally, else get the stairs position.
-        self.destPoint = pointMap[Building.roomMap.getRoomValue(room: destRoom)]!
+        self.destPoint = pointMap[Building.relay.getRoomValue(building: building, room: destRoom)]!
 
         self.startIndicatorImageLeading.constant = startPoint.x
         self.startIndicatorImageTop.constant = startPoint.y
@@ -94,8 +94,8 @@ class MapViewController: UIViewController {
     
     // Initializes all points from the be.
     func setPointChain() {
-        Building.pointList.addMutualNeighbors(one: startPoint, two: Building.pointList.getNearestNode(point: startPoint, nodes: Building.pointList.getPointNodes()))
-        Building.pointList.addMutualNeighbors(one: destPoint, two: Building.pointList.getNearestNode(point: destPoint, nodes: Building.pointList.getPointNodes()))
+        Building.relay.addMutualNeighbors(building: building, one: startPoint, two: Building.relay.getNearestNode(building: building, point: startPoint, nodes: Building.relay.getNodes(building)))
+        Building.relay.addMutualNeighbors(building: building, one: destPoint, two: Building.relay.getNearestNode(building: building, point: destPoint, nodes: Building.relay.getNodes(building)))
     }
     
     override func viewDidLoad() {
@@ -103,9 +103,9 @@ class MapViewController: UIViewController {
         // Sets the map image itself.
         mapImage.image = UIImage(named: getImage(building: building, floor: floor))
         // Initializes all points.
-        Building.pointMap.initBuildingPointMap(building: building, floor: floor)
+        Building.relay.initPoints(building: building, floor: floor)
         // Initializes all nodes.
-        Building.pointList.initPointNodes(building: building, floor: floor)
+        Building.relay.initNodes(building: building, floor: floor)
         self.mapTitle.text = Building.buildingMap.getBuildingName(building: building) + " Floor " + String(self.floor) + " Map"
         // Set marker starting positions.
         self.setMarkerPositions()

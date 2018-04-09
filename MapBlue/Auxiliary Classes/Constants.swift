@@ -15,7 +15,5 @@ struct Building {
     static let Dow = 3
     // Map that maps each building integer to a string.
     static let buildingMap = BuildingMap()
-    static let roomMap = RoomMap()
-    static let pointMap = PointMap()
-    static let pointList = PointList();
+    static let relay = Relay()
 }

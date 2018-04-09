@@ -52,7 +52,7 @@ class RoomViewController: UIViewController {
             roomOneError.text = "Please enter a starting room"
         }
         // Checks if room does not exist.
-        else if (!Building.roomMap.roomExists(room: startRoomField.text!)) {
+        else if (!Building.relay.roomExists(building: building, room: startRoomField.text!)) {
             check = false
             roomOneError.text = "Room does not exist"
         }
@@ -67,7 +67,7 @@ class RoomViewController: UIViewController {
             roomTwoError.text = "Please enter a destination room"
         }
         // Checks if room does not exist.
-        else if (!Building.roomMap.roomExists(room: destinationRoomField.text!)) {
+        else if (!Building.relay.roomExists(building: building, room: destinationRoomField.text!)) {
             check = false
             roomTwoError.text = "Room does not exist"
         }
@@ -76,7 +76,7 @@ class RoomViewController: UIViewController {
             roomTwoError.text = ""
         }
         // Checks if rooms are equivalent.
-        if (check && Building.roomMap.getRoomValue(room: startRoomField.text!) == Building.roomMap.getRoomValue(room: destinationRoomField.text!) && getFloor(startRoomField.text!) == getFloor(destinationRoomField.text!)) {
+        if (check && Building.relay.getRoomValue(building: building, room: startRoomField.text!) == Building.relay.getRoomValue(building: building, room: destinationRoomField.text!) && getFloor(startRoomField.text!) == getFloor(destinationRoomField.text!)) {
             check = false
             roomOneError.text = "Rooms are in same location"
             roomTwoError.text = "Rooms are in the same location"
@@ -110,7 +110,7 @@ class RoomViewController: UIViewController {
         // Sets label of room view controller.
         self.buildingTitle.text = "You are in " + Building.buildingMap.getBuildingName(building: building)
         // Initialize building room map.
-        Building.roomMap.initBuildingRoomMap(building)
+        Building.relay.initRooms(building)
     }
 
     override func didReceiveMemoryWarning() {
