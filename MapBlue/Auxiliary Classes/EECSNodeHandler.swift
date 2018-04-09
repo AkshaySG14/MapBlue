@@ -13,6 +13,32 @@ import UIKit
 class EECSNodeHandler {
     private var nodes: [Point] = []
     
+    func initNodes (_ floor : Int) {
+        // Cleares node list.
+        nodes.removeAll()
+        
+        switch (floor) {
+        case 1:
+            initEECSBuildingFloor1()
+            initEECSBuildingFloor1Neighbors()
+            break
+        case 2:
+            initEECSBuildingFloor2()
+            initEECSBuildingFloor2Neighbors()
+            break
+        case 3:
+            initEECSBuildingFloor3()
+            initEECSBuildingFloor3Neighbors()
+            break
+        case 4:
+            initEECSBuildingFloor4()
+            initEECSBuildingFloor4Neighbors()
+            break
+        default:
+            return
+        }
+    }
+
     // Silly workaround because += operator returns a void in Swift.
     private func incrementNum(count : inout Int) -> Int {
         count += 1
@@ -43,27 +69,6 @@ class EECSNodeHandler {
         return nearestPoint
     }
     
-    func initNodes (_ floor : Int) {
-        switch (floor) {
-        case 1:
-            initEECSBuildingFloor1()
-            initEECSBuildingFloor1Neighbors()
-            break
-        case 2:
-            initEECSBuildingFloor2()
-            initEECSBuildingFloor2Neighbors()
-            break
-        case 3:
-            initEECSBuildingFloor3()
-            break
-        case 4:
-            initEECSBuildingFloor4()
-            break
-        default:
-            return
-        }
-    }
-
     private func initEECSBuildingFloor1 () {
         nodes.append(Point(x: 75, y: 887.5)) // 0
         nodes.append(Point(x: 225, y: 887.5)) // 1

@@ -14,6 +14,9 @@ class EECSPointHandler {
     private var pointMap = [Int: Point]()
     
     func initPointMap(building : Int, floor : Int) {
+        // Clears point map.
+        pointMap.removeAll()
+        
         switch (floor) {
         case 1:
             initEECSBuildingFloor1(building)

@@ -13,6 +13,17 @@ import UIKit
 class EECSRoomHandler {
     private var buildingRoomMap = [String: Int]()
     
+    func initbuildingRoomMap() {
+        // Clears building room map.
+        buildingRoomMap.removeAll()
+        
+        var count = -1
+        initEECSBuildingFloor1(&count)
+        initEECSBuildingFloor2(&count)
+        initEECSBuildingFloor3(&count)
+        initEECSBuildingFloor4(&count)
+    }
+
     func getRoomMap() -> [String:Int] {
         return buildingRoomMap
     }
@@ -27,14 +38,6 @@ class EECSRoomHandler {
     
     func getRoomValue(_ room : String) -> Int {
         return buildingRoomMap[room]!
-    }
-    
-    func initbuildingRoomMap() {
-        var count = -1
-        initEECSBuildingFloor1(&count)
-        initEECSBuildingFloor2(&count)
-        initEECSBuildingFloor3(&count)
-        initEECSBuildingFloor4(&count)
     }
     
     private func initEECSBuildingFloor1(_ count : inout Int) {
