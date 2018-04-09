@@ -26,6 +26,10 @@ func getImage(building : Int, floor: Int) -> String {
         }
     case Building.GGBrown:
         return ""
+    case Building.EastHall:
+        return ""
+    case Building.Dow:
+        return ""
     default:
         return ""
     }
@@ -43,6 +47,8 @@ class BuildingMap {
     init() {
         buildingMap[Building.EECS] = "EECS Building"
         buildingMap[Building.GGBrown] = "G. G. Brown"
+        buildingMap[Building.EastHall] = "East Hall"
+        buildingMap[Building.Dow] = "Dow Building"
     }
     
     func getBuildingName(building : Int) -> String {
@@ -1309,11 +1315,11 @@ class RoomMap {
         buildingRoomMap["4436"] = count
         buildingRoomMap["4438"] = count
         
-        buildingRoomMap["stairs31"] = incrementNum(count: &count)
-        buildingRoomMap["stairs32"] = incrementNum(count: &count)
-        buildingRoomMap["stairs33"] = incrementNum(count: &count)
-        buildingRoomMap["stairs34"] = incrementNum(count: &count)
-        buildingRoomMap["stairs35"] = incrementNum(count: &count)
+        buildingRoomMap["stairs41"] = incrementNum(count: &count)
+        buildingRoomMap["stairs42"] = incrementNum(count: &count)
+        buildingRoomMap["stairs43"] = incrementNum(count: &count)
+        buildingRoomMap["stairs44"] = incrementNum(count: &count)
+        buildingRoomMap["stairs45"] = incrementNum(count: &count)
     }
     
     private func initbuildingRoomMap() {

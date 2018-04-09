@@ -41,6 +41,11 @@
 		AFA44FC82059A52A00737A6E /* PrimaryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA44FC72059A52A00737A6E /* PrimaryMapViewController.swift */; };
 		AFB80F1720524674003942E2 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB80F1620524674003942E2 /* RoomViewController.swift */; };
 		AFBCF66B2061A7AA001838E2 /* Indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBCF66A2061A7AA001838E2 /* Indicator.png */; };
+		AFC392A5207A953500FC51B7 /* EECSHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC392A4207A953500FC51B7 /* EECSHandler.swift */; };
+		AFC392A7207A95D300FC51B7 /* Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC392A6207A95D300FC51B7 /* Handler.swift */; };
+		AFC392A9207AB4DA00FC51B7 /* EECSNodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC392A8207AB4DA00FC51B7 /* EECSNodeHandler.swift */; };
+		AFC392AB207AB5B300FC51B7 /* EECSRoomHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC392AA207AB5B300FC51B7 /* EECSRoomHandler.swift */; };
+		AFC392AD207AC05300FC51B7 /* EECSPointHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC392AC207AC05300FC51B7 /* EECSPointHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +85,11 @@
 		AFA44FC72059A52A00737A6E /* PrimaryMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryMapViewController.swift; sourceTree = "<group>"; };
 		AFB80F1620524674003942E2 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		AFBCF66A2061A7AA001838E2 /* Indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Indicator.png; sourceTree = "<group>"; };
+		AFC392A4207A953500FC51B7 /* EECSHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EECSHandler.swift; sourceTree = "<group>"; };
+		AFC392A6207A95D300FC51B7 /* Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
+		AFC392A8207AB4DA00FC51B7 /* EECSNodeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EECSNodeHandler.swift; sourceTree = "<group>"; };
+		AFC392AA207AB5B300FC51B7 /* EECSRoomHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EECSRoomHandler.swift; sourceTree = "<group>"; };
+		AFC392AC207AC05300FC51B7 /* EECSPointHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EECSPointHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,11 @@
 			children = (
 				AF13454A2054CEDA00640178 /* Constants.swift */,
 				AF40F8022056F8F7006C362A /* Variables.swift */,
+				AFC392AC207AC05300FC51B7 /* EECSPointHandler.swift */,
+				AFC392A6207A95D300FC51B7 /* Handler.swift */,
+				AFC392A4207A953500FC51B7 /* EECSHandler.swift */,
+				AFC392AA207AB5B300FC51B7 /* EECSRoomHandler.swift */,
+				AFC392A8207AB4DA00FC51B7 /* EECSNodeHandler.swift */,
 				3D953CB32065A063009A50E2 /* Point.swift */,
 			);
 			path = "Auxiliary Classes";
@@ -268,14 +283,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC392AD207AC05300FC51B7 /* EECSPointHandler.swift in Sources */,
+				AFC392A9207AB4DA00FC51B7 /* EECSNodeHandler.swift in Sources */,
 				AF8407D0204FA5C3001182CA /* BuildingViewController.swift in Sources */,
 				AF40F8032056F8F7006C362A /* Variables.swift in Sources */,
+				AFC392A5207A953500FC51B7 /* EECSHandler.swift in Sources */,
 				AF7E76B4204DD577002DCC46 /* ViewController.swift in Sources */,
 				AF7E76B2204DD577002DCC46 /* AppDelegate.swift in Sources */,
 				AFA1BD96207277DF005A5E05 /* MapViewController.swift in Sources */,
+				AFC392A7207A95D300FC51B7 /* Handler.swift in Sources */,
 				AFB80F1720524674003942E2 /* RoomViewController.swift in Sources */,
 				AFA1BD98207347B9005A5E05 /* SecondaryMapViewController.swift in Sources */,
 				3D953CB42065A063009A50E2 /* Point.swift in Sources */,
+				AFC392AB207AB5B300FC51B7 /* EECSRoomHandler.swift in Sources */,
 				AF13454B2054CEDA00640178 /* Constants.swift in Sources */,
 				AFA44FC82059A52A00737A6E /* PrimaryMapViewController.swift in Sources */,
 			);

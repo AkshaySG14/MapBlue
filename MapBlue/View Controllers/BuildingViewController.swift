@@ -11,6 +11,8 @@ import UIKit
 class BuildingViewController: UIViewController {
     @IBOutlet weak var EECSButton: UIButton!
     @IBOutlet weak var GGButton: UIButton!
+    @IBOutlet weak var EHButton: UIButton!
+    @IBOutlet weak var DBButton: UIButton!
     
     // Sets the building according to the button.
     func getBuilding(_ sender: UIButton) -> Int {
@@ -19,6 +21,10 @@ class BuildingViewController: UIViewController {
             return Building.EECS
         case GGButton:
             return Building.GGBrown
+        case EHButton:
+            return Building.EastHall
+        case DBButton:
+            return Building.Dow
         default:
             return -1
         }
@@ -39,12 +45,11 @@ class BuildingViewController: UIViewController {
     @IBAction func GGBgotoRooms(_ sender: UIButton) {
         performSegue(withIdentifier: "gotoRooms", sender: sender)
     }
-    
+
     // Button segue for the EECS Building Button.
     @IBAction func EECSgotoRooms(_ sender: UIButton) {
          performSegue(withIdentifier: "gotoRooms", sender: sender)
     }
-    
     
     func setButtonBorder(button : UIButton) {
         // Color for border.
@@ -71,6 +76,8 @@ class BuildingViewController: UIViewController {
         // Sets the borders.
         self.setButtonBorder(button: EECSButton)
         self.setButtonBorder(button: GGButton)
+        self.setButtonBorder(button: EHButton)
+        self.setButtonBorder(button: DBButton)
     }
     
     override func viewDidLoad() {
