@@ -512,10 +512,10 @@ class EECSRoomHandler {
         buildingRoomMap["4436"] = count
         buildingRoomMap["4438"] = count
         
-        buildingRoomMap["stairs31"] = incrementNum(count: &count)
-        buildingRoomMap["stairs32"] = incrementNum(count: &count)
-        buildingRoomMap["stairs33"] = incrementNum(count: &count)
-        buildingRoomMap["stairs34"] = incrementNum(count: &count)
-        buildingRoomMap["stairs35"] = incrementNum(count: &count)
+        buildingRoomMap["stairs41"] = incrementNum(count: &count)
+        buildingRoomMap["stairs42"] = incrementNum(count: &count)
+        buildingRoomMap["stairs43"] = incrementNum(count: &count)
+        buildingRoomMap["stairs44"] = incrementNum(count: &count)
+        buildingRoomMap["stairs45"] = incrementNum(count: &count)
     }
 }
