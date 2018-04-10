@@ -106,13 +106,9 @@
 		AF13454C2054CF5500640178 /* Auxiliary Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AF5FA824207BE96F00383100 /* Handlers */,
 				AF13454A2054CEDA00640178 /* Constants.swift */,
 				AF40F8022056F8F7006C362A /* Variables.swift */,
-				AFC392AC207AC05300FC51B7 /* EECSPointHandler.swift */,
-				AFC392A6207A95D300FC51B7 /* Handler.swift */,
-				AFC392A4207A953500FC51B7 /* EECSHandler.swift */,
-				AFC392AA207AB5B300FC51B7 /* EECSRoomHandler.swift */,
-				AFC392A8207AB4DA00FC51B7 /* EECSNodeHandler.swift */,
 				3D953CB32065A063009A50E2 /* Point.swift */,
 			);
 			path = "Auxiliary Classes";
@@ -144,6 +140,36 @@
 				AF2021D220519C37008F82A9 /* iTunesArtwork@2x.png */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		AF5FA823207BE96400383100 /* EECS Handler */ = {
+			isa = PBXGroup;
+			children = (
+				AFC392AC207AC05300FC51B7 /* EECSPointHandler.swift */,
+				AFC392A4207A953500FC51B7 /* EECSHandler.swift */,
+				AFC392AA207AB5B300FC51B7 /* EECSRoomHandler.swift */,
+				AFC392A8207AB4DA00FC51B7 /* EECSNodeHandler.swift */,
+			);
+			path = "EECS Handler";
+			sourceTree = "<group>";
+		};
+		AF5FA824207BE96F00383100 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				AFC392A6207A95D300FC51B7 /* Handler.swift */,
+				AF5FA823207BE96400383100 /* EECS Handler */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		AF5FA825207BE9A600383100 /* Map Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFA44FC72059A52A00737A6E /* PrimaryMapViewController.swift */,
+				AFA1BD97207347B9005A5E05 /* SecondaryMapViewController.swift */,
+				AFA1BD95207277DF005A5E05 /* MapViewController.swift */,
+			);
+			path = "Map Controllers";
 			sourceTree = "<group>";
 		};
 		AF7E76A5204DD577002DCC46 = {
@@ -180,12 +206,10 @@
 		AF8407CE204F9CE9001182CA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AF5FA825207BE9A600383100 /* Map Controllers */,
 				AF7E76B3204DD577002DCC46 /* ViewController.swift */,
 				AF8407CF204FA5C3001182CA /* BuildingViewController.swift */,
 				AFB80F1620524674003942E2 /* RoomViewController.swift */,
-				AFA44FC72059A52A00737A6E /* PrimaryMapViewController.swift */,
-				AFA1BD97207347B9005A5E05 /* SecondaryMapViewController.swift */,
-				AFA1BD95207277DF005A5E05 /* MapViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

@@ -40,8 +40,46 @@
                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WSm-0C-GTq">
                                 <rect key="frame" x="0.0" y="119" width="384" height="236"/>
                                 <subviews>
+                                    <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BwB-KS-QeF" userLabel="DBButton">
+                                        <rect key="frame" x="72" y="0.0" width="240" height="37.5"/>
+                                        <color key="backgroundColor" red="0.98363727850000005" green="1" blue="0.98907430620000003" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Dow Herbert H. Building">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="GGBgotoRooms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adS-ZC-V9h"/>
+                                            <action selector="GGButton" destination="OBx-DH-xcV" eventType="touchUpInside" id="EbH-dF-reB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYk-K6-oKE">
+                                        <rect key="frame" x="148.5" y="57.5" width="87" height="37.5"/>
+                                        <color key="backgroundColor" red="0.98363727850000005" green="1" blue="0.98907430620000003" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="East Hall">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="GGBgotoRooms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lXU-bf-PD8"/>
+                                            <action selector="GGButton" destination="OBx-DH-xcV" eventType="touchUpInside" id="qLo-Rc-pVE"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-7x-jm8">
-                                        <rect key="frame" x="20" y="0.0" width="344" height="63.5"/>
+                                        <rect key="frame" x="20" y="115" width="344" height="63.5"/>
                                         <color key="backgroundColor" red="0.98363727846159543" green="1" blue="0.9890743061922963" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -61,7 +99,7 @@ Computer Science (EECS Building)</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAZ-Cl-ev1">
-                                        <rect key="frame" x="16" y="83.5" width="352" height="37.5"/>
+                                        <rect key="frame" x="16" y="198.5" width="352" height="37.5"/>
                                         <color key="backgroundColor" red="0.98363727850000005" green="1" blue="0.98907430620000003" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -77,44 +115,6 @@ Computer Science (EECS Building)</string>
                                         <connections>
                                             <action selector="GGBgotoRooms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PYm-jW-Blm"/>
                                             <action selector="GGButton" destination="OBx-DH-xcV" eventType="touchUpInside" id="ko8-vb-oKC"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYk-K6-oKE">
-                                        <rect key="frame" x="148.5" y="141" width="87" height="37.5"/>
-                                        <color key="backgroundColor" red="0.98363727850000005" green="1" blue="0.98907430620000003" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="East Hall">
-                                                    <attributes>
-                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" size="22" name="HelveticaNeue"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="GGBgotoRooms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lXU-bf-PD8"/>
-                                            <action selector="GGButton" destination="OBx-DH-xcV" eventType="touchUpInside" id="qLo-Rc-pVE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BwB-KS-QeF" userLabel="DBButton">
-                                        <rect key="frame" x="72" y="198.5" width="240" height="37.5"/>
-                                        <color key="backgroundColor" red="0.98363727850000005" green="1" blue="0.98907430620000003" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Dow Herbert H. Building">
-                                                    <attributes>
-                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" size="22" name="HelveticaNeue"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="GGBgotoRooms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adS-ZC-V9h"/>
-                                            <action selector="GGButton" destination="OBx-DH-xcV" eventType="touchUpInside" id="EbH-dF-reB"/>
                                         </connections>
                                     </button>
                                 </subviews>

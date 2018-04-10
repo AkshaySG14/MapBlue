@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreMotion
 
 class MapViewController: UIViewController {
     internal var building = 0

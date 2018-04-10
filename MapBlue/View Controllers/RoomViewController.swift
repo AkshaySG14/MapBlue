@@ -97,12 +97,6 @@ class RoomViewController: UIViewController {
         self.building = building!
     }
     
-    // Upon pressing enter key, exit keyboard. Possible due to text field delegation.
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Sets up the keyboard's dismissal upon screen being touched.
@@ -119,16 +113,11 @@ class RoomViewController: UIViewController {
     }
 }
 
-extension String {
-    subscript (bounds: CountableClosedRange<Int>) -> String {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return String(self[start...end])
-    }
-    
-    subscript (bounds: CountableRange<Int>) -> String {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return String(self[start..<end])
+// Extends text field so that typing enter exits keyboard.
+extension RoomViewController: UITextFieldDelegate {
+    // Upon pressing enter key, exit keyboard. Possible due to text field delegation.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
