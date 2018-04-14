@@ -182,26 +182,26 @@ class EECSPointHandler {
     }
     
     private func initEECSBuildingFloor4(_ building : Int) {
-        pointMap[Building.relay.getRoomValue(building: building, room: "4110")] = Point(x: 500, y: 500) // Room 4110
-        pointMap[Building.relay.getRoomValue(building: building, room: "4230")] = Point(x: 500, y: 500) // Room 4230
-        pointMap[Building.relay.getRoomValue(building: building, room: "4223")] = Point(x: 500, y: 500) // Room 4223
-        pointMap[Building.relay.getRoomValue(building: building, room: "4236")] = Point(x: 500, y: 500) // Room 4236
-        pointMap[Building.relay.getRoomValue(building: building, room: "4301")] = Point(x: 500, y: 500) // Room 4301
-        pointMap[Building.relay.getRoomValue(building: building, room: "4313")] = Point(x: 500, y: 500) // Room 4313
-        pointMap[Building.relay.getRoomValue(building: building, room: "4312")] = Point(x: 500, y: 500) // Room 4312
-        pointMap[Building.relay.getRoomValue(building: building, room: "4336")] = Point(x: 500, y: 500) // Room 4336
-        pointMap[Building.relay.getRoomValue(building: building, room: "4341")] = Point(x: 500, y: 500) // Room 4341
-        pointMap[Building.relay.getRoomValue(building: building, room: "4344")] = Point(x: 500, y: 500) // Room 4344
-        pointMap[Building.relay.getRoomValue(building: building, room: "4411")] = Point(x: 500, y: 500) // Room 4411
-        pointMap[Building.relay.getRoomValue(building: building, room: "4418")] = Point(x: 500, y: 500) // Room 4418
-        pointMap[Building.relay.getRoomValue(building: building, room: "4422")] = Point(x: 500, y: 500) // Room 4422
-        pointMap[Building.relay.getRoomValue(building: building, room: "4429")] = Point(x: 500, y: 500) // Room 4429
-        pointMap[Building.relay.getRoomValue(building: building, room: "4430")] = Point(x: 500, y: 500) // Room 4430
+        pointMap[Building.relay.getRoomValue(building: building, room: "4110")] = Point(x: 1250, y: 1100) // Room 4110
+        pointMap[Building.relay.getRoomValue(building: building, room: "4230")] = Point(x: 900, y: 950) // Room 4230
+        pointMap[Building.relay.getRoomValue(building: building, room: "4223")] = Point(x: 900, y: 800) // Room 4223
+        pointMap[Building.relay.getRoomValue(building: building, room: "4236")] = Point(x: 550, y: 875) // Room 4236
+        pointMap[Building.relay.getRoomValue(building: building, room: "4301")] = Point(x: 1800, y: 350) // Room 4301
+        pointMap[Building.relay.getRoomValue(building: building, room: "4313")] = Point(x: 1600, y: 350) // Room 4313
+        pointMap[Building.relay.getRoomValue(building: building, room: "4312")] = Point(x: 1350, y: 350) // Room 4312
+        pointMap[Building.relay.getRoomValue(building: building, room: "4336")] = Point(x: 550, y: 530) // Room 4336
+        pointMap[Building.relay.getRoomValue(building: building, room: "4341")] = Point(x: 450, y: 375) // Room 4341
+        pointMap[Building.relay.getRoomValue(building: building, room: "4344")] = Point(x: 150, y: 350) // Room 4344
+        pointMap[Building.relay.getRoomValue(building: building, room: "4411")] = Point(x: 1300, y: 130) // Room 4411
+        pointMap[Building.relay.getRoomValue(building: building, room: "4418")] = Point(x: 1200, y: 350) // Room 4418
+        pointMap[Building.relay.getRoomValue(building: building, room: "4422")] = Point(x: 940, y: 300) // Room 4422
+        pointMap[Building.relay.getRoomValue(building: building, room: "4429")] = Point(x: 550, y: 130) // Room 4429
+        pointMap[Building.relay.getRoomValue(building: building, room: "4430")] = Point(x: 500, y: 270) // Room 4430
         
-        pointMap[Building.relay.getRoomValue(building: building, room: "stairs41")] = Point(x: 500, y: 500) // Stairs 1
-        pointMap[Building.relay.getRoomValue(building: building, room: "stairs42")] = Point(x: 500, y: 500) // Stairs 2
-        pointMap[Building.relay.getRoomValue(building: building, room: "stairs43")] = Point(x: 500, y: 500) // Stairs 3
-        pointMap[Building.relay.getRoomValue(building: building, room: "stairs44")] = Point(x: 500, y: 500) // Stairs 4
-        pointMap[Building.relay.getRoomValue(building: building, room: "stairs45")] = Point(x: 500, y: 500) // Stairs 5
+        pointMap[Building.relay.getRoomValue(building: building, room: "stairs41")] = Point(x: 1470, y: 1200) // Stairs 1
+        pointMap[Building.relay.getRoomValue(building: building, room: "stairs42")] = Point(x: 1470, y: 100) // Stairs 2
+        pointMap[Building.relay.getRoomValue(building: building, room: "stairs43")] = Point(x: 850, y: 530) // Stairs 3
+        pointMap[Building.relay.getRoomValue(building: building, room: "stairs44")] = Point(x: 340, y: 900) // Stairs 4
+        pointMap[Building.relay.getRoomValue(building: building, room: "stairs45")] = Point(x: 340, y: 100) // Stairs 5
     }
 }
