@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Building View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -191,17 +185,17 @@ Computer Science (EECS Building)</string>
                                         <rect key="frame" x="0.0" y="100" width="2981" height="1889"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startIndicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="XRx-pZ-ahz">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="iwe-Qv-IUs"/>
-                                            <constraint firstAttribute="width" constant="40" id="ncM-bH-Ddm"/>
+                                            <constraint firstAttribute="height" constant="30" id="iwe-Qv-IUs"/>
+                                            <constraint firstAttribute="width" constant="30" id="ncM-bH-Ddm"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endIndicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="FYw-e1-SrK" userLabel="End Indicator Image">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="XI3-8n-3tZ"/>
-                                            <constraint firstAttribute="width" constant="40" id="g7A-yO-MlM"/>
+                                            <constraint firstAttribute="height" constant="30" id="XI3-8n-3tZ"/>
+                                            <constraint firstAttribute="width" constant="30" id="g7A-yO-MlM"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -506,17 +500,17 @@ Computer Science (EECS Building)</string>
                                         <rect key="frame" x="0.0" y="100" width="2981" height="1889"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startIndicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="am4-Ak-ZCX">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="3MJ-ie-rtZ"/>
-                                            <constraint firstAttribute="height" constant="40" id="qAS-1J-e7I"/>
+                                            <constraint firstAttribute="width" constant="30" id="3MJ-ie-rtZ"/>
+                                            <constraint firstAttribute="height" constant="30" id="qAS-1J-e7I"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endIndicator.png" translatesAutoresizingMaskIntoConstraints="NO" id="x4a-QV-1HO" userLabel="End Indicator Image">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="jEb-Fa-mGz"/>
-                                            <constraint firstAttribute="height" constant="40" id="vdg-qe-etS"/>
+                                            <constraint firstAttribute="width" constant="30" id="jEb-Fa-mGz"/>
+                                            <constraint firstAttribute="height" constant="30" id="vdg-qe-etS"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
