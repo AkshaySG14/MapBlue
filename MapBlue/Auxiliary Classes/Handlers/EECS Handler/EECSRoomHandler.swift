@@ -281,9 +281,9 @@ class EECSRoomHandler {
         buildingRoomMap["2420C"] = count
         
         
-        buildingRoomMap["2322"] = incrementNum(count : &count) //was 2422 but prob intended to be 2322 -james
+        buildingRoomMap["2322"] = incrementNum(count : &count)
         
-        buildingRoomMap["2331"] = incrementNum(count : &count) //added by james
+        buildingRoomMap["2331"] = incrementNum(count : &count)
         
         buildingRoomMap["2426"] = incrementNum(count : &count)
         
@@ -434,6 +434,11 @@ class EECSRoomHandler {
         buildingRoomMap["4120"] = count
         buildingRoomMap["4122"] = count
         
+        buildingRoomMap["4107"] = incrementNum(count : &count)
+        buildingRoomMap["4111"] = incrementNum(count : &count)
+        buildingRoomMap["4121"] = incrementNum(count : &count)
+        buildingRoomMap["4125"] = incrementNum(count : &count)
+        
         buildingRoomMap["4230"] = incrementNum(count : &count)
         buildingRoomMap["4230A"] = count
         buildingRoomMap["4230B"] = count
@@ -469,6 +474,7 @@ class EECSRoomHandler {
         buildingRoomMap["4312"] = incrementNum(count : &count)
         buildingRoomMap["4314"] = count
         buildingRoomMap["4316"] = count
+        
         buildingRoomMap["4334"] = incrementNum(count : &count)
         
         buildingRoomMap["4336"] = incrementNum(count : &count)

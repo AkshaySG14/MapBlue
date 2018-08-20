@@ -14,7 +14,7 @@ class EECSNodeHandler {
     private var nodes: [Point] = []
     
     func initNodes (_ floor : Int) {
-        // Cleares node list.
+        // Clears node list.
         nodes.removeAll()
         
         switch (floor) {
@@ -537,7 +537,7 @@ class EECSNodeHandler {
         addMutualNeighbors(one: nodes[58], two: nodes[59])
         addMutualNeighbors(one: nodes[59], two: nodes[60])
         addMutualNeighbors(one: nodes[60], two: nodes[31])
-        addMutualNeighbors(one: nodes[60], two: nodes[61])
+        addMutualNeighbors(one: nodes[61], two: nodes[31])
         addMutualNeighbors(one: nodes[61], two: nodes[47])
         addMutualNeighbors(one: nodes[63], two: nodes[16])
         addMutualNeighbors(one: nodes[63], two: nodes[64])

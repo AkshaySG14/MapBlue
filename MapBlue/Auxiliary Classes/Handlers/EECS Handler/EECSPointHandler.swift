@@ -183,12 +183,17 @@ class EECSPointHandler {
     
     private func initEECSBuildingFloor4(_ building : Int) {
         pointMap[Building.relay.getRoomValue(building: building, room: "4110")] = Point(x: 1250, y: 1100) // Room 4110
+        pointMap[Building.relay.getRoomValue(building: building, room: "4107")] = Point(x: 1375, y: 825) // Room 4107
+        pointMap[Building.relay.getRoomValue(building: building, room: "4111")] = Point(x: 1375, y: 950) // Room 4111
+        pointMap[Building.relay.getRoomValue(building: building, room: "4121")] = Point(x: 1212, y: 825) // Room 4121
+        pointMap[Building.relay.getRoomValue(building: building, room: "4125")] = Point(x: 1212, y: 950) // Room 4125
         pointMap[Building.relay.getRoomValue(building: building, room: "4230")] = Point(x: 900, y: 950) // Room 4230
         pointMap[Building.relay.getRoomValue(building: building, room: "4223")] = Point(x: 900, y: 800) // Room 4223
         pointMap[Building.relay.getRoomValue(building: building, room: "4236")] = Point(x: 550, y: 875) // Room 4236
         pointMap[Building.relay.getRoomValue(building: building, room: "4301")] = Point(x: 1800, y: 350) // Room 4301
         pointMap[Building.relay.getRoomValue(building: building, room: "4313")] = Point(x: 1600, y: 350) // Room 4313
         pointMap[Building.relay.getRoomValue(building: building, room: "4312")] = Point(x: 1350, y: 350) // Room 4312
+        pointMap[Building.relay.getRoomValue(building: building, room: "4334")] = Point(x: 650, y: 375) // Room 4334
         pointMap[Building.relay.getRoomValue(building: building, room: "4336")] = Point(x: 550, y: 530) // Room 4336
         pointMap[Building.relay.getRoomValue(building: building, room: "4341")] = Point(x: 450, y: 375) // Room 4341
         pointMap[Building.relay.getRoomValue(building: building, room: "4344")] = Point(x: 150, y: 350) // Room 4344
